@@ -233,6 +233,12 @@ const termsOfServiceRoute = createRoute({
   component: TermsOfServicePage,
 });
 
+const seoMapRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/seo-cluster-map',
+  component: SeoClusterMap,
+});
+
 
 // Automatic Tool Routes
 const toolRoutes = TOOLS.filter(t => t.available && t.component).map(tool => 
@@ -287,20 +293,9 @@ const resetPasswordRoute = createRoute({
   component: ResetPasswordPage,
 });
 
-const seoMapRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: '/seo-cluster-map',
-  component: SeoClusterMap,
-});
 
-const testRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: '/test-123',
-  component: () => <div className="p-8">TEST ROUTE WORKS</div>,
-});
 
 const routeTree = rootRoute.addChildren([
-  testRoute,
   indexRoute,
   toolsDirectoryRoute,
   aboutRoute,
