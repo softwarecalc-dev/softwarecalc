@@ -72,7 +72,7 @@ import { VatReverseCalculator } from '../components/calculators/VatReverseCalcul
 import { SalesTaxReverseCalculator } from '../components/calculators/SalesTaxReverseCalculator';
 import { SalesTaxRateCalculator } from '../components/calculators/SalesTaxRateCalculator';
 import { CreditCardPayoffCalculator } from '../components/calculators/CreditCardPayoffCalculator';
-import { InvestmentCalculator } from '../components/calculators/InvestmentCalculator';
+import { InvestmentCalculator } from '../components/calculators/InvestmentCalculator'; 
 import { DebtPayoffCalculator } from '../components/calculators/DebtPayoffCalculator';
 
 
@@ -2209,7 +2209,7 @@ howToUse: [
   formulaTitle: 'Compound Growth with Contributions',
   formulaExpression: 'Balance grows monthly with contributions and interest',
   formulaExplanation: 'Each month, contributions are added and interest is applied to the total balance, allowing compounding growth over time.'
-},
+  },
   {
   id: 'debt-payoff-calculator',
   name: 'Debt Payoff Calculator',
