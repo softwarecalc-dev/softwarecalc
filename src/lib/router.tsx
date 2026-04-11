@@ -233,11 +233,6 @@ const termsOfServiceRoute = createRoute({
   component: TermsOfServicePage,
 });
 
-const seoMapRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: '/seo-map',
-  component: SeoClusterMap,
-});
 
 // Automatic Tool Routes
 const toolRoutes = TOOLS.filter(t => t.available && t.component).map(tool => 
