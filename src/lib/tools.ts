@@ -75,6 +75,7 @@ import { CreditCardPayoffCalculator } from '../components/calculators/CreditCard
 import { InvestmentCalculator } from '../components/calculators/InvestmentCalculator'; 
 import { DebtPayoffCalculator } from '../components/calculators/DebtPayoffCalculator';
 import { InterestRateCalculator } from '../components/calculators/InterestRateCalculator';
+import { SalaryHourlyCalculator } from '../components/calculators/SalaryHourlyCalculator';
 
 
 
@@ -2269,6 +2270,35 @@ howToUse: [
   formulaTitle: 'Reverse Loan Interest Estimation',
   formulaExpression: 'Iterative simulation of loan balance over time',
   formulaExplanation: 'The calculator simulates loan repayment at different interest rates until the final balance reaches zero within the given term.'
+},
+  {
+  id: 'salary-hourly-calculator',
+  name: 'Salary to Hourly Calculator',
+  description: 'Convert between yearly salary and hourly wage based on working hours.',
+  aboutText: 'The Salary to Hourly Calculator helps you convert between annual salary and hourly wage based on your working hours per week and weeks per year. This is useful when comparing job offers, freelance rates, or understanding your effective hourly earnings. It gives you a clear way to compare different income structures. You may also find the [Income Tax Calculator](/salary-after-tax-calculator) helpful for net income estimates.',
+  howToUse: [
+    'Enter your salary or hourly wage.',
+    'Select conversion mode.',
+    'Enter hours per week.',
+    'View the converted value instantly.'
+  ],
+  href: '/salary-hourly-calculator',
+  icon: Calculator,
+  available: true,
+  category: 'Finance',
+  howItWorks: 'The calculator converts income by multiplying or dividing based on standard working hours per year.',
+  exampleUsage: [
+    'Compare job offers',
+    'Convert freelance rates',
+    'Understand hourly value of salary'
+  ],
+  relatedTools: ['salary-after-tax-calculator', 'commission-calculator', 'hours-worked-calculator'],
+  component: SalaryHourlyCalculator,
+  seoTitle: 'Salary to Hourly Calculator Online | Convert Salary to Hourly Wage',
+  seoDescription: 'Free online salary to hourly calculator. Convert annual salary to hourly wage or vice versa instantly.',
+  formulaTitle: 'Income Conversion Formula',
+  formulaExpression: 'Hourly = Salary / (Hours × Weeks)',
+  formulaExplanation: 'Income is converted by dividing annual salary by total working hours per year.'
 }
 ];
 
