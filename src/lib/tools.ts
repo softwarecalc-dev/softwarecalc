@@ -1,4 +1,4 @@
-import { LucideIcon, Calculator, Calendar, Dices, Percent, TrendingUp, Sigma, Ruler, Tag, Banknote, Receipt, Activity, Scale, Clock, Wallet } from 'lucide-react';
+import { LucideIcon, Calculator, Calendar, Dices, Percent, TrendingUp, Sigma, Ruler, Tag, Banknote, Receipt, Activity, Scale, Clock, Wallet, Search } from 'lucide-react';
 import { ComponentType } from 'react';
 import { BlackjackCalculator } from '../components/calculators/BlackjackCalculator';
 import { CompoundInterestCalculator } from '../components/calculators/CompoundInterestCalculator';
@@ -74,6 +74,7 @@ import { SalesTaxRateCalculator } from '../components/calculators/SalesTaxRateCa
 import { CreditCardPayoffCalculator } from '../components/calculators/CreditCardPayoffCalculator';
 import { InvestmentCalculator } from '../components/calculators/InvestmentCalculator'; 
 import { DebtPayoffCalculator } from '../components/calculators/DebtPayoffCalculator';
+import { InterestRateCalculator } from '../components/calculators/InterestRateCalculator';
 
 
 
@@ -2239,6 +2240,35 @@ howToUse: [
   formulaTitle: 'Debt Payoff Calculation',
   formulaExpression: 'Each payment reduces balance after interest is applied monthly',
   formulaExplanation: 'Interest is added to the remaining balance each month, and your payment is applied first to interest and then to the principal until the debt is cleared.'
+  },
+{
+  id: 'interest-rate-calculator',
+  name: 'Interest Rate Calculator',
+  description: 'Estimate the interest rate of a loan based on monthly payments and loan term.',
+  aboutText: 'The Interest Rate Calculator helps you estimate the implied interest rate of a loan when you know the loan amount, monthly payment, and loan term. This is useful when evaluating loan offers or understanding the true cost of borrowing. It helps you compare different financing options and see whether a loan is expensive or affordable. For related calculations, you may also find the [Loan Payment Calculator](/loan-payment-calculator) or [APR Calculator](/apr-calculator) helpful.',
+  howToUse: [
+    'Enter the total loan amount.',
+    'Enter your monthly payment.',
+    'Enter the loan term in years.',
+    'View the estimated interest rate and total cost.'
+  ],
+  href: '/interest-rate-calculator',
+  icon: Search,
+  available: true,
+  category: 'Finance',
+  howItWorks: 'The calculator simulates loan repayment and adjusts the interest rate until the remaining balance reaches zero within the loan term.',
+  exampleUsage: [
+    'Check if a loan offer has high interest',
+    'Compare financing options',
+    'Estimate hidden borrowing costs'
+  ],
+  relatedTools: ['loan-payment-calculator', 'apr-calculator', 'mortgage-calculator'],
+  component: InterestRateCalculator,
+  seoTitle: 'Interest Rate Calculator Online | Estimate Loan Interest Rate | SoftwareCalc',
+  seoDescription: 'Free online interest rate calculator. Estimate the interest rate of a loan based on payments and loan term.',
+  formulaTitle: 'Reverse Loan Interest Estimation',
+  formulaExpression: 'Iterative simulation of loan balance over time',
+  formulaExplanation: 'The calculator simulates loan repayment at different interest rates until the final balance reaches zero within the given term.'
 }
 ];
 
