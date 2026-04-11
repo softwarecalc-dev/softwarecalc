@@ -1,4 +1,4 @@
-import { LucideIcon, Calculator, Calendar, Dices, Percent, TrendingUp, Sigma, Ruler, Tag, Banknote, Receipt, Activity, Scale, Clock } from 'lucide-react';
+import { LucideIcon, Calculator, Calendar, Dices, Percent, TrendingUp, Sigma, Ruler, Tag, Banknote, Receipt, Activity, Scale, Clock, Wallet } from 'lucide-react';
 import { ComponentType } from 'react';
 import { BlackjackCalculator } from '../components/calculators/BlackjackCalculator';
 import { CompoundInterestCalculator } from '../components/calculators/CompoundInterestCalculator';
@@ -73,6 +73,7 @@ import { SalesTaxReverseCalculator } from '../components/calculators/SalesTaxRev
 import { SalesTaxRateCalculator } from '../components/calculators/SalesTaxRateCalculator';
 import { CreditCardPayoffCalculator } from '../components/calculators/CreditCardPayoffCalculator';
 import { InvestmentCalculator } from '../components/calculators/InvestmentCalculator';
+import { DebtPayoffCalculator } from '../components/calculators/DebtPayoffCalculator';
 
 
 
@@ -2208,6 +2209,36 @@ howToUse: [
   formulaTitle: 'Compound Growth with Contributions',
   formulaExpression: 'Balance grows monthly with contributions and interest',
   formulaExplanation: 'Each month, contributions are added and interest is applied to the total balance, allowing compounding growth over time.'
+},
+  {
+  id: 'debt-payoff-calculator',
+  name: 'Debt Payoff Calculator',
+  description: 'Calculate how long it takes to pay off debt and the total interest paid over time.',
+  aboutText: 'The Debt Payoff Calculator helps you estimate how long it will take to eliminate your debt based on your balance, interest rate, and monthly payment. It also shows how much interest you will pay over time, giving you a clearer picture of the true cost of your debt. This tool is useful for planning repayment strategies and comparing different payment amounts. For more detailed scenarios, you may also find the [Credit Card Payoff Calculator](/credit-card-payoff-calculator) or [Loan Payment Calculator](/loan-payment-calculator) helpful.',
+  howToUse: [
+    'Enter your total debt balance.',
+    'Enter the annual interest rate.',
+    'Enter your monthly payment amount.',
+    'View how many months it takes to pay off the debt.',
+    'Review total interest and total amount paid.'
+  ],
+  href: '/debt-payoff-calculator',
+  icon: Wallet,
+  available: true,
+  category: 'Finance',
+  howItWorks: 'Each month, interest is applied to the remaining balance, and your payment reduces the principal. The calculator repeats this process until the debt is fully paid off.',
+  exampleUsage: [
+    'Increase monthly payment → reduce payoff time',
+    'Compare different interest rates → see cost impact',
+    'Test repayment strategies → optimize debt payoff'
+  ],
+  relatedTools: ['credit-card-payoff-calculator', 'loan-payment-calculator', 'apr-calculator'],
+  component: DebtPayoffCalculator,
+  seoTitle: 'Debt Payoff Calculator Online | Calculate Debt Repayment Time | SoftwareCalc',
+  seoDescription: 'Free online debt payoff calculator. Estimate how long it takes to pay off debt and how much interest you will pay.',
+  formulaTitle: 'Debt Payoff Calculation',
+  formulaExpression: 'Each payment reduces balance after interest is applied monthly',
+  formulaExplanation: 'Interest is added to the remaining balance each month, and your payment is applied first to interest and then to the principal until the debt is cleared.'
 }
 ];
 
