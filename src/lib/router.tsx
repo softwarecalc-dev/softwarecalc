@@ -15,6 +15,7 @@ import { AboutPage } from '../pages/AboutPage';
 import { ContactPage } from '../pages/ContactPage';
 import { PrivacyPolicyPage } from '../pages/PrivacyPolicyPage';
 import { TermsOfServicePage } from '../pages/TermsOfServicePage';
+import { SeoClusterMap } from '../components/SeoClusterMap';
 import { Button } from '../components/ui/button';
 import { Loader2 } from 'lucide-react';
 
@@ -232,6 +233,12 @@ const termsOfServiceRoute = createRoute({
   component: TermsOfServicePage,
 });
 
+const seoMapRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/seo-map',
+  component: SeoClusterMap,
+});
+
 // Automatic Tool Routes
 const toolRoutes = TOOLS.filter(t => t.available && t.component).map(tool => 
   createRoute({
@@ -292,6 +299,7 @@ const routeTree = rootRoute.addChildren([
   contactRoute,
   privacyPolicyRoute,
   termsOfServiceRoute,
+  seoMapRoute,
   ...toolRoutes,
   ...categoryRoutes,
   loginRoute,
