@@ -293,7 +293,14 @@ const seoMapRoute = createRoute({
   component: SeoClusterMap,
 });
 
+const testRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/test-123',
+  component: () => <div className="p-8">TEST ROUTE WORKS</div>,
+});
+
 const routeTree = rootRoute.addChildren([
+  testRoute,
   indexRoute,
   toolsDirectoryRoute,
   aboutRoute,
