@@ -292,6 +292,12 @@ const resetPasswordRoute = createRoute({
   component: ResetPasswordPage,
 });
 
+const seoMapRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/seo-cluster-map',
+  component: SeoClusterMap,
+});
+
 const routeTree = rootRoute.addChildren([
   indexRoute,
   toolsDirectoryRoute,
