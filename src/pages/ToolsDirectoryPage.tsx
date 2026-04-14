@@ -1,4 +1,4 @@
-import { Link } from '@tanstack/react-router';
+  import { Link } from '@tanstack/react-router';
 import { TOOLS, ToolConfig, CATEGORY_META } from '@/lib/tools';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -29,15 +29,15 @@ export function ToolsDirectoryPage() {
     <div className="min-h-screen bg-background py-10 px-4 md:px-8">
       <div className="max-w-4xl mx-auto space-y-12">
 
-        {/* Header */}
-        <div className="space-y-3">
-          <h1 className="text-4xl font-bold tracking-tight" style={{ fontFamily: 'var(--font-serif)' }}>
-            Tools Directory
-          </h1>
-          <p className="text-muted-foreground text-lg">
-            All calculators and helper tools available on SoftwareCalc, organized by category.
-          </p>
-        </div>
+      {/* Header */}
+      <div className="space-y-3 text-center">
+        <h1 className="text-4xl font-bold tracking-tight" style={{ fontFamily: 'var(--font-serif)' }}>
+          All Online Calculators & Tools
+        </h1>
+        <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          Browse our full collection of free online calculators. Find tools for finance, math, conversions, health, and more. Each calculator is designed to give fast and accurate results with simple inputs.
+        </p>
+      </div>
 
         {/* Category Navigation */}
         <section className="space-y-4">
@@ -46,7 +46,7 @@ export function ToolsDirectoryPage() {
             Category Hubs
           </h2>
           <div className="flex flex-wrap gap-2">
-            {CATEGORY_ORDER.map((cat) => (
+            {activeCategories.map((cat) => (
               <Link
                 key={cat}
                 to={`/${CATEGORY_META[cat].slug}` as '/'}
@@ -67,7 +67,7 @@ export function ToolsDirectoryPage() {
             </div>
 
             <div className="grid gap-3">
-              {grouped[category].map((tool) => (
+              {grouped[category].slice(0, 4).map((tool) => (
                 <Link
                   key={tool.id}
                   to={tool.available ? (tool.href as '/') : undefined}
@@ -113,9 +113,30 @@ export function ToolsDirectoryPage() {
                 </Link>
               ))}
             </div>
+              <div className="pt-2 flex justify-center">
+  <Link to={`/${CATEGORY_META[category].slug}` as '/'}>
+                  <Button variant="outline">
+                    View all {CATEGORY_META[category].title.replace('Online ', '')}
+                  </Button>
+                </Link>
+              </div>
           </section>
         ))}
 
+        <section className="max-w-3xl mx-auto space-y-4 pt-12 text-sm md:text-base">
+  <h2 className="text-2xl font-semibold">
+    Free Online Calculators for Everyday Use
+  </h2>
+
+  <p className="text-muted-foreground">
+    SoftwareCalc provides a wide range of free calculators designed to help with everyday tasks. From financial planning and loan calculations to math problems and unit conversions, our tools are built to be fast, simple, and accurate.
+  </p>
+
+  <p className="text-muted-foreground">
+    You can explore categories like finance calculators for loans, investments, and savings, or use math and conversion tools for quick calculations. Each tool includes clear instructions and explanations so you can understand both the result and how it was calculated.
+  </p>
+</section>
+        
         {/* Back link */}
         <div className="pt-6 border-t">
           <Link to="/">
