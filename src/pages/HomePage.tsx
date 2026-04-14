@@ -5,6 +5,29 @@ import { ArrowRight } from 'lucide-react';
 import { TOOLS } from '@/lib/tools';
 
 export function HomePage() {
+  
+  const financeTools = TOOLS
+  .filter(t => t.category === 'Finance')
+  .sort((a, b) => (b.priority ?? 0) - (a.priority ?? 0))
+  .slice(0, 6);
+
+const incomeTools = TOOLS
+  .filter(t => t.name.toLowerCase().includes('salary') || t.name.toLowerCase().includes('income') || t.name.toLowerCase().includes('commission') || t.name.toLowerCase().includes('hour'))
+  .sort((a, b) => (b.priority ?? 0) - (a.priority ?? 0))
+  .slice(0, 4);
+
+const savingsTools = TOOLS
+  .filter(t => ['Retirement Calculator', 'Savings Goal Calculator', 'Inflation Calculator'].includes(t.name))
+  .sort((a, b) => (b.priority ?? 0) - (a.priority ?? 0));
+
+const otherTools = TOOLS
+  .filter(t =>
+    !financeTools.includes(t) &&
+    !incomeTools.includes(t) &&
+    !savingsTools.includes(t)
+  )
+  .slice(0, 6);
+  
   return (
     <div className="min-h-screen bg-background p-4 md:p-8">
       <div className="max-w-6xl mx-auto space-y-10">
@@ -36,45 +59,101 @@ export function HomePage() {
 
 
         {/* Tools grid — auto-populated from TOOLS registry */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {TOOLS.map((tool) => (
-            <Card
-              key={tool.id}
-              className={`flex flex-col h-full transition-all hover:shadow-lg ${tool.available
-                  ? 'hover:border-primary/50 cursor-pointer'
-                  : 'opacity-75 shadow-none'
-                }`}
-            >
-              <CardHeader className="flex-1">
-                <div className="flex items-center gap-3">
-                  <div className={`p-2 rounded-lg ${tool.available ? 'bg-primary/10' : 'bg-muted'}`}>
-                    <tool.icon
-                      className={`w-6 h-6 ${tool.available ? 'text-primary' : 'text-muted-foreground'}`}
-                    />
-                  </div>
-                  <CardTitle className="text-xl">{tool.name}</CardTitle>
-                </div>
-                <CardDescription className="mt-3 text-sm leading-relaxed">
-                  {tool.description}
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="mt-auto pt-0">
-                {tool.available ? (
-                  <Link to={tool.href as '/'} className="w-full">
-                    <Button className="w-full gap-2 group">
-                      Open Tool
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </Button>
-                  </Link>
-                ) : (
-                  <Button className="w-full" disabled variant="outline">
-                    Coming Soon
-                  </Button>
-                )}
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+{/* FINANCE */}
+<section className="space-y-4">
+  <h2 className="text-2xl font-semibold">Money & Finance Calculators</h2>
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {financeTools.map(tool => (
+      <Card key={tool.id} className="flex flex-col h-full transition-all hover:shadow-lg">
+        <CardHeader className="flex-1">
+          <div className="flex items-center gap-3">
+            <div className="p-2 rounded-lg bg-primary/10">
+              <tool.icon className="w-6 h-6 text-primary" />
+            </div>
+            <CardTitle className="text-xl">{tool.name}</CardTitle>
+          </div>
+          <CardDescription className="mt-3 text-sm leading-relaxed">
+            {tool.description}
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="mt-auto pt-0">
+          <Link to={tool.href as '/'} className="w-full">
+            <Button className="w-full gap-2 group">
+              Open Tool
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </Link>
+        </CardContent>
+      </Card>
+    ))}
+  </div>
+</section>
+
+{/* INCOME */}
+<section className="space-y-4 mt-12">
+  <h2 className="text-2xl font-semibold">Income & Salary Tools</h2>
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {incomeTools.map(tool => (
+      <Card key={tool.id} className="flex flex-col h-full transition-all hover:shadow-lg">
+        <CardHeader className="flex-1">
+          <CardTitle className="text-xl">{tool.name}</CardTitle>
+          <CardDescription className="mt-3 text-sm">
+            {tool.description}
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="mt-auto pt-0">
+          <Link to={tool.href as '/'} className="w-full">
+            <Button className="w-full">Open Tool</Button>
+          </Link>
+        </CardContent>
+      </Card>
+    ))}
+  </div>
+</section>
+
+{/* SAVINGS */}
+<section className="space-y-4 mt-12">
+  <h2 className="text-2xl font-semibold">Savings & Long-term Planning</h2>
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {savingsTools.map(tool => (
+      <Card key={tool.id} className="flex flex-col h-full transition-all hover:shadow-lg">
+        <CardHeader className="flex-1">
+          <CardTitle className="text-xl">{tool.name}</CardTitle>
+          <CardDescription className="mt-3 text-sm">
+            {tool.description}
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="mt-auto pt-0">
+          <Link to={tool.href as '/'} className="w-full">
+            <Button className="w-full">Open Tool</Button>
+          </Link>
+        </CardContent>
+      </Card>
+    ))}
+  </div>
+</section>
+
+{/* OTHER */}
+<section className="space-y-4 mt-12">
+  <h2 className="text-2xl font-semibold">Other Tools</h2>
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {otherTools.map(tool => (
+      <Card key={tool.id} className="flex flex-col h-full transition-all hover:shadow-lg">
+        <CardHeader className="flex-1">
+          <CardTitle className="text-xl">{tool.name}</CardTitle>
+          <CardDescription className="mt-3 text-sm">
+            {tool.description}
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="mt-auto pt-0">
+          <Link to={tool.href as '/'} className="w-full">
+            <Button className="w-full">Open Tool</Button>
+          </Link>
+        </CardContent>
+      </Card>
+    ))}
+  </div>
+</section>
 
         {/* 👇 PASTE HERE */}
         <section className="max-w-3xl mx-auto space-y-4 text-sm md:text-base pt-6">
