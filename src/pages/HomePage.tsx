@@ -2,7 +2,7 @@ import { Link } from '@tanstack/react-router';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
-import { TOOLS } from '@/lib/tools';
+import { TOOLS, CATEGORY_META } from '@/lib/tools';
 
 export function HomePage() {
   
@@ -58,100 +58,65 @@ const otherTools = TOOLS
         {/* Homepage content */}
 
 
-        {/* Tools grid — auto-populated from TOOLS registry */}
-{/* FINANCE */}
-<section className="space-y-4">
-  <h2 className="text-2xl font-semibold">Money & Finance Calculators</h2>
+{/* CATEGORY SECTION */}
+<section className="space-y-6 pt-10">
+  <h2 className="text-2xl font-semibold text-center">
+    Browse Calculators by Category
+  </h2>
+
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    {financeTools.map(tool => (
-      <Card key={tool.id} className="flex flex-col h-full transition-all hover:shadow-lg">
-        <CardHeader className="flex-1">
-          <div className="flex items-center gap-3">
-            <div className="p-2 rounded-lg bg-primary/10">
-              <tool.icon className="w-6 h-6 text-primary" />
-            </div>
-            <CardTitle className="text-xl">{tool.name}</CardTitle>
-          </div>
-          <CardDescription className="mt-3 text-sm leading-relaxed">
-            {tool.description}
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="mt-auto pt-0">
-          <Link to={tool.href as '/'} className="w-full">
-            <Button className="w-full gap-2 group">
-              Open Tool
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </Link>
-        </CardContent>
-      </Card>
+
+    {Object.entries(CATEGORY_META).map(([key, category]) => (
+      <Link key={key} to={`/${category.slug}`}>
+        <Card className="h-full hover:shadow-lg transition-all cursor-pointer">
+          <CardHeader>
+            <CardTitle className="text-xl">{category.title}</CardTitle>
+            <CardDescription className="mt-2">
+              {category.description}
+            </CardDescription>
+          </CardHeader>
+
+          <CardContent>
+          <Button className="w-full">
+            View {category.title.replace('Online ', '')}
+          </Button>
+          </CardContent>
+        </Card>
+      </Link>
     ))}
+
   </div>
 </section>
+      {/* FEATURED FINANCE TOOLS */}
+<section className="space-y-4 pt-12">
+  <h2 className="text-2xl font-semibold text-center">
+    Most Popular Finance Calculators
+  </h2>
 
-{/* INCOME */}
-<section className="space-y-4 mt-12">
-  <h2 className="text-2xl font-semibold">Income & Salary Tools</h2>
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    {incomeTools.map(tool => (
-      <Card key={tool.id} className="flex flex-col h-full transition-all hover:shadow-lg">
-        <CardHeader className="flex-1">
-          <CardTitle className="text-xl">{tool.name}</CardTitle>
-          <CardDescription className="mt-3 text-sm">
-            {tool.description}
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="mt-auto pt-0">
-          <Link to={tool.href as '/'} className="w-full">
-            <Button className="w-full">Open Tool</Button>
-          </Link>
-        </CardContent>
-      </Card>
-    ))}
-  </div>
-</section>
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    {TOOLS
+      .filter(t =>
+        [
+          'mortgage-calculator',
+          'loan-payment-calculator',
+          'credit-card-payoff-calculator',
+          'investment-calculator'
+        ].includes(t.id)
+      )
+      .map(tool => (
+        <Card key={tool.id} className="hover:shadow-lg transition-all">
+          <CardHeader>
+            <CardTitle>{tool.name}</CardTitle>
+            <CardDescription>{tool.description}</CardDescription>
+          </CardHeader>
 
-{/* SAVINGS */}
-<section className="space-y-4 mt-12">
-  <h2 className="text-2xl font-semibold">Savings & Long-term Planning</h2>
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    {savingsTools.map(tool => (
-      <Card key={tool.id} className="flex flex-col h-full transition-all hover:shadow-lg">
-        <CardHeader className="flex-1">
-          <CardTitle className="text-xl">{tool.name}</CardTitle>
-          <CardDescription className="mt-3 text-sm">
-            {tool.description}
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="mt-auto pt-0">
-          <Link to={tool.href as '/'} className="w-full">
-            <Button className="w-full">Open Tool</Button>
-          </Link>
-        </CardContent>
-      </Card>
-    ))}
-  </div>
-</section>
-
-{/* OTHER */}
-<section className="space-y-4 mt-12">
-  <h2 className="text-2xl font-semibold">Other Tools</h2>
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    {otherTools.map(tool => (
-      <Card key={tool.id} className="flex flex-col h-full transition-all hover:shadow-lg">
-        <CardHeader className="flex-1">
-          <CardTitle className="text-xl">{tool.name}</CardTitle>
-          <CardDescription className="mt-3 text-sm">
-            {tool.description}
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="mt-auto pt-0">
-          <Link to={tool.href as '/'} className="w-full">
-            <Button className="w-full">Open Tool</Button>
-          </Link>
-        </CardContent>
-      </Card>
-    ))}
+          <CardContent>
+            <Link to={tool.href as '/'} className="w-full">
+              <Button className="w-full">Open</Button>
+            </Link>
+          </CardContent>
+        </Card>
+      ))}
   </div>
 </section>
 
@@ -171,6 +136,18 @@ const otherTools = TOOLS
             calculation as well as the answer.
           </p>
         </section>
+{/* CTA SECTION */}
+<section className="text-center pt-12 space-y-3">
+  <h3 className="text-xl font-semibold">
+    Explore all tools in one place
+  </h3>
+
+  <Link to="/tools">
+    <Button size="lg">
+      Open Tools Hub
+    </Button>
+  </Link>
+</section>
 
       </div>
     </div>
