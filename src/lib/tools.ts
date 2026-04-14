@@ -591,8 +591,8 @@ howToUse: [
     name: 'Compound Interest Calculator',
     description:
       'Calculate compound interest and visualize investment growth over time with a chart.',
-    aboutText: 'The Compound Interest Calculator helps you estimate how an investment grows over time when interest is compounded. It calculates how your balance increases as interest is applied to both the original principal and previously earned interest. This tool is useful for long-term financial planning, retirement savings, and investment projections. It also helps visualize how regular contributions and compounding frequency impact total growth. If you want to calculate simple percentage gains or returns, you may also find the [Percentage Calculator](/percentage-calculator) helpful.',
-
+aboutText: 'The Compound Interest Calculator helps you understand how money grows over time when returns are reinvested. Unlike simple interest, compound interest means you earn returns not only on your initial investment, but also on the interest already generated. Over long periods, this creates exponential growth and is one of the most powerful concepts in investing. This calculator is especially useful for long-term financial planning, retirement goals, and comparing different investment strategies. It also shows how small monthly contributions can significantly increase your final balance over time. If you want to compare basic percentage-based growth, you can also use the [Percentage Calculator](/percentage-calculator).',
+    
     howToUse: [
       'Enter your initial investment amount.',
       'Input the interest rate and compounding frequency.',
@@ -604,15 +604,15 @@ howToUse: [
     available: true,
     category: 'Finance',
     howItWorks:
-      'Compound interest grows an investment by earning interest on both the initial principal and the accumulated interest from previous periods. The more frequently interest is compounded, the faster your investment grows. This tool calculates your final balance and shows a year-by-year chart of your investment value versus total contributions.',
+  'Compound interest works by continuously reinvesting earned interest back into the investment. This means each calculation period generates returns not only on the original principal, but also on all previously earned interest. Over time, this creates exponential growth rather than linear growth. The calculator simulates this process step-by-step, applying your chosen interest rate, compounding frequency, and optional contributions to show how your investment evolves over time. It also separates total contributions from total interest earned so you can clearly see what portion of your growth comes from investing versus compounding.',
     exampleUsage: [
-      '$10,000 invested at 5% annually for 20 years → $26,533',
-      '$500 monthly contributions at 7% monthly for 30 years → $566,765',
-      'Long-term investment growth simulation with different compounding frequencies',
-    ],
+  '$10,000 invested at 5% annually for 20 years → $26,533 total value (more than double from interest alone)',
+  '$500 monthly contributions at 7% return over 30 years → $566,765 total value (majority from compound growth)',
+  'Long-term investing scenario showing how consistent contributions can outperform one-time investments'
+],
     relatedTools: ['profit-margin-calculator', 'percentage-calculator', 'commission-calculator'],
     component: CompoundInterestCalculator,
-    seoTitle: 'Compound Interest Calculator Online | Investment Growth & Interest Chart | SoftwareCalc',
+    seoTitle: 'Compound Interest Calculator Online | Investment Growth Calculator & Chart',
     seoDescription: 'Free online compound interest calculator. Estimate investment growth, interest earnings, and future value with optional regular contributions and compounding.',
   },
   {
@@ -914,7 +914,7 @@ howToUse: [
     id: 'loan-payment-calculator',
     name: 'Loan Payment Calculator',
     description: 'Calculate monthly loan payments, total interest, payoff date, and savings from extra payments.',
-    aboutText: "Use this Loan Payment Calculator to estimate your monthly loan payment, total repayment amount, total interest, and payoff date for a fixed-rate loan. You can enter a loan amount, annual interest rate, loan term, optional down payment, and extra monthly payment to see how each factor affects the overall cost of borrowing. The calculator also shows an amortization schedule, helping you understand how each payment is split between principal and interest over time. This can be useful for personal loans, auto loans, and other installment loans. If you want to estimate long-term growth instead of borrowing costs, see the [Compound Interest Calculator](/compound-interest-calculator). For a simpler non-amortized interest estimate, the [Simple Interest Calculator](/simple-interest-calculator) may also be helpful.",
+    aboutText: "The Loan Payment Calculator helps you understand the true cost of borrowing by showing how a loan is repaid over time through fixed monthly payments. Each payment is split between interest and principal, and this balance changes over the life of the loan. In the early years, most of your payment goes toward interest, while later payments reduce the loan balance faster. This calculator is useful when comparing different loan options such as personal loans, car loans, or other installment loans. It also helps you see how changes in interest rate, loan term, or extra monthly payments can significantly affect the total cost and payoff time. Understanding these factors can help you make better borrowing decisions and potentially save a large amount in interest over time. For investment growth scenarios, you can use the [Compound Interest Calculator](/compound-interest-calculator) instead.",
     howToUse: [
       'Enter the total loan amount.',
       'Add the annual interest rate for the loan.',
@@ -927,15 +927,15 @@ howToUse: [
     icon: Banknote,
     available: true,
     category: 'Finance',
-    howItWorks: 'This calculator uses the standard amortization formula for fixed-rate loans to calculate the monthly payment required to repay the financed amount over the selected term. It then breaks each payment into interest and principal, updates the remaining balance month by month, and estimates the payoff date. When an extra monthly payment is added, the calculator recomputes the schedule to show how much time and interest can be saved.',
-      exampleUsage: [
-      '$20,000 loan at 6% for 5 years → monthly payment and total interest estimate',
-      'Add an extra monthly payment to see payoff time reduction',
-      'Subtract a down payment to calculate the actual financed amount'
-    ],
+    howItWorks: "A loan is repaid through fixed monthly payments calculated using a standard amortisation formula. Each payment includes both interest (the cost of borrowing) and principal (the amount you actually repay). At the beginning of the loan, interest makes up a larger portion of each payment, while over time more of your payment goes toward reducing the loan balance. This calculator simulates that repayment process month by month, updating the remaining balance and showing how long it takes to fully repay the loan. If you add extra monthly payments, the calculator recalculates the schedule and shows how much faster you can pay off the loan and how much interest you can save overall.",
+    exampleUsage: [
+    'Compare a $25,000 car loan at 6% over 5 years to see total interest paid over time',
+    'Add an extra $200 monthly payment to see how many years of repayment you can eliminate',
+    'Adjust interest rate from 5% to 8% to understand how borrowing cost changes significantly between lenders'
+  ],
     relatedTools: ['compound-interest-calculator', 'percentage-calculator', 'simple-interest-calculator'],
     component: LoanPaymentCalculator,
-    seoTitle: 'Loan Payment Calculator Online | Monthly Payment, Interest & Payoff | SoftwareCalc',
+    seoTitle: 'Loan Payment Calculator Online | Monthly Payments, Interest & Payoff Schedule',
     seoDescription: 'Free online loan payment calculator to estimate monthly payments, total interest, total repayment, payoff date, and amortization schedule for fixed-rate loans.'
   },
   {
@@ -972,7 +972,7 @@ howToUse: [
     id: 'salary-after-tax-calculator',
     name: 'Salary After Tax Calculator',
     description: 'Calculate your take-home salary after tax based on gross income and tax rate.',
-    aboutText: ` Use this Salary After Tax Calculator to estimate your take-home pay after taxes. Enter your gross salary and tax rate to quickly see how much income you keep after deductions. This tool is useful for comparing job offers, budgeting monthly expenses, and understanding how taxes affect your income. You can view both monthly and yearly net salary to better plan your finances. If you want to calculate how long it takes to build savings from your income, try the [Savings Goal Calculator](/savings-goal-calculator). For long-term growth projections, you can also use the [Compound Interest Calculator](/compound-interest-calculator). `,
+    aboutText: `The Salary After Tax Calculator helps you understand how much of your income you actually keep after taxes are deducted. Your gross salary can often look much higher than your real take-home pay, especially in countries with higher tax rates or additional deductions. This calculator helps you quickly compare gross and net income so you can make better decisions when evaluating job offers, planning a budget, or negotiating salary. It is especially useful when comparing different income levels or understanding how tax rates impact your monthly lifestyle. You can also use the [Savings Goal Calculator](/savings-goal-calculator) to plan how much you can save from your net income, or the [Compound Interest Calculator](/compound-interest-calculator) for long-term growth planning.`,
     howToUse: [
       'Enter your gross salary amount.',
       'Enter the tax rate as a percentage.',
@@ -983,18 +983,18 @@ howToUse: [
     icon: Banknote,
     available: true,
     category: 'Finance',
-    howItWorks: 'The calculator multiplies your gross salary by the tax rate to find the tax amount, then subtracts it to give the net salary. For yearly input it shows monthly equivalents; for monthly input it shows the annual projection.',
+    howItWorks: 'Income tax reduces your gross salary before you receive it as take-home pay. This calculator applies the tax rate to your gross income and subtracts it to determine your net salary. It also converts between monthly and yearly values depending on your input, helping you understand how your income changes across different time periods. The result shows both total tax paid and final take-home income so you can clearly see the impact of taxation on your earnings.',
     exampleUsage: [
-      'Gross 50,000 at 20% tax → Net 40,000 per year',
-      'Gross 4,000/month at 25% tax → Net 3,000/month, 36,000/year',
-      'See your monthly breakdown across all 12 months'
-    ],
+    'Gross salary of 60,000 with 30% tax → see real take-home income after deductions',
+    'Compare two job offers with different salaries and tax rates to understand actual earnings',
+    'Convert monthly salary into yearly net income to better plan long-term budgeting'
+  ],
     relatedTools: ['simple-interest-calculator', 'commission-calculator', 'profit-margin-calculator'],
     component: SalaryAfterTaxCalculator,
     formulaTitle: 'Net Salary Formula',
     formulaExpression: 'Net Salary = Gross Salary × (1 − Tax Rate)',
     formulaExplanation: 'The calculator subtracts tax from your gross salary using the provided tax rate. The result is your take-home (net) income.',
-    seoTitle: 'Salary After Tax Calculator Online (Net Salary)',
+    seoTitle: 'Salary After Tax Calculator Online | Net Income & Take-Home Pay',
     seoDescription: 'Calculate your take-home salary after tax. Enter your gross income and tax rate to estimate net pay instantly.'
   },
   {
@@ -1120,7 +1120,7 @@ howToUse: [
     id: 'mortgage-calculator',
     name: 'Mortgage Calculator',
     description: 'Estimate monthly mortgage payments and total cost of a home loan.',
-    aboutText: 'The Mortgage Calculator helps you estimate your monthly mortgage payment and total cost of a home loan. Enter the home price, down payment, interest rate, and loan term to see your monthly obligation, total repayment, and how much you will pay in interest over the life of the loan. This tool is useful for budgeting a home purchase, comparing loan terms, or understanding how the down payment affects monthly costs. For a deeper look at borrowing costs including fees, try the [APR Calculator](/apr-calculator). To plan how long it might take to save for a down payment, see the [Savings Goal Calculator](/savings-goal-calculator).',
+    aboutText: 'The Mortgage Calculator helps you understand the real long-term cost of buying a home by showing how your monthly payment is built from loan amount, interest rate, and repayment time. A mortgage is usually the largest financial commitment most people make, and even small changes in interest rate or loan term can significantly affect total repayment. This calculator helps you compare different scenarios such as shorter vs longer loan terms, or how increasing your down payment reduces both monthly cost and total interest paid over time. It is especially useful when planning a home purchase, comparing mortgage offers, or testing how much house you can realistically afford. For more detailed borrowing cost analysis including fees, you can also use the [APR Calculator](/apr-calculator).',
     howToUse: [
       'Enter the home price.',
       'Enter your down payment amount.',
@@ -1131,18 +1131,18 @@ howToUse: [
     icon: TrendingUp,
     available: true,
     category: 'Finance',
-    howItWorks: 'The calculator subtracts the down payment from the home price to find the loan amount. It then applies the standard amortisation formula to compute the fixed monthly payment required to repay the loan at the given interest rate over the chosen term.',
+    howItWorks: 'A mortgage is repaid through fixed monthly payments that include both interest and principal. In the early years, a larger portion of each payment goes toward interest, while later payments contribute more toward reducing the loan balance. This calculator uses the standard amortisation formula to simulate this repayment structure over time. It calculates your monthly payment based on the loan amount after down payment, applies the interest rate on a monthly basis, and spreads the repayment across the selected loan term. It also shows total repayment and total interest so you can clearly see the long-term cost difference between loan options.',
     exampleUsage: [
-      'Home 300,000 with 60,000 down at 6.5% for 30 years → monthly payment estimate',
-      'Compare a 15-year vs 30-year mortgage to see total interest difference',
-      'See how a larger down payment reduces monthly cost and total interest'
-    ],
+    'Compare a $300,000 home with 10% vs 20% down payment to see how monthly payments change significantly',
+    'Test a 15-year mortgage vs 30-year mortgage to understand how shorter terms reduce total interest but increase monthly cost',
+    'Adjust interest rate from 5% to 7% to see how even small rate changes impact long-term affordability'
+],
     relatedTools: ['loan-payment-calculator', 'apr-calculator', 'savings-goal-calculator'],
     component: MortgageCalculator,
     formulaTitle: 'Mortgage Payment Formula',
     formulaExpression: 'M = P × [r(1+r)^n] ÷ [(1+r)^n − 1]',
     formulaExplanation: 'P is the loan amount (home price minus down payment), r is the monthly interest rate (annual rate ÷ 12), and n is the total number of monthly payments (years × 12).',
-    seoTitle: 'Mortgage Calculator Online | Monthly Payment & Home Loan Cost',
+    seoTitle: 'Mortgage Calculator Online | Monthly Payment, Interest & Home Loan Cost',
     seoDescription: 'Free mortgage calculator. Estimate monthly payments, loan amount, total interest, and total cost based on home price and down payment.'
   },
   {
@@ -2156,7 +2156,7 @@ howToUse: [
   id: 'credit-card-payoff-calculator',
   name: 'Credit Card Payoff Calculator',
   description: 'Calculate how long it will take to pay off your credit card and how much interest you will pay.',
-  aboutText: 'The Credit Card Payoff Calculator helps you understand how long it will take to pay off your credit card balance and how much interest you will pay over time. By entering your balance, interest rate, and monthly payment, you can see a clear breakdown of your repayment timeline. You can also test the impact of making extra payments to reduce interest and pay off debt faster. If you are managing multiple debts, you may also find the [Debt to Income Calculator](/debt-to-income-calculator) or [Loan Payment Calculator](/loan-payment-calculator) useful.',
+  aboutText: 'The Credit Card Payoff Calculator helps you understand how long it will take to completely pay off your credit card debt and how much interest you will end up paying. Credit cards often have high interest rates, which means that making only minimum payments can keep you in debt for many years. This calculator shows how your balance decreases over time based on your monthly payment, and how even small increases in payments can significantly reduce both payoff time and total interest. It is especially useful for planning debt repayment strategies and understanding the real cost of carrying a balance. If you are comparing different debt situations, you may also find the [Debt to Income Calculator](/debt-to-income-calculator) or [Loan Payment Calculator](/loan-payment-calculator) useful.',
   howToUse: [
     'Enter your credit card balance.',
     'Enter the annual interest rate.',
@@ -2168,15 +2168,15 @@ howToUse: [
   icon: Banknote,
   available: true,
   category: 'Finance',
-  howItWorks: 'The calculator simulates monthly payments by applying interest to the remaining balance and subtracting your payment each month. It continues until the balance reaches zero, tracking total interest and total payments along the way.',
+  howItWorks: 'Credit card balances grow monthly because interest is applied to the remaining balance before your payment is subtracted. If your payment is too low, a large portion goes toward interest instead of reducing the principal. This calculator simulates that process month by month, showing how your balance decreases over time. It also calculates total interest paid and total repayment amount, and demonstrates how increasing your monthly payment or adding extra payments can significantly shorten your debt timeline.',
   exampleUsage: [
-    'Balance 5000 at 18% with 150/month → payoff timeline and interest',
-    'Balance 2000 at 20% with extra payments → faster payoff',
-    'Compare different payment amounts to reduce interest cost'
-  ],
+  'Balance $5,000 at 18% interest with $150 monthly payment → see payoff timeline and total interest cost',
+  'Increase monthly payment by $50 to see how many months of debt you can eliminate',
+  'Compare minimum payment vs fixed payment strategy to understand long-term interest impact'
+],
   relatedTools: ['loan-payment-calculator', 'apr-calculator', 'debt-to-income-calculator'],
   component: CreditCardPayoffCalculator,
-  seoTitle: 'Credit Card Payoff Calculator Online | Pay Off Debt Faster | SoftwareCalc',
+  seoTitle: 'Credit Card Payoff Calculator Online | Debt Payoff & Interest Savings Tool',
   seoDescription: 'Free online credit card payoff calculator. Enter your balance, interest rate, and payment to calculate payoff time and total interest.',
   formulaTitle: 'Credit Card Payoff Calculation',
   formulaExpression: 'Balance updated monthly using interest and payments',
@@ -2186,7 +2186,7 @@ howToUse: [
   id: 'investment-calculator',
   name: 'Investment Calculator',
   description: 'Calculate investment growth with compound interest and monthly contributions.',
-  aboutText: 'The Investment Calculator helps you estimate how your money can grow over time with compound interest and regular contributions. By entering an initial investment, monthly deposits, and an expected return rate, you can see how your balance increases and how much of your growth comes from interest versus contributions. This is useful for long-term investing, savings planning, and understanding the power of compounding. If you are planning retirement or savings goals, you may also find the [Retirement Calculator](/retirement-calculator) or [Savings Goal Calculator](/savings-goal-calculator) useful.',
+  aboutText: `The Investment Calculator helps you understand how your money can grow over time by combining regular contributions with compound interest. It is designed to show the long-term impact of consistent investing, where both your deposits and the returns they generate contribute to overall growth. This is especially useful when planning long-term financial goals such as building wealth, saving for retirement, or comparing different investment strategies. Even small changes in monthly contributions or expected return rates can have a significant impact over time. The calculator also helps you see how much of your final balance comes from your own contributions versus investment growth, giving you a clearer picture of how your money is working for you. For retirement-focused planning, you can also use the [Retirement Calculator](/retirement-calculator) or [Savings Goal Calculator](/savings-goal-calculator).`,
   howToUse: [
     'Enter your initial investment.',
     'Enter your monthly contribution.',
@@ -2198,15 +2198,15 @@ howToUse: [
   icon: TrendingUp,
   available: true,
   category: 'Finance',
-  howItWorks: 'The calculator simulates monthly compounding by adding contributions and applying interest each month. Over time, both your deposits and earned interest contribute to growth.',
+  howItWorks: 'Investment growth happens through two combined effects: your regular contributions and compound interest. Each month, your contribution is added to the total balance, and interest is applied to the updated amount. Over time, this creates exponential growth where returns generate additional returns. This calculator simulates that process step-by-step to show how your investment evolves, how much you contribute yourself, and how much comes from growth over time.',
   exampleUsage: [
-    'Start with 1000 and invest monthly → long-term growth',
-    'Increase monthly contributions → faster balance growth',
-    'Compare different return rates → impact on total value'
-  ],
+  'Invest 200 per month with 7% return → see long-term portfolio growth',
+  'Increase monthly contribution from 200 to 300 → compare long-term impact',
+  'Compare 5% vs 8% return rates → understand how investment performance affects total wealth'
+],
   relatedTools: ['compound-interest-calculator', 'retirement-calculator', 'savings-goal-calculator'],
   component: InvestmentCalculator,
-  seoTitle: 'Investment Calculator Online | Compound Growth with Contributions | SoftwareCalc',
+  seoTitle: 'Investment Calculator Online | Compound Growth & Monthly Contributions',
   seoDescription: 'Free online investment calculator. Estimate how your savings grow with compound interest and monthly contributions over time.',
   formulaTitle: 'Compound Growth with Contributions',
   formulaExpression: 'Balance grows monthly with contributions and interest',
