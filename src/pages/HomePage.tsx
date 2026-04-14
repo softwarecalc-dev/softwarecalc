@@ -33,7 +33,7 @@ const otherTools = TOOLS
       <div className="max-w-6xl mx-auto space-y-10">
         {/* Header */}
         <div className="text-center space-y-4 pt-4">
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight">
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
             Free Online Calculators for Finance, Math
             <br className="hidden md:block" />
               & Everyday Use
