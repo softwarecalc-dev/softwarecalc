@@ -66,7 +66,11 @@ const otherTools = TOOLS
 
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-    {Object.entries(CATEGORY_META).map(([key, category]) => (
+    Object.entries(CATEGORY_META)
+      .filter(([key]) =>
+        TOOLS.some(tool => tool.category === key && tool.available)
+      )
+      .map(([key, category]) => (
       <Link key={key} to={`/${category.slug}`}>
         <Card className="h-full hover:shadow-lg transition-all cursor-pointer">
           <CardHeader>
