@@ -33,12 +33,12 @@ const otherTools = TOOLS
       <div className="max-w-6xl mx-auto space-y-10">
         {/* Header */}
         <div className="text-center space-y-4 pt-4">
-          <h1
-            className="text-4xl md:text-5xl font-bold tracking-tight"
-            style={{ fontFamily: 'var(--font-serif)' }}
-          >
-            Free Online Calculators for Finance, Math & Everyday Use
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight">
+            Free Online Calculators for Finance, Math
+            <br className="hidden md:block" />
+              & Everyday Use
           </h1>
+          
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             SoftwareCalc is a collection of free online calculators designed to help you solve everyday problems quickly and easily.
             Whether you need to calculate loan payments, savings growth, percentages, or taxes, our tools give you accurate results instantly.
