@@ -53,7 +53,7 @@ function Navigation() {
             className="text-muted-foreground hover:text-foreground transition-colors"
             activeProps={{ className: 'text-foreground font-medium' }}
           >
-            Directory
+            Tools
           </Link>
 
 
@@ -101,7 +101,7 @@ function MainLayout() {
     // Update page title and description
     const staticTitleMap: Record<string, string> = {
       '/': 'SoftwareCalc – Online Tools & Calculators',
-      '/tools': 'Tools Directory – SoftwareCalc',
+      '/tools': 'Tools – SoftwareCalc',
       '/about': 'About – SoftwareCalc',
       '/contact': 'Contact – SoftwareCalc',
       '/privacy-policy': 'Privacy Policy – SoftwareCalc',
