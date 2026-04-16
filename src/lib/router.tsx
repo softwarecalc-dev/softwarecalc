@@ -91,12 +91,31 @@ function MainLayout() {
   const { consent } = useCookieConsent();
   const location = useLocation();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
+ useEffect(() => {
+  window.scrollTo(0, 0);
 
-    if (consent === 'accepted') {
-      trackPageView(location.pathname);
-    }
+  if (consent === 'accepted') {
+    trackPageView(location.pathname);
+  }
+
+  // ✅ ALWAYS run canonical (outside consent)
+  let canonical = document.querySelector("link[rel='canonical']");
+  if (!canonical) {
+    canonical = document.createElement('link');
+    canonical.setAttribute('rel', 'canonical');
+    document.head.appendChild(canonical);
+  }
+
+  const url = new URL(window.location.href);
+  const cleanHost = url.hostname.replace('www.', '');
+
+  canonical.setAttribute(
+    'href',
+    `${url.protocol}//${cleanHost}${url.pathname}`
+  );
+
+  // Update page title and description
+  const staticTitleMap: Record<string, string> = {
 
     // Update page title and description
     const staticTitleMap: Record<string, string> = {
