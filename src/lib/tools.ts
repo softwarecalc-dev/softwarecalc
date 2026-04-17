@@ -968,7 +968,7 @@ howToUse: [
     formulaExplanation: 'Savings grow monthly until the target goal amount is reached.',
     seoTitle: 'Savings Goal Calculator Online | How Long to Reach Your Goal',
     seoDescription: 'Calculate how long it takes to reach your savings goal with monthly contributions. Free online savings goal planner.'
-  }  
+  },  
   {
     id: 'salary-after-tax-calculator',
     name: 'Salary After Tax Calculator',
