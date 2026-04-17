@@ -591,7 +591,7 @@ howToUse: [
     name: 'Compound Interest Calculator',
     description:
       'Calculate compound interest and visualize investment growth over time with a chart.',
-aboutText: 'The Compound Interest Calculator helps you understand how money grows over time when returns are reinvested. Unlike simple interest, compound interest means you earn returns not only on your initial investment, but also on the interest already generated. Over long periods, this creates exponential growth and is one of the most powerful concepts in investing. This calculator is especially useful for long-term financial planning, retirement goals, and comparing different investment strategies. It also shows how small monthly contributions can significantly increase your final balance over time. If you want to compare basic percentage-based growth, you can also use the [Percentage Calculator](/percentage-calculator).',
+    aboutText: 'The Compound Interest Calculator helps you estimate how an investment grows over time when interest is continuously reinvested. This is especially useful for understanding passive growth, where you invest a lump sum and let it compound without needing frequent contributions. For example, investing $10,000 at a fixed annual return can grow significantly over time due to interest being earned on both the initial amount and previously generated returns. This makes it ideal for long-term scenarios such as retirement savings or holding investments without active management. If you want to model regular monthly investing instead, you can use the [Investment Calculator](/investment-calculator).',
     
     howToUse: [
       'Enter your initial investment amount.',
@@ -610,9 +610,9 @@ aboutText: 'The Compound Interest Calculator helps you understand how money grow
   '$500 monthly contributions at 7% return over 30 years → $566,765 total value (majority from compound growth)',
   'Long-term investing scenario showing how consistent contributions can outperform one-time investments'
 ],
-    relatedTools: ['profit-margin-calculator', 'percentage-calculator', 'commission-calculator'],
+    relatedTools: ['investment-calculator', 'roi-calculator', 'percentage-calculator'],
     component: CompoundInterestCalculator,
-    seoTitle: 'Compound Interest Calculator Online | Investment Growth Calculator & Chart',
+    seoTitle: 'Compound Interest Calculator Online | Lump Sum Investment Growth',
     seoDescription: 'Free online compound interest calculator. Estimate investment growth, interest earnings, and future value with optional regular contributions and compounding.',
   },
   {
@@ -1254,7 +1254,7 @@ aboutText: 'The Compound Interest Calculator helps you understand how money grow
   id: 'roi-calculator',
   name: 'ROI Calculator',
   description: 'Calculate return on investment (ROI) and profit based on investment and return amount.',
-  aboutText: 'The ROI Calculator helps you measure how profitable an investment is by calculating the return on investment as a percentage. It compares the amount you invested with the amount you received to show both your profit and ROI. This tool is commonly used in finance, business, and investing to evaluate performance and compare opportunities. If you want to estimate how quickly an investment pays back, you may also find the [Payback Period Calculator](/payback-period-calculator) useful. For long-term growth estimates, the [Compound Interest Calculator](/compound-interest-calculator) can also help.',
+  aboutText: 'The ROI Calculator helps you evaluate how profitable an investment or business decision is by calculating the return on investment as a percentage. Unlike long-term growth calculators, this tool is designed for analyzing completed or short-term investments, allowing you to quickly determine whether a project or purchase was worth the cost. For example, if you invest $1,000 and receive $1,300 in return, the calculator shows both your profit and ROI percentage. This makes it useful for comparing different opportunities and making data-driven financial decisions. For long-term growth projections, you can use the [Investment Calculator](/investment-calculator) or [Compound Interest Calculator](/compound-interest-calculator).',
   howToUse: [
     'Enter the initial investment amount.',
     'Enter the total return amount.',
@@ -2186,7 +2186,7 @@ aboutText: 'The Compound Interest Calculator helps you understand how money grow
   id: 'investment-calculator',
   name: 'Investment Calculator',
   description: 'Calculate investment growth with compound interest and monthly contributions.',
-  aboutText: `The Investment Calculator helps you understand how your money can grow over time by combining regular contributions with compound interest. It is designed to show the long-term impact of consistent investing, where both your deposits and the returns they generate contribute to overall growth. This is especially useful when planning long-term financial goals such as building wealth, saving for retirement, or comparing different investment strategies. Even small changes in monthly contributions or expected return rates can have a significant impact over time. The calculator also helps you see how much of your final balance comes from your own contributions versus investment growth, giving you a clearer picture of how your money is working for you. For retirement-focused planning, you can also use the [Retirement Calculator](/retirement-calculator) or [Savings Goal Calculator](/savings-goal-calculator).`,
+  aboutText: `The Investment Calculator helps you estimate how your savings grow when you invest regularly over time. Unlike simple compound interest scenarios, this tool focuses on active investing where you make consistent monthly contributions. This is especially useful for planning long-term goals like retirement or building wealth gradually. For example, investing $300 per month at a 7% annual return over 25 years can result in a significantly larger portfolio due to the combined effect of contributions and compounding. This calculator allows you to adjust contribution amounts and return rates to compare different investment strategies. If you want to calculate growth from a one-time investment only, you can use the [Compound Interest Calculator](/compound-interest-calculator).`,
   howToUse: [
     'Enter your initial investment.',
     'Enter your monthly contribution.',
@@ -2200,13 +2200,13 @@ aboutText: 'The Compound Interest Calculator helps you understand how money grow
   category: 'Finance',
   howItWorks: 'Investment growth happens through two combined effects: your regular contributions and compound interest. Each month, your contribution is added to the total balance, and interest is applied to the updated amount. Over time, this creates exponential growth where returns generate additional returns. This calculator simulates that process step-by-step to show how your investment evolves, how much you contribute yourself, and how much comes from growth over time.',
   exampleUsage: [
-  'Invest 200 per month with 7% return → see long-term portfolio growth',
-  'Increase monthly contribution from 200 to 300 → compare long-term impact',
-  'Compare 5% vs 8% return rates → understand how investment performance affects total wealth'
+  'Invest $300 per month at 7% for 25 years → estimate long-term portfolio growth',
+  'Increase monthly contributions from $200 to $400 → compare total outcome',
+  'Compare 5% vs 8% returns → see how performance impacts final balance'
 ],
   relatedTools: ['compound-interest-calculator', 'retirement-calculator', 'savings-goal-calculator'],
   component: InvestmentCalculator,
-  seoTitle: 'Investment Calculator Online | Compound Growth & Monthly Contributions',
+  seoTitle: 'Investment Calculator Online | Monthly Contributions & Growth',
   seoDescription: 'Free online investment calculator. Estimate how your savings grow with compound interest and monthly contributions over time.',
   formulaTitle: 'Compound Growth with Contributions',
   formulaExpression: 'Balance grows monthly with contributions and interest',
