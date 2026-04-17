@@ -91,14 +91,14 @@ function MainLayout() {
   const { consent } = useCookieConsent();
   const location = useLocation();
 
- useEffect(() => {
+useEffect(() => {
   window.scrollTo(0, 0);
 
   if (consent === 'accepted') {
     trackPageView(location.pathname);
   }
 
-  // ✅ ALWAYS run canonical (outside consent)
+  // ALWAYS run canonical (outside consent)
   let canonical = document.querySelector("link[rel='canonical']");
   if (!canonical) {
     canonical = document.createElement('link');
@@ -113,6 +113,7 @@ function MainLayout() {
     'href',
     `${url.protocol}//${cleanHost}${url.pathname}`
   );
+}, [location.pathname, consent]);
 
   // Update page title and description
   const staticTitleMap: Record<string, string> = {
