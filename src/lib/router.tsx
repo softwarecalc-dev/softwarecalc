@@ -98,7 +98,6 @@ useEffect(() => {
     trackPageView(location.pathname);
   }
 
-  // ALWAYS run canonical (outside consent)
   let canonical = document.querySelector("link[rel='canonical']");
   if (!canonical) {
     canonical = document.createElement('link');
@@ -113,63 +112,58 @@ useEffect(() => {
     'href',
     `${url.protocol}//${cleanHost}${url.pathname}`
   );
+
+  // title logic
+  const staticTitleMap: Record<string, string> = {
+    '/': 'SoftwareCalc – Online Tools & Calculators',
+    '/tools': 'Tools – SoftwareCalc',
+    '/about': 'About – SoftwareCalc',
+    '/contact': 'Contact – SoftwareCalc',
+    '/privacy-policy': 'Privacy Policy – SoftwareCalc',
+    '/login': 'Login – SoftwareCalc',
+    '/signup': 'Sign Up – SoftwareCalc',
+    '/forgot-password': 'Forgot Password – SoftwareCalc',
+    '/reset-password': 'Reset Password – SoftwareCalc',
+  };
+
+  const staticDescMap: Record<string, string> = {
+    '/': 'SoftwareCalc provides simple online calculators and helper tools designed to be fast and easy to use.',
+    '/tools': 'Browse our collection of helpful online calculators and tools.',
+  };
+
+  const currentTool = TOOLS.find(t => t.href === location.pathname);
+  const currentCategory = Object.entries(CATEGORY_META).find(
+    ([, meta]) => `/${meta.slug}` === location.pathname
+  );
+
+  let newTitle = currentTool?.seoTitle || staticTitleMap[location.pathname] || 'SoftwareCalc';
+  let newDesc = currentTool?.seoDescription || staticDescMap[location.pathname] || 'SoftwareCalc provides simple online calculators and helper tools designed to be fast and easy to use.';
+
+  if (currentCategory) {
+    newTitle = `${currentCategory[1].title} – SoftwareCalc`;
+    newDesc = currentCategory[1].description;
+  }
+
+  document.title = newTitle;
+
+  let metaDesc = document.querySelector('meta[name="description"]');
+  if (!metaDesc) {
+    metaDesc = document.createElement('meta');
+    metaDesc.setAttribute('name', 'description');
+    document.head.appendChild(metaDesc);
+  }
+  metaDesc.setAttribute('content', newDesc);
+
+  let ogDesc = document.querySelector('meta[property="og:description"]');
+  if (ogDesc) {
+    ogDesc.setAttribute('content', newDesc);
+  }
+
+  let ogTitle = document.querySelector('meta[property="og:title"]');
+  if (ogTitle) {
+    ogTitle.setAttribute('content', newTitle);
+  }
 }, [location.pathname, consent]);
-
-// Update page title and description
-const staticTitleMap: Record<string, string> = {
-  '/': 'SoftwareCalc – Online Tools & Calculators',
-  '/tools': 'Tools – SoftwareCalc',
-  '/about': 'About – SoftwareCalc',
-  '/contact': 'Contact – SoftwareCalc',
-  '/privacy-policy': 'Privacy Policy – SoftwareCalc',
-  '/login': 'Login – SoftwareCalc',
-  '/signup': 'Sign Up – SoftwareCalc',
-  '/forgot-password': 'Forgot Password – SoftwareCalc',
-  '/reset-password': 'Reset Password – SoftwareCalc',
-};
-
-const staticDescMap: Record<string, string> = {
-  '/': 'SoftwareCalc provides simple online calculators and helper tools designed to be fast and easy to use.',
-  '/tools': 'Browse our collection of helpful online calculators and tools.',
-};
-
-    // Check if the current path matches a tool
-    const currentTool = TOOLS.find(t => t.href === location.pathname);
-
-    // Check if the current path matches a category hub page
-    const currentCategory = Object.entries(CATEGORY_META).find(([, meta]) => `/${meta.slug}` === location.pathname);
-
-    let newTitle = currentTool?.seoTitle || staticTitleMap[location.pathname] || 'SoftwareCalc';
-    let newDesc = currentTool?.seoDescription || staticDescMap[location.pathname] || 'SoftwareCalc provides simple online calculators and helper tools designed to be fast and easy to use.';
-
-    if (currentCategory) {
-      newTitle = `${currentCategory[1].title} – SoftwareCalc`;
-      newDesc = currentCategory[1].description;
-    }
-
-    document.title = newTitle;
-
-    // Update meta description
-    let metaDesc = document.querySelector('meta[name="description"]');
-    if (!metaDesc) {
-      metaDesc = document.createElement('meta');
-      metaDesc.setAttribute('name', 'description');
-      document.head.appendChild(metaDesc);
-    }
-    metaDesc.setAttribute('content', newDesc);
-
-    // Update OG description
-    let ogDesc = document.querySelector('meta[property="og:description"]');
-    if (ogDesc) {
-      ogDesc.setAttribute('content', newDesc);
-    }
-
-    // Update OG title
-    let ogTitle = document.querySelector('meta[property="og:title"]');
-    if (ogTitle) {
-      ogTitle.setAttribute('content', newTitle);
-    }
-  }, [location.pathname, consent]);
 
   return (
     <AuthProvider>
