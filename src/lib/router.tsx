@@ -115,26 +115,23 @@ useEffect(() => {
   );
 }, [location.pathname, consent]);
 
-  // Update page title and description
-  const staticTitleMap: Record<string, string> = {
+// Update page title and description
+const staticTitleMap: Record<string, string> = {
+  '/': 'SoftwareCalc – Online Tools & Calculators',
+  '/tools': 'Tools – SoftwareCalc',
+  '/about': 'About – SoftwareCalc',
+  '/contact': 'Contact – SoftwareCalc',
+  '/privacy-policy': 'Privacy Policy – SoftwareCalc',
+  '/login': 'Login – SoftwareCalc',
+  '/signup': 'Sign Up – SoftwareCalc',
+  '/forgot-password': 'Forgot Password – SoftwareCalc',
+  '/reset-password': 'Reset Password – SoftwareCalc',
+};
 
-    // Update page title and description
-    const staticTitleMap: Record<string, string> = {
-      '/': 'SoftwareCalc – Online Tools & Calculators',
-      '/tools': 'Tools – SoftwareCalc',
-      '/about': 'About – SoftwareCalc',
-      '/contact': 'Contact – SoftwareCalc',
-      '/privacy-policy': 'Privacy Policy – SoftwareCalc',
-      '/login': 'Login – SoftwareCalc',
-      '/signup': 'Sign Up – SoftwareCalc',
-      '/forgot-password': 'Forgot Password – SoftwareCalc',
-      '/reset-password': 'Reset Password – SoftwareCalc',
-    };
-
-    const staticDescMap: Record<string, string> = {
-      '/': 'SoftwareCalc provides simple online calculators and helper tools designed to be fast and easy to use.',
-      '/tools': 'Browse our collection of helpful online calculators and tools.',
-    };
+const staticDescMap: Record<string, string> = {
+  '/': 'SoftwareCalc provides simple online calculators and helper tools designed to be fast and easy to use.',
+  '/tools': 'Browse our collection of helpful online calculators and tools.',
+};
 
     // Check if the current path matches a tool
     const currentTool = TOOLS.find(t => t.href === location.pathname);
