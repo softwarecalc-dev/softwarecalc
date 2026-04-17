@@ -938,36 +938,37 @@ howToUse: [
     seoTitle: 'Loan Payment Calculator Online | Monthly Payments, Interest & Payoff Schedule',
     seoDescription: 'Free online loan payment calculator to estimate monthly payments, total interest, total repayment, payoff date, and amortization schedule for fixed-rate loans.'
   },
-  {
+{
     id: 'savings-goal-calculator',
     name: 'Savings Goal Calculator',
     description: 'Calculate how long it will take to reach your savings goal with monthly contributions and interest.',
-    aboutText: ` Use this Savings Goal Calculator to estimate how long it may take to reach a specific savings target. Enter your goal amount, current savings, monthly contribution, and optional annual interest rate to see how your balance grows over time. This tool is useful for planning goals like an emergency fund, home deposit, travel budget, or other major savings target. The monthly breakdown helps you understand how much of your progress comes from your own contributions versus interest earned. If you want to estimate overall investment growth instead, try our [Compound Interest Calculator](/compound-interest-calculator). If you are comparing borrowing costs, see the [Loan Payment Calculator](/loan-payment-calculator). `,
+    aboutText: `Use this Savings Goal Calculator to estimate how long it will take to reach a specific financial target. Enter your goal amount, current savings, monthly contributions, and optional interest rate to calculate the time required to reach your goal. This tool is designed for planning specific targets such as emergency funds, down payments, travel budgets, or large purchases. It focuses on time-to-goal planning rather than long-term wealth projection. If you want to simulate long-term investment growth instead, use the [Investment Calculator](/investment-calculator). If you want to model one-time investment growth, use the [Compound Interest Calculator](/compound-interest-calculator).`,
     howToUse: [
-      'Enter your target savings amount.',
+      'Enter your savings goal amount.',
       'Add your current savings balance.',
-      'Enter how much you plan to save each month.',
-      'Optionally add an annual interest rate.',
-      'View how long it may take to reach your goal and review the monthly breakdown.'
+      'Enter monthly contribution amount.',
+      'Optionally include interest rate.',
+      'View estimated time to reach your goal.',
+      'Review monthly progress breakdown.'
     ],
     href: '/savings-goal-calculator',
     icon: Banknote,
     available: true,
     category: 'Finance',
-    howItWorks: 'The calculator simulates your savings month by month. Each month, interest is applied to the current balance, then the monthly contribution is added. This repeats until the balance reaches the savings goal.',
+    howItWorks: 'The calculator simulates monthly savings growth until the target amount is reached, including contributions and optional interest.',
     exampleUsage: [
-      'Goal of 10,000 with 200/month at 4% interest → time and interest breakdown',
-      'Already have 5,000 saved and want to reach 20,000',
-      'See how adding an interest rate shortens your timeline'
+      'How long to save $10,000 with $200/month contributions',
+      'Time needed to reach a $20,000 emergency fund',
+      'Impact of increasing monthly savings on goal timeline'
     ],
-    relatedTools: ['compound-interest-calculator', 'simple-interest-calculator', 'loan-payment-calculator'],
+    relatedTools: ['investment-calculator', 'compound-interest-calculator', 'loan-payment-calculator'],
     component: SavingsGoalCalculator,
-    formulaTitle: 'Savings Growth Formula',
-    formulaExpression: 'Balance\u2099 = Balance\u2099\u208b\u2081 \u00d7 (1 + r) + Monthly Contribution',
-    formulaExplanation: 'This calculator works month by month. Each month, interest is applied to the current balance, then the monthly contribution is added. The process repeats until the savings goal is reached.',
-    seoTitle: 'Savings Goal Calculator Online (Time to Reach Your Goal)',
-    seoDescription: 'Calculate how long it will take to reach your savings goal with monthly contributions and interest. Free online savings goal calculator.'
-  },
+    formulaTitle: 'Goal Timeline Formula',
+    formulaExpression: 'Balanceₙ = Balanceₙ₋₁ × (1 + r) + Monthly Contribution',
+    formulaExplanation: 'Savings grow monthly until the target goal amount is reached.',
+    seoTitle: 'Savings Goal Calculator Online | How Long to Reach Your Goal',
+    seoDescription: 'Calculate how long it takes to reach your savings goal with monthly contributions. Free online savings goal planner.'
+  }  
   {
     id: 'salary-after-tax-calculator',
     name: 'Salary After Tax Calculator',
@@ -1056,37 +1057,37 @@ howToUse: [
     seoTitle: 'Poker Odds Calculator (Texas Hold\u2019em) | Win %, Equity & Probabilities',
     seoDescription: 'Free online poker odds calculator for Texas Hold\u2019em. Calculate win, tie, and loss probabilities from preflop to river.',
   },
-  {
+{
     id: 'retirement-calculator',
     name: 'Retirement Calculator',
     description: 'Estimate how much your retirement savings could grow by your target retirement age.',
-    aboutText: ` Use this Retirement Calculator to estimate how much your savings could grow by your target retirement age. Enter your current age, retirement age, current savings, monthly contributions, and expected annual return to project your future retirement balance. This tool is useful for long-term financial planning because it shows both your projected savings growth and how much of that total comes from your own contributions versus investment growth. If you include an inflation rate, you can also see how future purchasing power may differ from the headline balance. If you want to estimate general investment growth, try the [Compound Interest Calculator](/compound-interest-calculator). To measure how inflation affects future purchasing power, you can also use the [Inflation Calculator](/inflation-calculator). `,
+    aboutText: `Use this Retirement Calculator to estimate whether your current savings and contributions are likely to support your retirement goals. Enter your current age, retirement age, savings, monthly contributions, and expected return to project your future retirement balance. This tool is focused on long-term retirement planning and helps you understand if your savings trajectory is sufficient to reach financial independence by a specific age. It is designed for goal-based planning rather than general investment growth. If you want to model one-time investment growth, use the [Compound Interest Calculator](/compound-interest-calculator). If you want to track progress toward a specific savings target, use the [Savings Goal Calculator](/savings-goal-calculator).`,
     howToUse: [
-      'Enter your current age and target retirement age.',
+      'Enter your current age and retirement age.',
       'Add your current savings balance.',
-      'Enter how much you plan to contribute each month.',
-      'Enter your expected annual return.',
-      'Optionally add an inflation rate to see an inflation-adjusted estimate.',
-      'Review your projected retirement balance and year-by-year breakdown.'
+      'Enter your monthly contribution amount.',
+      'Enter expected annual return.',
+      'Optionally include inflation for real-value estimates.',
+      'Review projected retirement balance and progress over time.'
     ],
     href: '/retirement-calculator',
     icon: TrendingUp,
     available: true,
     category: 'Finance',
-    howItWorks: 'This calculator projects retirement savings by applying monthly growth and monthly contributions from your current age until your chosen retirement age. It can also show an inflation-adjusted estimate to help you understand future purchasing power.',
+    howItWorks: 'The calculator simulates savings growth from current age to retirement by applying monthly contributions and compound growth. It focuses on whether your savings trajectory is sufficient to reach retirement goals.',
     exampleUsage: [
-      'Start at age 30, retire at 65, contribute monthly, and project long-term growth.',
-      'Compare how a higher monthly contribution changes your retirement balance.',
-      'Add inflation to see how future purchasing power may differ from the nominal balance.'
+    'Check if $500/month savings is enough to retire at 65',
+    'Compare retirement outcomes at different contribution levels',
+    'See how changing retirement age impacts required savings'
     ],
-    relatedTools: ['compound-interest-calculator', 'savings-goal-calculator', 'inflation-calculator', 'salary-after-tax-calculator'],
+    relatedTools: ['investment-calculator', 'savings-goal-calculator', 'compound-interest-calculator', 'inflation-calculator'],
     component: RetirementCalculator,
-    formulaTitle: 'Retirement Savings Projection Formula',
-    formulaExpression: 'Balance\u2099 = Balance\u2099\u208b\u2081 \u00d7 (1 + r) + Monthly Contribution',
-    formulaExplanation: 'This retirement calculator projects your savings month by month. Each month, the current balance grows by the expected return rate, then your monthly contribution is added. If inflation is included, the final projected balance is also adjusted to estimate future purchasing power.',
-    seoTitle: 'Retirement Calculator Online | Retirement Savings Projection',
-    seoDescription: 'Estimate how much your retirement savings could grow by retirement age using current savings, monthly contributions, and expected return. Free online retirement calculator.'
-  },
+    formulaTitle: 'Retirement Projection Formula',
+    formulaExpression: 'Balanceₙ = Balanceₙ₋₁ × (1 + r) + Monthly Contribution',
+    formulaExplanation: 'Each month, savings grow with returns and contributions until retirement age is reached.',
+    seoTitle: 'Retirement Calculator Online | Will You Have Enough to Retire?',
+    seoDescription: 'Estimate if your savings and contributions are enough for retirement. Free retirement planning calculator with growth projections.'
+  }
   {
     id: 'apr-calculator',
     name: 'APR Calculator',
