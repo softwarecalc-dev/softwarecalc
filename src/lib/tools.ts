@@ -1087,7 +1087,7 @@ howToUse: [
     formulaExplanation: 'Each month, savings grow with returns and contributions until retirement age is reached.',
     seoTitle: 'Retirement Calculator Online | Will You Have Enough to Retire?',
     seoDescription: 'Estimate if your savings and contributions are enough for retirement. Free retirement planning calculator with growth projections.'
-  }
+  },
   {
     id: 'apr-calculator',
     name: 'APR Calculator',
