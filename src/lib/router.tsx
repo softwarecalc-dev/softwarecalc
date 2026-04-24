@@ -105,14 +105,8 @@ useEffect(() => {
     document.head.appendChild(canonical);
   }
 
-  const url = new URL(window.location.href);
-  const cleanHost = url.hostname.replace('www.', '');
-
-  canonical.setAttribute(
-    'href',
-    `${url.protocol}//${cleanHost}${url.pathname}`
-  );
-
+  
+  
   // title logic
   const staticTitleMap: Record<string, string> = {
     '/': 'SoftwareCalc – Online Tools & Calculators',
