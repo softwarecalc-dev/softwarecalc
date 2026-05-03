@@ -18,8 +18,7 @@ import {
 interface GuideContent {
   title: string;
   intro: string;
-  problems: string[];
-  whenToUse: string[];
+  story: string;
 }
 
 const GUIDE_CONTENT: Record<ToolConfig['category'], GuideContent> = {
@@ -27,11 +26,29 @@ const GUIDE_CONTENT: Record<ToolConfig['category'], GuideContent> = {
   title: 'Can I Afford a House? A Real-World Finance Journey',
 
   intro:
-    'Buying a house is not a single calculation — it is a sequence of financial decisions. You start with your real income, then define affordability, then test loans, and finally compare long-term cost vs alternatives like renting or investing. This guide walks you through that exact journey step by step.',
+    'Buying a house is not a single calculation — it is a sequence of financial decisions. You start with your real income, then define affordability, then test loans, and finally compare long-term cost vs alternatives like renting or investing. This guide walks through a real-life financial journey.',
 
-    // (DO NOTHING HERE — just continue normally)
-storySections: [],
-  
+  story: `
+<p>
+Alex just got a new job after being unemployed for a while. The first thing he wants to know is how much money he actually takes home. He opens a <a href="/salary-after-tax-calculator" class="text-primary underline">salary after tax calculator</a> and realises his real income is lower than expected.
+</p>
+
+<p>
+Now he needs structure. He decides that housing should not take more than 30% of his income, so he uses a <a href="/budget-calculator" class="text-primary underline">budget calculator</a> to figure out what is actually safe to spend each month.
+</p>
+
+<p>
+After a few months of saving, he starts thinking about what to do with his extra money. Should he invest it or keep saving? He tries a <a href="/roi-calculator" class="text-primary underline">ROI calculator</a> and sees how long-term growth can change everything.
+</p>
+
+<p>
+Eventually he looks at buying a house. The price looks okay at first, but when he checks mortgage payments using a <a href="/mortgage-calculator" class="text-primary underline">mortgage calculator</a>, he realises interest over time completely changes the picture.
+</p>
+
+<p>
+In the end, he is not just deciding between houses anymore — he is deciding between renting, investing, or buying, each shaping his financial future in completely different ways.
+</p>
+`
 },
   Math: {
     title: 'Math Calculator Guide',
@@ -286,50 +303,14 @@ export function ToolCategoryGuide({ slug }: ToolCategoryGuideProps) {
           <p className="text-muted-foreground text-lg leading-relaxed">{content.intro}</p>
         </div>
 
-        {/* ── Story Flow (Finance only) ── */}
-{category === 'Finance' && content.storySections && (
-  <section className="space-y-8 max-w-2xl mx-auto">
+       {/* ── Story ── */}
+<div
+  className="max-w-2xl mx-auto space-y-6 text-lg leading-relaxed text-muted-foreground"
+  dangerouslySetInnerHTML={{ __html: content.story }}
+/>
+</div>
 
-    {content.storySections.map((section, i) => {
-      const tool = TOOLS.find(t =>
-        t.name.toLowerCase().includes(section.toolHint.toLowerCase()) ||
-        section.toolHint.toLowerCase().includes(t.name.toLowerCase())
-      );
 
-      return (
-        <Card key={i} className="border-l-4 border-primary/40">
-          <CardContent className="pt-6 space-y-3">
-
-            {/* Step title */}
-            <h2 className="text-xl font-semibold">
-              {section.title}
-            </h2>
-
-            {/* Story text */}
-            <p className="text-muted-foreground leading-relaxed">
-              {section.text}
-            </p>
-
-            {/* Tool CTA (IMPORTANT PART) */}
-            {tool && (
-              <div className="pt-2">
-                <Link
-                  to={tool.href as any}
-                  className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
-                >
-                  Open {tool.name}
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            )}
-
-          </CardContent>
-        </Card>
-      );
-    })}
-
-  </section>
-)}
 
         {/* ── Footer CTA ── */}
         <div className="pt-4 border-t flex flex-col sm:flex-row items-center justify-between gap-4">
