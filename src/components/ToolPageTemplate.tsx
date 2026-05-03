@@ -44,43 +44,59 @@ export function ToolPageTemplate({ tool, children }: ToolPageTemplateProps) {
       document.head.appendChild(script);
     }
 
-    const structuredData = [
-      {
-        '@context': 'https://schema.org',
-        '@type': 'SoftwareApplication',
-        name: tool.name,
-        description: tool.description,
-        url: `https://softwarecalc.com${tool.href}`,
-        applicationCategory: 'CalculatorApplication',
-        operatingSystem: 'Any',
-      },
-      {
-        '@context': 'https://schema.org',
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          {
-            '@type': 'ListItem',
-            position: 1,
-            name: 'Home',
-            item: 'https://softwarecalc.com',
-          },
-          {
-            '@type': 'ListItem',
-            position: 2,
-            name: 'Tools',
-            item: 'https://softwarecalc.com/tools',
-          },
-          {
-            '@type': 'ListItem',
-            position: 3,
-            name: tool.name,
-            item: `https://softwarecalc.com${tool.href}`,
-          },
-        ],
-      },
-    ];
+const structuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: tool.name,
+    description: tool.description,
+    url: `https://softwarecalc.com${tool.href}`,
+    applicationCategory: 'CalculatorApplication',
+    operatingSystem: 'Any',
+  },
 
-    script.text = JSON.stringify(structuredData);
+  tool.faq && tool.faq.length > 0
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: tool.faq.map((item) => ({
+          '@type': 'Question',
+          name: item.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: item.answer,
+          },
+        })),
+      }
+    : null,
+
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://softwarecalc.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Tools',
+        item: 'https://softwarecalc.com/tools',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: tool.name,
+        item: `https://softwarecalc.com${tool.href}`,
+      },
+    ],
+  },
+];
+
+script.text = JSON.stringify(structuredData.filter(Boolean));
 
     // Cleanup: remove script when navigating away from a tool page
     // Actually, since all tools use this template, we can just leave it or update it.
