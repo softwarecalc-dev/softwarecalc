@@ -24,9 +24,9 @@ interface GuideContent {
 
 const GUIDE_CONTENT: Record<ToolConfig['category'], GuideContent> = {
 Finance: {
-  title: 'Can I Afford a House? A Real-World Finance Journey',
-  intro: 'Buying a house is not a single calculation — it is a sequence of financial decisions. You start with your real income, then define affordability, then test loans, and finally compare long-term cost vs alternatives like renting or investing. This guide walks through a real-life financial journey.',  
-story: `
+  title: 'From Paycheck to Property: A Practical Personal Finance Story',
+  intro: 'Financial stability starts long before buying a house. You first understand your real income, reduce debt, improve savings, and make smarter long-term decisions with investing and loan planning. This guide follows a realistic journey from salary planning to home ownership using practical financial calculators along the way.',
+  story: `
 <p>
 Alex had spent most of his twenties doing what many people do — working hard, paying bills, and telling himself that “real financial planning” would start next year. Somehow, next year kept moving further away. First it was rent, then car repairs, then holidays, then unexpected expenses. Saving money always felt like something meant for people who already had money.
 </p>
