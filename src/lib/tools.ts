@@ -2343,114 +2343,114 @@ type FaqItem = { question: string; answer: string };
 const CATEGORY_FALLBACK_FAQS: Record<ToolConfig['category'], FaqItem[]> = {
   'Finance': [
     {
-      question: 'Is this calculator free to use?',
-      answer: 'Yes, this calculator is completely free. There is no sign-up required and you can use it as many times as you need.',
+      question: 'What financial formula does this calculator use?',
+      answer: 'This calculator applies standard financial formulas used in banking, accounting, and personal finance. The underlying math follows widely accepted conventions so the results are comparable to those from financial institutions.',
     },
     {
-      question: 'How accurate are the results?',
-      answer: 'The results are based on standard financial formulas and are accurate for general planning purposes. For important financial decisions, we recommend consulting a qualified financial advisor.',
+      question: 'Can I use the result for real financial planning?',
+      answer: 'Yes, the results are suitable for budgeting, loan comparison, and general planning. For large commitments such as mortgages or business loans, we recommend cross-checking with a qualified financial advisor who can account for your full financial picture.',
     },
     {
-      question: 'Can I use this calculator on mobile?',
-      answer: 'Yes, this calculator works on all devices including smartphones and tablets.',
+      question: 'Why might my bank quote a slightly different figure?',
+      answer: 'Lenders and banks may apply additional fees, compound interest differently, or use slightly different rounding conventions. This calculator uses standard formulas and provides a reliable estimate, but always confirm final figures directly with your lender.',
     },
   ],
   'Math': [
     {
-      question: 'Is this calculator free to use?',
-      answer: 'Yes, this calculator is completely free with no account required.',
+      question: 'How does this calculator handle rounding?',
+      answer: 'Results are rounded to a practical number of decimal places using standard mathematical rounding rules. If you need a specific precision, use the displayed value before it is rounded, or apply your own rounding based on the context.',
     },
     {
-      question: 'How precise are the calculations?',
-      answer: 'Calculations follow standard mathematical rules and are displayed to a practical number of decimal places. Results are suitable for schoolwork, everyday use, and most professional contexts.',
+      question: 'Can I use this for schoolwork or exams?',
+      answer: 'Yes, this calculator follows standard mathematical rules taught in schools and universities. It is a useful tool for checking your working or understanding how a formula applies to a specific problem.',
     },
     {
-      question: 'Can I use this on a phone or tablet?',
-      answer: 'Yes, this calculator is fully responsive and works on any device with a modern web browser.',
+      question: 'What should I do if my textbook gives a different answer?',
+      answer: 'Small differences are usually caused by rounding at intermediate steps or different conventions for significant figures. Try entering your full-precision values and compare the unrounded result. If the difference is larger, double-check that the formula used matches the one in your textbook.',
     },
   ],
   'Conversions': [
     {
-      question: 'Is this converter free?',
-      answer: 'Yes, this converter is completely free and requires no sign-up or download.',
+      question: 'Which unit system does this converter use as a base?',
+      answer: 'The converter uses internationally recognised base units and standard conversion factors. Metric units follow SI definitions, and imperial conversions use the internationally agreed ratios (for example, 1 inch = 25.4 mm exactly).',
     },
     {
-      question: 'How accurate are the conversions?',
-      answer: 'Conversions use internationally recognised unit ratios and are accurate for everyday and professional use.',
+      question: 'Why would I need to convert between these units in real life?',
+      answer: 'Unit conversions come up frequently in cooking, construction, travel, science, and engineering. Different countries and industries use different measurement systems, so being able to convert accurately saves time and prevents costly errors.',
     },
     {
-      question: 'Does this work on mobile devices?',
-      answer: 'Yes, the converter is fully responsive and works on smartphones, tablets, and desktops.',
+      question: 'How many decimal places are shown in the result?',
+      answer: 'Results are shown to several decimal places to preserve accuracy. For everyday use you can round the result to the precision you need. The full decimal value is there for situations where higher accuracy matters.',
     },
   ],
   'Health': [
     {
-      question: 'Is this health calculator free?',
-      answer: 'Yes, it is completely free and no account is needed.',
+      question: 'What do the different result ranges mean?',
+      answer: 'Health calculators display results alongside standard reference ranges so you can understand where your value sits. These ranges are based on widely used clinical guidelines. Your result is a useful indicator, but individual health is complex and results should be interpreted in context.',
     },
     {
-      question: 'Are the results medically accurate?',
-      answer: 'This tool uses widely accepted health formulas for general reference. It is not a substitute for professional medical advice. Always consult a qualified healthcare provider for health decisions.',
+      question: 'Is this a substitute for medical advice?',
+      answer: 'No. This tool is for general informational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. If you have concerns about your health, please consult a qualified healthcare provider.',
     },
     {
-      question: 'Can I use this on my phone?',
-      answer: 'Yes, this calculator works on all screen sizes including mobile phones and tablets.',
+      question: 'How are the health values calculated?',
+      answer: 'This calculator uses formulas and reference ranges published by recognised health organisations. The formulas are applied exactly as specified, so the results are consistent with what a healthcare professional would calculate using the same method.',
     },
   ],
   'Date & Time': [
     {
-      question: 'Is this calculator free to use?',
-      answer: 'Yes, this tool is free and requires no sign-up.',
+      question: 'How does this calculator handle months of different lengths?',
+      answer: 'Date calculations account for the actual number of days in each month, including February in leap years. The result reflects the precise calendar difference between the two dates you enter.',
     },
     {
-      question: 'Does it account for time zones?',
-      answer: 'Calculations use the date and time values you enter directly. For time zone conversions, please adjust your input to the relevant local time first.',
+      question: 'Does the calculator adjust for time zones or daylight saving?',
+      answer: 'The calculator works with the date and time values you enter directly. If your calculation spans a daylight saving transition or crosses time zones, enter the times already adjusted to the same time zone to get an accurate result.',
     },
     {
-      question: 'Does this work on mobile?',
-      answer: 'Yes, this tool is fully responsive and works on any modern device.',
+      question: 'What is the most common use for a date or time calculator?',
+      answer: 'Common uses include calculating how many days remain until a deadline or event, finding the exact time difference between two shifts or appointments, determining someone\'s age from their birth date, and planning project timelines.',
     },
   ],
   'Probability': [
     {
-      question: 'Is this calculator free to use?',
-      answer: 'Yes, completely free with no registration required.',
+      question: 'What does a probability result actually mean?',
+      answer: 'A probability value between 0 and 1 (or 0% and 100%) represents the theoretical likelihood of an outcome occurring. A result of 0.25 means there is a 1 in 4 chance of that outcome under ideal, unbiased conditions.',
     },
     {
-      question: 'How are the probabilities calculated?',
-      answer: 'Results are based on standard probability and combinatorics formulas. They reflect theoretical outcomes under ideal conditions.',
+      question: 'Do real-world results always match the calculated probability?',
+      answer: 'Not in every single instance. Probability describes long-run frequency — the more times you repeat an event, the closer actual results tend to come to the theoretical probability. In the short term, outcomes can vary widely.',
     },
     {
-      question: 'Can I use this on a phone or tablet?',
-      answer: 'Yes, this calculator works on all modern devices and screen sizes.',
+      question: 'What assumptions does this probability calculation make?',
+      answer: 'The calculation assumes each outcome is independent and equally likely unless stated otherwise. Real-world factors such as bias, skill, or changing conditions can affect actual outcomes and are not included in the theoretical formula.',
     },
   ],
   'Random Generators': [
     {
-      question: 'Is this generator truly random?',
-      answer: 'The generator uses your browser\'s built-in random number functions, which produce results suitable for games, draws, and everyday use.',
+      question: 'How is the random result generated?',
+      answer: 'This generator uses your browser\'s built-in pseudo-random number function, which produces statistically unpredictable results suitable for games, raffles, classroom activities, and everyday decision-making.',
     },
     {
-      question: 'Is this tool free?',
-      answer: 'Yes, it is completely free and works without any sign-up.',
+      question: 'Is every result equally likely?',
+      answer: 'Yes, within the range you set, every possible value has an equal chance of being selected on each generation. The generator does not weight any outcome or remember previous results.',
     },
     {
-      question: 'Does it work on mobile?',
-      answer: 'Yes, the generator is fully responsive and works on all modern devices.',
+      question: 'What are some common uses for a random generator?',
+      answer: 'Random generators are used for prize draws and giveaways, picking a random team or player, generating test data, deciding between options when you are undecided, classroom activities, and tabletop games.',
     },
   ],
   'Game Calculators': [
     {
-      question: 'Is this calculator free to use?',
-      answer: 'Yes, completely free with no account required.',
+      question: 'Where do the strategy recommendations come from?',
+      answer: 'Recommendations are derived from mathematically established basic strategy tables that have been calculated through probability analysis and computer simulation. They represent the statistically optimal decision for each hand or situation under standard game rules.',
     },
     {
-      question: 'Are the recommendations based on real strategy?',
-      answer: 'Yes, recommendations are based on mathematically established strategies for the relevant game. Results reflect optimal play under standard rules.',
+      question: 'Does following the recommended strategy guarantee a win?',
+      answer: 'No. Strategy recommendations reduce the house edge and maximise your expected return over many hands, but they cannot guarantee a win on any individual hand. Variance means short-term results will always differ from the long-run expectation.',
     },
     {
-      question: 'Can I use this on my phone?',
-      answer: 'Yes, this tool works on all devices including smartphones and tablets.',
+      question: 'Do rule variations affect the recommended strategy?',
+      answer: 'Yes. Game rules such as the number of decks, whether the dealer stands or hits on soft 17, and available player options like surrender can all shift the optimal strategy slightly. This calculator uses the most common standard rules; check the specific rules of the game you are playing.',
     },
   ],
 };
