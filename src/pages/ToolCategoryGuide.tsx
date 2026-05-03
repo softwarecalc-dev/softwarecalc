@@ -206,7 +206,9 @@ interface ToolCategoryGuideProps {
 export function ToolCategoryGuide({ slug }: ToolCategoryGuideProps) {
   const category = GUIDE_SLUGS[slug];
   const content = category ? GUIDE_CONTENT[category] : null;
-  const tools = category ? TOOLS.filter((t) => t.category === category && t.available) : [];
+  const tools = category
+  ? TOOLS.filter((t) => t.category === category && t.available)
+  : [];
 
   // JSON-LD structured data
   useEffect(() => {
@@ -303,14 +305,36 @@ export function ToolCategoryGuide({ slug }: ToolCategoryGuideProps) {
           <p className="text-muted-foreground text-lg leading-relaxed">{content.intro}</p>
         </div>
 
-       {/* ── Story ── */}
-<div
-  className="max-w-2xl mx-auto space-y-6 text-lg leading-relaxed text-muted-foreground"
-  dangerouslySetInnerHTML={{ __html: content.story }}
-/>
+{/* ── Story ── */}
+<div className="bg-white dark:bg-zinc-900 border rounded-xl p-6 max-w-2xl mx-auto">
+  <div
+    className="space-y-6 text-base leading-relaxed text-muted-foreground"
+    dangerouslySetInnerHTML={{ __html: content.story }}
+  />
+</div>
 
 
+{/* ── Relevant Tools ── */}
+{tools.length > 0 && (
+  <div className="bg-white dark:bg-zinc-900 rounded-xl border p-6 space-y-4">
+    <h2 className="text-lg font-semibold">
+      Relevant tools in this guide
+    </h2>
 
+    <div className="grid sm:grid-cols-2 gap-2">
+      {tools.map((tool) => (
+        <Link
+          key={tool.id}
+          to={tool.href as any}
+          className="text-primary hover:underline text-sm"
+        >
+          {tool.name}
+        </Link>
+      ))}
+    </div>
+  </div>
+)}
+        
         {/* ── Footer CTA ── */}
         <div className="pt-4 border-t flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
