@@ -2335,3 +2335,131 @@ export function getToolById(id: string): ToolConfig | undefined {
 export function getRelatedTools(ids: string[]): ToolConfig[] {
   return ids.map((id) => getToolById(id)).filter(Boolean) as ToolConfig[];
 }
+
+// ─── Fallback FAQ Generator ───────────────────────────────────────────────────
+
+type FaqItem = { question: string; answer: string };
+
+const CATEGORY_FALLBACK_FAQS: Record<ToolConfig['category'], FaqItem[]> = {
+  'Finance': [
+    {
+      question: 'Is this calculator free to use?',
+      answer: 'Yes, this calculator is completely free. There is no sign-up required and you can use it as many times as you need.',
+    },
+    {
+      question: 'How accurate are the results?',
+      answer: 'The results are based on standard financial formulas and are accurate for general planning purposes. For important financial decisions, we recommend consulting a qualified financial advisor.',
+    },
+    {
+      question: 'Can I use this calculator on mobile?',
+      answer: 'Yes, this calculator works on all devices including smartphones and tablets.',
+    },
+  ],
+  'Math': [
+    {
+      question: 'Is this calculator free to use?',
+      answer: 'Yes, this calculator is completely free with no account required.',
+    },
+    {
+      question: 'How precise are the calculations?',
+      answer: 'Calculations follow standard mathematical rules and are displayed to a practical number of decimal places. Results are suitable for schoolwork, everyday use, and most professional contexts.',
+    },
+    {
+      question: 'Can I use this on a phone or tablet?',
+      answer: 'Yes, this calculator is fully responsive and works on any device with a modern web browser.',
+    },
+  ],
+  'Conversions': [
+    {
+      question: 'Is this converter free?',
+      answer: 'Yes, this converter is completely free and requires no sign-up or download.',
+    },
+    {
+      question: 'How accurate are the conversions?',
+      answer: 'Conversions use internationally recognised unit ratios and are accurate for everyday and professional use.',
+    },
+    {
+      question: 'Does this work on mobile devices?',
+      answer: 'Yes, the converter is fully responsive and works on smartphones, tablets, and desktops.',
+    },
+  ],
+  'Health': [
+    {
+      question: 'Is this health calculator free?',
+      answer: 'Yes, it is completely free and no account is needed.',
+    },
+    {
+      question: 'Are the results medically accurate?',
+      answer: 'This tool uses widely accepted health formulas for general reference. It is not a substitute for professional medical advice. Always consult a qualified healthcare provider for health decisions.',
+    },
+    {
+      question: 'Can I use this on my phone?',
+      answer: 'Yes, this calculator works on all screen sizes including mobile phones and tablets.',
+    },
+  ],
+  'Date & Time': [
+    {
+      question: 'Is this calculator free to use?',
+      answer: 'Yes, this tool is free and requires no sign-up.',
+    },
+    {
+      question: 'Does it account for time zones?',
+      answer: 'Calculations use the date and time values you enter directly. For time zone conversions, please adjust your input to the relevant local time first.',
+    },
+    {
+      question: 'Does this work on mobile?',
+      answer: 'Yes, this tool is fully responsive and works on any modern device.',
+    },
+  ],
+  'Probability': [
+    {
+      question: 'Is this calculator free to use?',
+      answer: 'Yes, completely free with no registration required.',
+    },
+    {
+      question: 'How are the probabilities calculated?',
+      answer: 'Results are based on standard probability and combinatorics formulas. They reflect theoretical outcomes under ideal conditions.',
+    },
+    {
+      question: 'Can I use this on a phone or tablet?',
+      answer: 'Yes, this calculator works on all modern devices and screen sizes.',
+    },
+  ],
+  'Random Generators': [
+    {
+      question: 'Is this generator truly random?',
+      answer: 'The generator uses your browser\'s built-in random number functions, which produce results suitable for games, draws, and everyday use.',
+    },
+    {
+      question: 'Is this tool free?',
+      answer: 'Yes, it is completely free and works without any sign-up.',
+    },
+    {
+      question: 'Does it work on mobile?',
+      answer: 'Yes, the generator is fully responsive and works on all modern devices.',
+    },
+  ],
+  'Game Calculators': [
+    {
+      question: 'Is this calculator free to use?',
+      answer: 'Yes, completely free with no account required.',
+    },
+    {
+      question: 'Are the recommendations based on real strategy?',
+      answer: 'Yes, recommendations are based on mathematically established strategies for the relevant game. Results reflect optimal play under standard rules.',
+    },
+    {
+      question: 'Can I use this on my phone?',
+      answer: 'Yes, this tool works on all devices including smartphones and tablets.',
+    },
+  ],
+};
+
+/**
+ * Returns the tool's custom FAQ if it has one, otherwise returns 3 generic
+ * fallback FAQs appropriate for the tool's category.
+ */
+export function getEffectiveFaqs(tool: ToolConfig): FaqItem[] {
+  if (tool.faq && tool.faq.length > 0) return tool.faq;
+  return CATEGORY_FALLBACK_FAQS[tool.category] ?? CATEGORY_FALLBACK_FAQS['Math'];
+}

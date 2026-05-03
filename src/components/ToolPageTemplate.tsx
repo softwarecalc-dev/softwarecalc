@@ -4,7 +4,7 @@ import { Link } from '@tanstack/react-router';
 import { ArrowRight, CheckCircle, Home } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ToolConfig, getRelatedTools } from '@/lib/tools';
+import { ToolConfig, getRelatedTools, getEffectiveFaqs } from '@/lib/tools';
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -30,6 +30,7 @@ interface ToolPageTemplateProps {
  */
 export function ToolPageTemplate({ tool, children }: ToolPageTemplateProps) {
   const related = getRelatedTools(tool.relatedTools);
+  const faqItems = getEffectiveFaqs(tool);
 
   // ── Structured Data (JSON-LD) ──
   useEffect(() => {
@@ -55,11 +56,11 @@ const structuredData = [
     operatingSystem: 'Any',
   },
 
-  tool.faq && tool.faq.length > 0
+  faqItems.length > 0
     ? {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        mainEntity: tool.faq.map((item) => ({
+        mainEntity: faqItems.map((item) => ({
           '@type': 'Question',
           name: item.question,
           acceptedAnswer: {
@@ -292,7 +293,7 @@ script.text = JSON.stringify(structuredData.filter(Boolean));
         )}
 
         {/* ── FAQ ── */}
-{tool.faq && tool.faq.length > 0 && (
+{faqItems.length > 0 && (
   <section aria-labelledby="faq-heading" className="space-y-4">
     <h2
       id="faq-heading"
@@ -304,7 +305,7 @@ script.text = JSON.stringify(structuredData.filter(Boolean));
 
     <Card>
       <CardContent className="pt-6 space-y-6">
-        {tool.faq.map((item, i) => (
+        {faqItems.map((item, i) => (
           <div key={i} className="space-y-2">
             <h3 className="font-medium text-foreground">
               {item.question}
