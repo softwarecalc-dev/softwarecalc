@@ -62,7 +62,7 @@ function Navigation() {
             className="text-muted-foreground hover:text-foreground transition-colors"
             activeProps={{ className: 'text-foreground font-medium' }}
           >
-            Calculator Guides
+            Real-Life Guides
           </Link>
 
 
