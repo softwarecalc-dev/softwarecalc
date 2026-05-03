@@ -19,21 +19,21 @@ interface GuideContent {
   title: string;
   intro: string;
   story: string;
+  mentionedTools: string[];
 }
-mentionedTools: [
-  'Salary After Tax Calculator',
-  'Budget Calculator',
-  'ROI Calculator',
-  'Mortgage Calculator',
-],
+
 
 const GUIDE_CONTENT: Record<ToolConfig['category'], GuideContent> = {
-  Finance: {
+Finance: {
   title: 'Can I Afford a House? A Real-World Finance Journey',
+  intro: 'Buying a house is not a single calculation — it is a sequence of financial decisions. You start with your real income, then define affordability, then test loans, and finally compare long-term cost vs alternatives like renting or investing. This guide walks through a real-life financial journey.',
 
-  intro:
-    'Buying a house is not a single calculation — it is a sequence of financial decisions. You start with your real income, then define affordability, then test loans, and finally compare long-term cost vs alternatives like renting or investing. This guide walks through a real-life financial journey.',
-
+  mentionedTools: [
+    'Salary After Tax Calculator',
+    'Mortgage Calculator',
+    'ROI Calculator',
+  ],
+  
   story: `
 <p>
 Alex just got a new job after being unemployed for a while. The first thing he wants to know is how much money he actually takes home. He opens a <a href="/salary-after-tax-calculator" class="text-primary underline">salary after tax calculator</a> and realises his real income is lower than expected.
@@ -212,14 +212,13 @@ interface ToolCategoryGuideProps {
 export function ToolCategoryGuide({ slug }: ToolCategoryGuideProps) {
   const category = GUIDE_SLUGS[slug];
   const content = category ? GUIDE_CONTENT[category] : null;
-  const tools =
-    category && content && 'mentionedTools' in content
-      ? TOOLS.filter(
-          (t) =>
-            t.available &&
-            (content as any).mentionedTools.includes(t.name)
-        )
-      : [];
+ const tools = category
+  ? TOOLS.filter(
+      (t) =>
+        t.available &&
+        content?.mentionedTools?.includes(t.name)
+    )
+  : [];
 
   // JSON-LD structured data
   useEffect(() => {
