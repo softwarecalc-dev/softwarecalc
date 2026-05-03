@@ -24,27 +24,42 @@ interface GuideContent {
 
 const GUIDE_CONTENT: Record<ToolConfig['category'], GuideContent> = {
   Finance: {
-  title: 'Finance Calculator Guide',
+  title: 'Can I Afford a House? A Real-World Finance Journey',
+
   intro:
-    'Most financial decisions are not single calculations — they are chains of decisions. Buying a house, taking a loan, or planning investments all require understanding income, affordability, interest, and long-term cost. This guide walks through real-life financial scenarios step by step, showing exactly which calculators you need at each stage.',
+    'Buying a house is not a single calculation — it is a sequence of financial decisions. You start with your real income, then define affordability, then test loans, and finally compare long-term cost vs alternatives like renting or investing. This guide walks you through that exact journey step by step.',
 
-  problems: [
-    'I want to buy a house — how much can I actually afford?',
-    'How does my income translate into borrowing power?',
-    'What will my monthly mortgage payment be?',
-    'Is renting or buying better for my situation?',
-    'How much total interest will I pay over time?',
-    'How long will it take to pay off my loan early?',
-    'Is this investment worth it compared to savings or inflation?'
-  ],
-
-  whenToUse: [
-    'Start with your income — use a salary calculator to understand your real take-home pay after tax.',
-    'Then check affordability — compare monthly expenses vs potential loan payments.',
-    'Use mortgage/loan calculators to see long-term cost including interest over time.',
-    'Compare renting vs buying — model both scenarios side by side over 5–30 years.',
-    'Before committing — simulate different interest rates and repayment speeds.',
-    'For investments — compare expected ROI vs savings accounts and inflation impact.'
+  storySections: [
+    {
+      title: '1. Start with your real income (not your salary)',
+      text:
+        'Most people overestimate what they can afford because they look at gross salary. What actually matters is your net income after tax — the money you truly have available each month.',
+      toolHint: 'Salary After Tax Calculator',
+    },
+    {
+      title: '2. Define a safe monthly housing budget',
+      text:
+        'A stable rule is to keep housing costs between 25–35% of your monthly net income. This protects you from financial stress and unexpected expenses.',
+      toolHint: 'Budget / Affordability Calculator',
+    },
+    {
+      title: '3. Understand your loan reality',
+      text:
+        'Even a small change in interest rate dramatically affects your total cost over time. Two similar houses can have very different long-term affordability.',
+      toolHint: 'Loan / Mortgage Calculator',
+    },
+    {
+      title: '4. Look at total cost over time',
+      text:
+        'The real cost of a house is not the price — it is the total interest paid over 20–30 years. This often surprises first-time buyers.',
+      toolHint: 'Loan Interest / ROI Calculator',
+    },
+    {
+      title: '5. Compare renting vs buying',
+      text:
+        'Buying builds equity, but renting gives flexibility. The better choice depends on long-term financial growth vs lifestyle freedom.',
+      toolHint: 'ROI Calculator',
+    },
   ],
 },
   Math: {
@@ -300,6 +315,32 @@ export function ToolCategoryGuide({ slug }: ToolCategoryGuideProps) {
           <p className="text-muted-foreground text-lg leading-relaxed">{content.intro}</p>
         </div>
 
+        {/* ── Story mode (Finance only) ── */}
+        {category === 'Finance' && content.storySections && (
+          <section className="space-y-6">
+            {content.storySections.map((section, i) => (
+              <Card key={i}>
+                <CardContent className="pt-6 space-y-3">
+                  <h2 className="text-xl font-semibold">
+                    {section.title}
+                  </h2>
+
+                  <p className="text-muted-foreground leading-relaxed">
+                    {section.text}
+                  </p>
+
+                  <div className="text-sm font-medium text-primary">
+                    Recommended tool:{' '}
+                    <Link to="/salary-calculator" className="underline hover:opacity-80">
+                      Salary After Tax Calculator
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </section>
+        )}
+        
         {/* ── Common real-world problems ── */}
         <section aria-labelledby="problems-heading" className="space-y-4">
           <h2
