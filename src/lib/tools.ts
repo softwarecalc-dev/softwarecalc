@@ -2331,9 +2331,186 @@ export function getToolById(id: string): ToolConfig | undefined {
   return TOOLS.find((t) => t.id === id);
 }
 
-/** Get a list of tools by their ids (for Related Tools sections) */
-export function getRelatedTools(ids: string[]): ToolConfig[] {
-  return ids.map((id) => getToolById(id)).filter(Boolean) as ToolConfig[];
+// ─── Concept-cluster map ──────────────────────────────────────────────────────
+// Each entry lists the strongest topical neighbours for that tool.
+// Used as a fallback when a tool's explicit relatedTools list has fewer than 3
+// entries. Ordered by relevance — earlier entries are preferred.
+const CONCEPT_CLUSTERS: Record<string, string[]> = {
+  // ── Finance: Loans & Debt ──
+  'loan-payment-calculator':     ['mortgage-calculator', 'apr-calculator', 'loan-to-value-calculator', 'debt-to-income-calculator', 'simple-interest-calculator', 'credit-card-payoff-calculator'],
+  'mortgage-calculator':         ['loan-payment-calculator', 'loan-to-value-calculator', 'debt-to-income-calculator', 'apr-calculator', 'savings-goal-calculator'],
+  'apr-calculator':              ['loan-payment-calculator', 'mortgage-calculator', 'simple-interest-calculator', 'compound-interest-calculator', 'interest-rate-calculator'],
+  'loan-to-value-calculator':    ['mortgage-calculator', 'loan-payment-calculator', 'debt-to-income-calculator', 'apr-calculator'],
+  'debt-to-income-calculator':   ['loan-payment-calculator', 'mortgage-calculator', 'salary-after-tax-calculator', 'debt-payoff-calculator'],
+  'credit-card-payoff-calculator':['debt-payoff-calculator', 'loan-payment-calculator', 'simple-interest-calculator', 'savings-goal-calculator'],
+  'debt-payoff-calculator':      ['credit-card-payoff-calculator', 'loan-payment-calculator', 'savings-goal-calculator', 'debt-to-income-calculator'],
+  'simple-interest-calculator':  ['compound-interest-calculator', 'loan-payment-calculator', 'apr-calculator', 'savings-goal-calculator'],
+  'compound-interest-calculator':['simple-interest-calculator', 'savings-goal-calculator', 'retirement-calculator', 'inflation-calculator', 'rule-of-72-calculator'],
+  'interest-rate-calculator':    ['loan-payment-calculator', 'apr-calculator', 'simple-interest-calculator', 'compound-interest-calculator', 'mortgage-calculator'],
+  'payback-period-calculator':   ['roi-calculator', 'break-even-calculator', 'net-profit-calculator', 'investment-calculator'],
+
+  // ── Finance: Investing & Growth ──
+  'savings-goal-calculator':     ['compound-interest-calculator', 'retirement-calculator', 'inflation-calculator', 'investment-calculator', 'simple-interest-calculator'],
+  'retirement-calculator':       ['compound-interest-calculator', 'savings-goal-calculator', 'inflation-calculator', 'investment-calculator', 'rule-of-72-calculator'],
+  'investment-calculator':       ['compound-interest-calculator', 'roi-calculator', 'savings-goal-calculator', 'retirement-calculator', 'rule-of-72-calculator'],
+  'inflation-calculator':        ['compound-interest-calculator', 'retirement-calculator', 'savings-goal-calculator', 'salary-after-tax-calculator'],
+  'roi-calculator':              ['payback-period-calculator', 'break-even-calculator', 'net-profit-calculator', 'gross-profit-calculator', 'investment-calculator'],
+  'rule-of-72-calculator':       ['compound-interest-calculator', 'savings-goal-calculator', 'investment-calculator', 'roi-calculator'],
+
+  // ── Finance: Income & Tax ──
+  'salary-after-tax-calculator': ['salary-hourly-calculator', 'commission-calculator', 'debt-to-income-calculator', 'inflation-calculator'],
+  'salary-hourly-calculator':    ['salary-after-tax-calculator', 'commission-calculator', 'hours-worked-calculator', 'tip-calculator'],
+  'commission-calculator':       ['salary-after-tax-calculator', 'profit-margin-calculator', 'markup-calculator', 'sales-tax-calculator'],
+
+  // ── Finance: Pricing & Profit ──
+  'profit-margin-calculator':    ['markup-calculator', 'gross-profit-calculator', 'net-profit-calculator', 'break-even-calculator', 'roi-calculator'],
+  'markup-calculator':           ['profit-margin-calculator', 'gross-profit-calculator', 'discount-calculator', 'sales-tax-calculator'],
+  'gross-profit-calculator':     ['net-profit-calculator', 'profit-margin-calculator', 'break-even-calculator', 'roi-calculator'],
+  'net-profit-calculator':       ['gross-profit-calculator', 'profit-margin-calculator', 'break-even-calculator', 'roi-calculator'],
+  'break-even-calculator':       ['profit-margin-calculator', 'gross-profit-calculator', 'net-profit-calculator', 'payback-period-calculator', 'roi-calculator'],
+
+  // ── Finance: Tax ──
+  'sales-tax-calculator':        ['vat-calculator', 'sales-tax-reverse-calculator', 'sales-tax-rate-calculator', 'discount-calculator', 'markup-calculator'],
+  'vat-calculator':              ['vat-reverse-calculator', 'sales-tax-calculator', 'sales-tax-rate-calculator', 'markup-calculator'],
+  'vat-reverse-calculator':      ['vat-calculator', 'sales-tax-reverse-calculator', 'sales-tax-rate-calculator', 'markup-calculator'],
+  'sales-tax-reverse-calculator':['sales-tax-calculator', 'vat-reverse-calculator', 'sales-tax-rate-calculator', 'discount-calculator'],
+  'sales-tax-rate-calculator':   ['sales-tax-calculator', 'sales-tax-reverse-calculator', 'vat-calculator', 'markup-calculator'],
+
+  // ── Conversions ──
+  'length-converter':            ['weight-converter', 'temperature-converter', 'recipe-volume-converter', 'square-footage-calculator'],
+  'weight-converter':            ['length-converter', 'temperature-converter', 'recipe-volume-converter', 'bmi-calculator'],
+  'temperature-converter':       ['length-converter', 'weight-converter', 'recipe-volume-converter'],
+  'recipe-volume-converter':     ['weight-converter', 'length-converter', 'temperature-converter', 'unit-price-calculator'],
+
+  // ── Math: Percentages ──
+  'percentage-calculator':       ['percentage-change-calculator', 'discount-calculator', 'ratio-calculator', 'decimal-to-percent-calculator'],
+  'percentage-change-calculator':['percentage-calculator', 'discount-calculator', 'ratio-calculator', 'profit-margin-calculator'],
+  'decimal-to-percent-calculator':['percentage-calculator', 'percentage-change-calculator', 'decimal-to-fraction-calculator', 'rounding-calculator'],
+
+  // ── Math: Fractions ──
+  'fraction-calculator':         ['decimal-to-fraction-calculator', 'fraction-to-decimal-calculator', 'simplify-fractions-calculator', 'improper-fraction-to-mixed-number-calculator', 'mixed-number-to-improper-fraction-calculator'],
+  'decimal-to-fraction-calculator':['fraction-to-decimal-calculator', 'simplify-fractions-calculator', 'fraction-calculator', 'decimal-to-percent-calculator'],
+  'fraction-to-decimal-calculator':['decimal-to-fraction-calculator', 'simplify-fractions-calculator', 'fraction-calculator', 'decimal-to-percent-calculator'],
+  'simplify-fractions-calculator':['fraction-calculator', 'decimal-to-fraction-calculator', 'gcf-calculator', 'proportion-calculator'],
+  'improper-fraction-to-mixed-number-calculator':['mixed-number-to-improper-fraction-calculator', 'fraction-calculator', 'simplify-fractions-calculator'],
+  'mixed-number-to-improper-fraction-calculator':['improper-fraction-to-mixed-number-calculator', 'fraction-calculator', 'simplify-fractions-calculator'],
+  'proportion-calculator':       ['ratio-calculator', 'fraction-calculator', 'percentage-calculator', 'simplify-fractions-calculator'],
+
+  // ── Math: Roots & Exponents ──
+  'square-root-calculator':      ['cube-root-calculator', 'nth-root-calculator', 'exponent-calculator', 'scientific-notation-calculator'],
+  'cube-root-calculator':        ['square-root-calculator', 'nth-root-calculator', 'exponent-calculator'],
+  'nth-root-calculator':         ['square-root-calculator', 'cube-root-calculator', 'exponent-calculator'],
+  'exponent-calculator':         ['square-root-calculator', 'scientific-notation-calculator', 'nth-root-calculator'],
+  'scientific-notation-calculator':['exponent-calculator', 'sig-fig-calculator', 'rounding-calculator', 'absolute-value-calculator'],
+
+  // ── Math: Factors & Primes ──
+  'gcf-calculator':              ['lcm-calculator', 'factors-calculator', 'common-factors-calculator', 'prime-factorization-calculator'],
+  'lcm-calculator':              ['gcf-calculator', 'factors-calculator', 'prime-factorization-calculator', 'common-factors-calculator'],
+  'factors-calculator':          ['gcf-calculator', 'lcm-calculator', 'prime-factorization-calculator', 'common-factors-calculator', 'divisibility-calculator'],
+  'common-factors-calculator':   ['gcf-calculator', 'factors-calculator', 'prime-factorization-calculator', 'divisibility-calculator'],
+  'prime-factorization-calculator':['prime-number-calculator', 'gcf-calculator', 'factors-calculator', 'lcm-calculator'],
+  'prime-number-calculator':     ['prime-factorization-calculator', 'factors-calculator', 'divisibility-calculator', 'even-or-odd-calculator'],
+  'divisibility-calculator':     ['factors-calculator', 'prime-number-calculator', 'even-or-odd-calculator', 'gcf-calculator'],
+  'even-or-odd-calculator':      ['divisibility-calculator', 'prime-number-calculator', 'factors-calculator'],
+
+  // ── Math: Precision & Rounding ──
+  'rounding-calculator':         ['sig-fig-calculator', 'scientific-notation-calculator', 'decimal-to-fraction-calculator'],
+  'sig-fig-calculator':          ['rounding-calculator', 'scientific-notation-calculator', 'absolute-value-calculator'],
+  'absolute-value-calculator':   ['sig-fig-calculator', 'rounding-calculator', 'reciprocal-calculator'],
+  'reciprocal-calculator':       ['fraction-calculator', 'absolute-value-calculator', 'exponent-calculator'],
+
+  // ── Math: General ──
+  'average-calculator':          ['ratio-calculator', 'percentage-calculator', 'percentage-change-calculator'],
+  'ratio-calculator':            ['proportion-calculator', 'percentage-calculator', 'average-calculator', 'fraction-calculator'],
+  'discount-calculator':         ['percentage-calculator', 'sales-tax-calculator', 'markup-calculator', 'profit-margin-calculator'],
+  'tip-calculator':              ['percentage-calculator', 'discount-calculator', 'sales-tax-calculator'],
+  'unit-price-calculator':       ['discount-calculator', 'percentage-calculator', 'ratio-calculator', 'sales-tax-calculator'],
+  'square-footage-calculator':   ['unit-price-calculator', 'length-converter', 'ratio-calculator'],
+
+  // ── Date & Time ──
+  'hours-worked-calculator':     ['date-time-difference-calculator', 'age-calculator', 'days-until-date-calculator', 'salary-hourly-calculator'],
+  'date-time-difference-calculator':['age-calculator', 'hours-worked-calculator', 'days-until-date-calculator'],
+  'age-calculator':              ['date-time-difference-calculator', 'days-until-date-calculator', 'hours-worked-calculator'],
+  'days-until-date-calculator':  ['date-time-difference-calculator', 'age-calculator', 'hours-worked-calculator'],
+
+  // ── Health ──
+  'bmi-calculator':              ['weight-converter', 'length-converter'],
+
+  // ── Game Calculators ──
+  'blackjack-helper':            ['texas-holdem-odds-calculator', 'random-number-generator'],
+  'texas-holdem-odds-calculator':['blackjack-helper', 'random-number-generator'],
+
+  // ── Random / Utility ──
+  'random-number-generator':     ['click-counter', 'blackjack-helper'],
+  'click-counter':               ['random-number-generator'],
+};
+
+/**
+ * Returns up to 4 related tools for a given tool, using a 3-tier strategy:
+ *   1. Explicit relatedTools IDs (author-specified, highest trust)
+ *   2. Concept-cluster neighbours (topically related, same cluster)
+ *   3. Same-category fill (any available tool in the same category)
+ *
+ * The current tool is never included. Results are deduplicated.
+ */
+export function getRelatedTools(currentToolId: string, explicitIds: string[]): ToolConfig[];
+/** @deprecated — use getRelatedTools(tool.id, tool.relatedTools) */
+export function getRelatedTools(explicitIds: string[]): ToolConfig[];
+export function getRelatedTools(
+  firstArg: string | string[],
+  secondArg?: string[],
+): ToolConfig[] {
+  const MAX = 4;
+
+  // Handle both call signatures (new: id + ids, legacy: ids only)
+  const currentToolId: string | null = typeof firstArg === 'string' ? firstArg : null;
+  const explicitIds: string[] = typeof firstArg === 'string' ? (secondArg ?? []) : firstArg;
+
+  const seen = new Set<string>();
+  if (currentToolId) seen.add(currentToolId);
+
+  const result: ToolConfig[] = [];
+
+  function addTool(id: string): boolean {
+    if (seen.has(id)) return false;
+    const t = getToolById(id);
+    if (!t || !t.available) return false;
+    seen.add(id);
+    result.push(t);
+    return true;
+  }
+
+  // Tier 1 — explicit relatedTools
+  for (const id of explicitIds) {
+    if (result.length >= MAX) break;
+    addTool(id);
+  }
+
+  // Tier 2 — concept-cluster neighbours
+  if (result.length < MAX && currentToolId) {
+    const clusterNeighbours = CONCEPT_CLUSTERS[currentToolId] ?? [];
+    for (const id of clusterNeighbours) {
+      if (result.length >= MAX) break;
+      addTool(id);
+    }
+  }
+
+  // Tier 3 — same-category fill
+  if (result.length < MAX && currentToolId) {
+    const currentTool = getToolById(currentToolId);
+    if (currentTool) {
+      const sameCat = TOOLS.filter(
+        (t) => t.category === currentTool.category && t.available && !seen.has(t.id),
+      );
+      for (const t of sameCat) {
+        if (result.length >= MAX) break;
+        seen.add(t.id);
+        result.push(t);
+      }
+    }
+  }
+
+  return result;
 }
 
 // ─── Fallback FAQ Generator ───────────────────────────────────────────────────

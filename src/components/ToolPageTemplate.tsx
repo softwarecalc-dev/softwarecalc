@@ -29,7 +29,7 @@ interface ToolPageTemplateProps {
  * Related tools) is derived from the tools registry automatically.
  */
 export function ToolPageTemplate({ tool, children }: ToolPageTemplateProps) {
-  const related = getRelatedTools(tool.relatedTools);
+  const related = getRelatedTools(tool.id, tool.relatedTools);
   const faqItems = getEffectiveFaqs(tool);
 
   // ── Structured Data (JSON-LD) ──
