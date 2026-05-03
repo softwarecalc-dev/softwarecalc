@@ -57,6 +57,13 @@ function Navigation() {
           >
             Tools
           </Link>
+          <Link
+            to="/guides"
+            className="text-muted-foreground hover:text-foreground transition-colors"
+            activeProps={{ className: 'text-foreground font-medium' }}
+          >
+            Calculator Guides
+          </Link>
 
 
           {SHOW_AUTH_UI && (
