@@ -26,25 +26,237 @@ const GUIDE_CONTENT: Record<ToolConfig['category'], GuideContent> = {
 Finance: {
   title: 'Can I Afford a House? A Real-World Finance Journey',
   intro: 'Buying a house is not a single calculation — it is a sequence of financial decisions. You start with your real income, then define affordability, then test loans, and finally compare long-term cost vs alternatives like renting or investing. This guide walks through a real-life financial journey.',  
-  story: `
+story: `
 <p>
-Alex just got a new job after being unemployed for a while. The first thing he wants to know is how much money he actually takes home. He opens a <a href="/salary-after-tax-calculator" class="text-primary underline">salary after tax calculator</a> and realises his real income is lower than expected.
+Alex had spent most of his twenties doing what many people do — working hard, paying bills, and telling himself that “real financial planning” would start next year. Somehow, next year kept moving further away. First it was rent, then car repairs, then holidays, then unexpected expenses. Saving money always felt like something meant for people who already had money.
 </p>
 
 <p>
-Now he needs structure. He decides that housing should not take more than 30% of his income, so he uses a <a href="/budget-calculator" class="text-primary underline">budget calculator</a> to figure out what is actually safe to spend each month.
+But things changed when he landed a better job.
 </p>
 
 <p>
-After a few months of saving, he starts thinking about what to do with his extra money. Should he invest it or keep saving? He tries a <a href="/roi-calculator" class="text-primary underline">ROI calculator</a> and sees how long-term growth can change everything.
+The salary sounded great during the interview. The number looked big, and for the first time in years, he felt like life might finally get easier. But after signing the contract, he sat at his kitchen table and realised something important: gross salary and real salary were not the same thing.
 </p>
 
 <p>
-Eventually he looks at buying a house. The price looks okay at first, but when he checks mortgage payments using a <a href="/mortgage-calculator" class="text-primary underline">mortgage calculator</a>, he realises interest over time completely changes the picture.
+He opened a <a href="/salary-after-tax-calculator" class="text-primary underline">Salary After Tax Calculator</a> and entered his new income. The result surprised him. Taxes, deductions, and contributions took a much bigger piece than he expected. His salary still looked good, but suddenly it felt real. This was the number he actually had to work with.
 </p>
 
 <p>
-In the end, he is not just deciding between houses anymore — he is deciding between renting, investing, or buying, each shaping his financial future in completely different ways.
+Instead of guessing, Alex decided to take control properly. He listed every monthly cost: rent, electricity, food, fuel, insurance, phone bills, subscriptions he had forgotten existed, and the small “just this once” purchases that somehow happened every week.
+</p>
+
+<p>
+When he compared spending against income, he realised something uncomfortable — he was earning more, but not building anything. His money was disappearing without a plan.
+</p>
+
+<p>
+That was the moment he decided he wanted more than just surviving month to month. He wanted a house.
+</p>
+
+<p>
+Not immediately. Not next month. But someday soon enough that it felt like a real goal instead of a fantasy.
+</p>
+
+<p>
+He started researching what banks actually cared about. One term kept appearing everywhere: debt-to-income ratio. Apparently, lenders did not care how confident you felt — they cared how much of your monthly income was already committed elsewhere.
+</p>
+
+<p>
+He used a <a href="/debt-to-income-calculator" class="text-primary underline">Debt To Income Calculator</a> and entered his car payment, student loan balance, and credit card payments. The result was worse than he hoped. He was still technically “fine,” but not strong enough for the mortgage he wanted.
+</p>
+
+<p>
+That meant step one was not buying property. Step one was cleaning up debt.
+</p>
+
+<p>
+His credit card balance had been annoying him for years. Minimum payments made it feel manageable, but never smaller. He checked a <a href="/credit-card-payoff-calculator" class="text-primary underline">Credit Card Payoff Calculator</a> and saw the brutal truth: if he kept paying the minimum, he would be paying for years.
+</p>
+
+<p>
+That annoyed him enough to act.
+</p>
+
+<p>
+He built a simple plan using a <a href="/debt-payoff-calculator" class="text-primary underline">Debt Payoff Calculator</a>. If he cut unnecessary spending and added one extra payment every month, the timeline changed dramatically. Suddenly, the debt had an ending.
+</p>
+
+<p>
+At work, he started volunteering for extra shifts. Sometimes it was tiring, but every extra hour now had a purpose. He used a <a href="/salary-hourly-calculator" class="text-primary underline">Salary Hourly Calculator</a> to break down what his time was actually worth. Seeing the hourly number made overtime decisions easier. One extra weekend shift was no longer “just work” — it was part of the future house deposit.
+</p>
+
+<p>
+Months passed. His credit card debt shrank. His savings account slowly stopped looking embarrassing.
+</p>
+
+<p>
+Then came the question almost everyone asks:
+</p>
+
+<p>
+Should I save more… or should I invest?
+</p>
+
+<p>
+Keeping money in the bank felt safe, but inflation made that safety look expensive. Prices kept rising. Rent kept rising. Even groceries seemed offended by his existence.
+</p>
+
+<p>
+He checked an <a href="/inflation-calculator" class="text-primary underline">Inflation Calculator</a> and realised that money sitting still was quietly losing value every year. That changed how he thought about “playing it safe.”
+</p>
+
+<p>
+He moved on to a <a href="/compound-interest-calculator" class="text-primary underline">Compound Interest Calculator</a>. At first, the numbers looked small. But when he changed the timeline from two years to ten, then twenty, the graph became ridiculous. Small monthly contributions turned into something that looked like an actual future.
+</p>
+
+<p>
+For the first time, retirement stopped feeling like an abstract old-person problem. It became math.
+</p>
+
+<p>
+He opened a <a href="/retirement-calculator" class="text-primary underline">Retirement Calculator</a> and tested different monthly investments. Waiting five more years made a huge difference. Starting now, even imperfectly, mattered more than waiting for the “perfect time.”
+</p>
+
+<p>
+That lesson hit him harder than expected.
+</p>
+
+<p>
+He was not late. But he would be if he kept delaying.
+</p>
+
+<p>
+Still, the house goal remained.
+</p>
+
+<p>
+He started browsing listings. Apartments. Small townhouses. Places with kitchens that looked suspiciously optimistic in photos.
+</p>
+
+<p>
+At first, prices looked manageable. Then he opened a <a href="/mortgage-calculator" class="text-primary underline">Mortgage Calculator</a>.
+</p>
+
+<p>
+That changed everything.
+</p>
+
+<p>
+Monthly payments were one thing. Interest over twenty-five or thirty years was another. A house listed at one price could quietly cost almost double by the end.
+</p>
+
+<p>
+He added more detail with a <a href="/loan-payment-calculator" class="text-primary underline">Loan Payment Calculator</a>, adjusting rates and repayment lengths. Shorter loans meant higher monthly pressure. Longer loans meant paying far more over time. There was no magic option — only trade-offs.
+</p>
+
+<p>
+Then came the deposit problem.
+</p>
+
+<p>
+Banks wanted security. They wanted proof he could contribute enough upfront. He checked a <a href="/loan-to-value-calculator" class="text-primary underline">Loan To Value Calculator</a> and understood why saving for a larger deposit mattered so much. A better LTV ratio meant better loan conditions and less financial risk.
+</p>
+
+<p>
+He created a target and used a <a href="/savings-goal-calculator" class="text-primary underline">Savings Goal Calculator</a> to figure out how much he needed to save each month to reach it in two years.
+</p>
+
+<p>
+The number looked aggressive.
+</p>
+
+<p>
+But aggressive felt better than vague.
+</p>
+
+<p>
+At one point, he considered buying a cheaper property, renovating it, and selling later. He tested the idea with a <a href="/break-even-calculator" class="text-primary underline">Break Even Calculator</a> and later a <a href="/roi-calculator" class="text-primary underline">ROI Calculator</a>. Some deals looked exciting until maintenance costs entered the conversation. Numbers were much less romantic than YouTube property influencers.
+</p>
+
+<p>
+That was probably a good thing.
+</p>
+
+<p>
+Slowly, Alex stopped thinking like someone trying to “get rich” and started thinking like someone building stability.
+</p>
+
+<p>
+He paid down debt.
+</p>
+
+<p>
+He tracked spending.
+</p>
+
+<p>
+He invested consistently.
+</p>
+
+<p>
+He understood loans before signing them.
+</p>
+
+<p>
+He saved with purpose instead of hope.
+</p>
+
+<p>
+And maybe most importantly, he stopped being intimidated by money.
+</p>
+
+<p>
+Finance had always seemed like a language spoken by other people — bankers, investors, people in expensive suits saying words like “portfolio” too casually.
+</p>
+
+<p>
+But now he understood something simple:
+</p>
+
+<p>
+Most financial decisions were not magic. They were just calculations people avoided because they were uncomfortable.
+</p>
+
+<p>
+And calculators made uncomfortable things clearer.
+</p>
+
+<p>
+One evening, sitting at the same kitchen table where this had started, Alex looked at his numbers again.
+</p>
+
+<p>
+He was not buying the dream house yet.
+</p>
+
+<p>
+But he had no credit card panic.
+</p>
+
+<p>
+His savings had direction.
+</p>
+
+<p>
+His investments had momentum.
+</p>
+
+<p>
+His mortgage options were realistic.
+</p>
+
+<p>
+And for the first time in a long time, the future did not feel random.
+</p>
+
+<p>
+It felt planned.
+</p>
+
+<p>
+That was worth more than the house itself.
 </p>
 `
 },
