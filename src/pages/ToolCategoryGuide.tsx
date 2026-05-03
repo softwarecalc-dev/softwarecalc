@@ -313,110 +313,51 @@ export function ToolCategoryGuide({ slug }: ToolCategoryGuideProps) {
             </h1>
           </div>
           <p className="text-muted-foreground text-lg leading-relaxed">{content.intro}</p>
-        </div>
 
-        {/* ── Story mode (Finance only) ── */}
-        {category === 'Finance' && content.storySections && (
-          <section className="space-y-6">
-            {content.storySections.map((section, i) => (
-              <Card key={i}>
-                <CardContent className="pt-6 space-y-3">
-                  <h2 className="text-xl font-semibold">
-                    {section.title}
-                  </h2>
+        {/* ── Story Flow (Finance only) ── */}
+{category === 'Finance' && content.storySections && (
+  <section className="space-y-6">
 
-                  <p className="text-muted-foreground leading-relaxed">
-                    {section.text}
-                  </p>
+    {content.storySections.map((section, i) => {
+      const tool = TOOLS.find(t =>
+        t.name.toLowerCase().includes(section.toolHint.toLowerCase()) ||
+        section.toolHint.toLowerCase().includes(t.name.toLowerCase())
+      );
 
-                  <div className="text-sm font-medium text-primary">
-                    Recommended tool:{' '}
-                    <Link to="/salary-calculator" className="underline hover:opacity-80">
-                      Salary After Tax Calculator
-                    </Link>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </section>
-        )}
-        
-        {/* ── Common real-world problems ── */}
-        <section aria-labelledby="problems-heading" className="space-y-4">
-          <h2
-            id="problems-heading"
-            className="text-2xl font-semibold tracking-tight"
-            style={{ fontFamily: 'var(--font-serif)' }}
-          >
-            Common real-world problems
-          </h2>
-          <Card>
-            <CardContent className="pt-6">
-              <ul className="space-y-3">
-                {content.problems.map((problem, i) => (
-                  <li key={i} className="flex gap-3">
-                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary text-sm font-semibold flex items-center justify-center">
-                      {i + 1}
-                    </span>
-                    <span className="text-muted-foreground leading-relaxed">{problem}</span>
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
-        </section>
+      return (
+        <Card key={i} className="border-l-4 border-primary/40">
+          <CardContent className="pt-6 space-y-3">
 
-        {/* ── Recommended tools ── */}
-        <section aria-labelledby="tools-heading" className="space-y-4">
-          <h2
-            id="tools-heading"
-            className="text-2xl font-semibold tracking-tight"
-            style={{ fontFamily: 'var(--font-serif)' }}
-          >
-            Recommended tools
-          </h2>
-          <div className="grid gap-3">
-            {tools.map((tool) => (
-              <Link key={tool.id} to={tool.href as '/'} className="block group">
-                <Card className="transition-all hover:border-primary/50 hover:bg-muted/30">
-                  <div className="flex items-center p-4 gap-4">
-                    <div className="p-2.5 rounded-lg bg-primary/10 text-primary shrink-0">
-                      <tool.icon className="w-5 h-5" />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="font-semibold">{tool.name}</p>
-                      <p className="text-sm text-muted-foreground line-clamp-1">{tool.description}</p>
-                    </div>
-                    <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
-                  </div>
-                </Card>
-              </Link>
-            ))}
-          </div>
-        </section>
+            {/* Step title */}
+            <h2 className="text-xl font-semibold">
+              {section.title}
+            </h2>
 
-        {/* ── When to use ── */}
-        <section aria-labelledby="when-heading" className="space-y-4">
-          <h2
-            id="when-heading"
-            className="text-2xl font-semibold tracking-tight"
-            style={{ fontFamily: 'var(--font-serif)' }}
-          >
-            When to use these calculators
-          </h2>
-          <Card>
-            <CardContent className="pt-6">
-              <ul className="space-y-3">
-                {content.whenToUse.map((tip, i) => (
-                  <li key={i} className="flex gap-3">
-                    <span className="flex-shrink-0 w-2 h-2 rounded-full bg-primary mt-2" />
-                    <span className="text-muted-foreground leading-relaxed">{tip}</span>
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
-        </section>
+            {/* Story text */}
+            <p className="text-muted-foreground leading-relaxed">
+              {section.text}
+            </p>
+
+            {/* Tool CTA (IMPORTANT PART) */}
+            {tool && (
+              <div className="pt-2">
+                <Link
+                  to={tool.href as any}
+                  className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
+                >
+                  Open {tool.name}
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            )}
+
+          </CardContent>
+        </Card>
+      );
+    })}
+
+  </section>
+)}
 
         {/* ── Footer CTA ── */}
         <div className="pt-4 border-t flex flex-col sm:flex-row items-center justify-between gap-4">
