@@ -20,6 +20,12 @@ interface GuideContent {
   intro: string;
   story: string;
 }
+mentionedTools: [
+  'Salary After Tax Calculator',
+  'Budget Calculator',
+  'ROI Calculator',
+  'Mortgage Calculator',
+],
 
 const GUIDE_CONTENT: Record<ToolConfig['category'], GuideContent> = {
   Finance: {
@@ -206,9 +212,14 @@ interface ToolCategoryGuideProps {
 export function ToolCategoryGuide({ slug }: ToolCategoryGuideProps) {
   const category = GUIDE_SLUGS[slug];
   const content = category ? GUIDE_CONTENT[category] : null;
-  const tools = category
-  ? TOOLS.filter((t) => t.category === category && t.available)
-  : [];
+  const tools =
+    category && content && 'mentionedTools' in content
+      ? TOOLS.filter(
+          (t) =>
+            t.available &&
+            (content as any).mentionedTools.includes(t.name)
+        )
+      : [];
 
   // JSON-LD structured data
   useEffect(() => {
