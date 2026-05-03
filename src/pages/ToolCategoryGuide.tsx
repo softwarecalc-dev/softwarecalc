@@ -29,38 +29,9 @@ const GUIDE_CONTENT: Record<ToolConfig['category'], GuideContent> = {
   intro:
     'Buying a house is not a single calculation — it is a sequence of financial decisions. You start with your real income, then define affordability, then test loans, and finally compare long-term cost vs alternatives like renting or investing. This guide walks you through that exact journey step by step.',
 
-  storySections: [
-    {
-      title: '1. Start with your real income (not your salary)',
-      text:
-        'Most people overestimate what they can afford because they look at gross salary. What actually matters is your net income after tax — the money you truly have available each month.',
-      toolHint: 'Salary After Tax Calculator',
-    },
-    {
-      title: '2. Define a safe monthly housing budget',
-      text:
-        'A stable rule is to keep housing costs between 25–35% of your monthly net income. This protects you from financial stress and unexpected expenses.',
-      toolHint: 'Budget / Affordability Calculator',
-    },
-    {
-      title: '3. Understand your loan reality',
-      text:
-        'Even a small change in interest rate dramatically affects your total cost over time. Two similar houses can have very different long-term affordability.',
-      toolHint: 'Loan / Mortgage Calculator',
-    },
-    {
-      title: '4. Look at total cost over time',
-      text:
-        'The real cost of a house is not the price — it is the total interest paid over 20–30 years. This often surprises first-time buyers.',
-      toolHint: 'Loan Interest / ROI Calculator',
-    },
-    {
-      title: '5. Compare renting vs buying',
-      text:
-        'Buying builds equity, but renting gives flexibility. The better choice depends on long-term financial growth vs lifestyle freedom.',
-      toolHint: 'ROI Calculator',
-    },
-  ],
+    // (DO NOTHING HERE — just continue normally)
+storySections: [],
+  
 },
   Math: {
     title: 'Math Calculator Guide',
@@ -317,7 +288,7 @@ export function ToolCategoryGuide({ slug }: ToolCategoryGuideProps) {
 
         {/* ── Story Flow (Finance only) ── */}
 {category === 'Finance' && content.storySections && (
-  <section className="space-y-6">
+  <section className="space-y-8 max-w-2xl mx-auto">
 
     {content.storySections.map((section, i) => {
       const tool = TOOLS.find(t =>
