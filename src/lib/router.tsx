@@ -16,6 +16,8 @@ import { ContactPage } from '../pages/ContactPage';
 import { PrivacyPolicyPage } from '../pages/PrivacyPolicyPage';
 import { TermsOfServicePage } from '../pages/TermsOfServicePage';
 import { SeoClusterMap } from '../components/SeoClusterMap';
+import { ToolCategoryGuide, GUIDE_SLUGS } from '../pages/ToolCategoryGuide';
+import { GuidesIndexPage } from '../pages/GuidesIndexPage';
 import { Button } from '../components/ui/button';
 import { Loader2 } from 'lucide-react';
 
@@ -238,6 +240,20 @@ const seoMapRoute = createRoute({
   component: SeoClusterMap,
 });
 
+const guidesIndexRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/guides',
+  component: GuidesIndexPage,
+});
+
+const guideRoutes = Object.keys(GUIDE_SLUGS).map((slug) =>
+  createRoute({
+    getParentRoute: () => rootRoute,
+    path: `/guides/${slug}`,
+    component: () => <ToolCategoryGuide slug={slug} />,
+  })
+);
+
 
 // Automatic Tool Routes
 const toolRoutes = TOOLS.filter(t => t.available && t.component).map(tool => 
@@ -302,6 +318,8 @@ const routeTree = rootRoute.addChildren([
   privacyPolicyRoute,
   termsOfServiceRoute,
   seoMapRoute,
+  guidesIndexRoute,
+  ...guideRoutes,
   ...toolRoutes,
   ...categoryRoutes,
   loginRoute,
