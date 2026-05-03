@@ -11,13 +11,6 @@ import {
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
 
-const GUIDE_LIST = Object.entries(GUIDE_SLUGS).map(([slug, category]) => ({
-  slug,
-  category,
-  label: `${category} Calculator Guide`,
-  description: GUIDE_DESCRIPTIONS[category as keyof typeof GUIDE_DESCRIPTIONS],
-}));
-
 const GUIDE_DESCRIPTIONS = {
   Finance: 'Loans, mortgages, investments, tax, profit, and income calculations explained.',
   Math: 'Fractions, percentages, roots, factors, and general arithmetic covered.',
@@ -28,6 +21,13 @@ const GUIDE_DESCRIPTIONS = {
   'Random Generators': 'Generate unbiased random numbers for draws, games, and testing.',
   'Game Calculators': 'Optimal strategy and probability tools for blackjack, poker, and more.',
 };
+
+const GUIDE_LIST = Object.entries(GUIDE_SLUGS).map(([slug, category]) => ({
+  slug,
+  category,
+  label: `${category} Calculator Guide`,
+  description: GUIDE_DESCRIPTIONS[category as keyof typeof GUIDE_DESCRIPTIONS],
+}));
 
 export function GuidesIndexPage() {
   return (
