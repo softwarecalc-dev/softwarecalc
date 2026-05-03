@@ -308,7 +308,6 @@ export function ToolCategoryGuide({ slug }: ToolCategoryGuideProps) {
   className="max-w-2xl mx-auto space-y-6 text-lg leading-relaxed text-muted-foreground"
   dangerouslySetInnerHTML={{ __html: content.story }}
 />
-</div>
 
 
 
