@@ -313,6 +313,7 @@ export function ToolCategoryGuide({ slug }: ToolCategoryGuideProps) {
             </h1>
           </div>
           <p className="text-muted-foreground text-lg leading-relaxed">{content.intro}</p>
+        </div>
 
         {/* ── Story Flow (Finance only) ── */}
 {category === 'Finance' && content.storySections && (
