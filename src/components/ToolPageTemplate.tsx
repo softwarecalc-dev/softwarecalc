@@ -275,6 +275,34 @@ export function ToolPageTemplate({ tool, children }: ToolPageTemplateProps) {
           </section>
         )}
 
+        {/* ── FAQ ── */}
+{tool.faq && tool.faq.length > 0 && (
+  <section aria-labelledby="faq-heading" className="space-y-4">
+    <h2
+      id="faq-heading"
+      className="text-2xl font-semibold tracking-tight"
+      style={{ fontFamily: 'var(--font-serif)' }}
+    >
+      Frequently Asked Questions
+    </h2>
+
+    <Card>
+      <CardContent className="pt-6 space-y-6">
+        {tool.faq.map((item, i) => (
+          <div key={i} className="space-y-2">
+            <h3 className="font-medium text-foreground">
+              {item.question}
+            </h3>
+            <p className="text-muted-foreground leading-relaxed">
+              {item.answer}
+            </p>
+          </div>
+        ))}
+      </CardContent>
+    </Card>
+  </section>
+)}
+        
         {/* ── Related tools ── */}
         {related.length > 0 && (
           <section aria-labelledby="related-tools-heading" className="space-y-4">
