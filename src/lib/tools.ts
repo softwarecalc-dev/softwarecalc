@@ -110,6 +110,11 @@ export interface ToolConfig {
   aboutText?: string;
   /** Optional step-by-step list shown in the "How to use" section below the calculator UI */
   howToUse?: string[];
+    /** Optional FAQ section shown below Example Usage */
+  faq?: {
+    question: string;
+    answer: string;
+  }[];
   /** Optional title for the Formula section (defaults to "Formula") */
   formulaTitle?: string;
   /** The formula expression displayed in a monospace block */
@@ -348,7 +353,7 @@ howToUse: [
   {
     id: 'markup-calculator',
     name: 'Markup Calculator',
-    description: 'Calculate selling price and profit based on cost and markup percentage.',
+    description: 'Calculate selling price, markup percentage, and profit based on product cost.',
     aboutText: 'The Markup Calculator helps you determine the selling price of a product based on its cost and a markup percentage. It shows how much profit you will earn and what the final selling price should be. This tool is commonly used in retail, e-commerce, and product pricing to ensure items are sold at a profitable margin. It also works well with the [Profit Margin Calculator](/profit-margin-calculator) when analyzing profitability and the [Discount Calculator](/discount-calculator) when planning promotional pricing.',
     howToUse: [
       'Enter the cost of the item or product.',
@@ -366,6 +371,24 @@ howToUse: [
       'Cost $100 with 25% markup → Selling Price $125, Profit $25',
       'Cost $50 with 100% markup → Selling Price $100, Profit $50',
     ],
+    faq: [
+  {
+    question: 'What is the difference between markup and profit margin?',
+    answer: 'Markup is based on cost, while profit margin is based on selling price. Markup determines how much you add to your cost price, while profit margin shows how much of the final selling price is actual profit.'
+  },
+  {
+    question: 'How do I calculate selling price using markup?',
+    answer: 'To calculate selling price, add the markup percentage to the original cost. For example, if an item costs $100 and you apply a 25% markup, the selling price becomes $125.'
+  },
+  {
+    question: 'Is 100% markup the same as doubling the price?',
+    answer: 'Yes. A 100% markup means you add the full cost amount again, so a product that costs $50 would be sold for $100.'
+  },
+  {
+    question: 'Should I use markup or profit margin for pricing?',
+    answer: 'Businesses often use markup when setting prices because it is based on cost. Profit margin is more useful for analyzing profitability after the selling price has been set. Many businesses use both together for better pricing decisions.'
+  }
+],
     relatedTools: ['profit-margin-calculator', 'vat-calculator', 'discount-calculator'],
     component: MarkupCalculator,
     seoTitle: 'Markup Calculator Online | Calculate Selling Price & Profit | SoftwareCalc',
