@@ -24,27 +24,29 @@ interface GuideContent {
 
 const GUIDE_CONTENT: Record<ToolConfig['category'], GuideContent> = {
   Finance: {
-    title: 'Finance Calculator Guide',
-    intro:
-      'Finance calculators help you make sense of money — whether you are planning a loan, comparing investment options, understanding your tax bill, or figuring out how much profit a business is making. This guide covers the most common financial situations where a calculator saves time and reduces errors.',
-    problems: [
-      'How much will my monthly loan or mortgage payment be?',
-      'How long will it take to pay off my credit card debt?',
-      'What is my take-home pay after tax?',
-      'Is this investment worth it — what is the ROI?',
-      'How much will I have saved by retirement?',
-      'What markup percentage do I need to hit my target profit margin?',
-      'How much VAT or sales tax do I owe on a transaction?',
-    ],
-    whenToUse: [
-      'Before taking out any loan or mortgage — calculate total interest and monthly payments first.',
-      'When comparing two investment options — use ROI and compound interest calculators side by side.',
-      'At the start of a new job — use the salary after tax calculator to understand your net income.',
-      'When pricing products or services — use margin and markup calculators to stay profitable.',
-      'During tax season — use VAT, sales tax, and income calculators to double-check figures.',
-      'When planning long-term savings — retirement and compound interest calculators show how time and rate affect growth.',
-    ],
-  },
+  title: 'Finance Calculator Guide',
+  intro:
+    'Most financial decisions are not single calculations — they are chains of decisions. Buying a house, taking a loan, or planning investments all require understanding income, affordability, interest, and long-term cost. This guide walks through real-life financial scenarios step by step, showing exactly which calculators you need at each stage.',
+
+  problems: [
+    'I want to buy a house — how much can I actually afford?',
+    'How does my income translate into borrowing power?',
+    'What will my monthly mortgage payment be?',
+    'Is renting or buying better for my situation?',
+    'How much total interest will I pay over time?',
+    'How long will it take to pay off my loan early?',
+    'Is this investment worth it compared to savings or inflation?'
+  ],
+
+  whenToUse: [
+    'Start with your income — use a salary calculator to understand your real take-home pay after tax.',
+    'Then check affordability — compare monthly expenses vs potential loan payments.',
+    'Use mortgage/loan calculators to see long-term cost including interest over time.',
+    'Compare renting vs buying — model both scenarios side by side over 5–30 years.',
+    'Before committing — simulate different interest rates and repayment speeds.',
+    'For investments — compare expected ROI vs savings accounts and inflation impact.'
+  ],
+},
   Math: {
     title: 'Math Calculator Guide',
     intro:
