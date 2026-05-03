@@ -12,7 +12,7 @@ import {
 } from '@/components/ui/breadcrumb';
 
 const GUIDE_DESCRIPTIONS = {
-  Finance: 'Loans, mortgages, investments, tax, profit, and income calculations explained.',
+  Finance: 'From Paycheck to Property: A Practical Personal Finance Story',
   Math: 'Fractions, percentages, roots, factors, and general arithmetic covered.',
   Conversions: 'Convert between metric and imperial units for length, weight, temperature, and volume.',
   Health: 'BMI and body measurement calculators with standard reference ranges.',
