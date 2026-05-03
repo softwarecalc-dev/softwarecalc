@@ -306,9 +306,9 @@ export function ToolCategoryGuide({ slug }: ToolCategoryGuideProps) {
         </div>
 
 {/* ── Story ── */}
-<div className="bg-white dark:bg-zinc-900 border rounded-xl p-6 max-w-2xl mx-auto">
+<div className="bg-white dark:bg-zinc-900 border shadow-sm rounded-xl p-6 max-w-2xl mx-auto">
   <div
-    className="space-y-6 text-base leading-relaxed text-muted-foreground"
+    className="space-y-5 text-base leading-relaxed text-muted-foreground"
     dangerouslySetInnerHTML={{ __html: content.story }}
   />
 </div>
@@ -316,7 +316,7 @@ export function ToolCategoryGuide({ slug }: ToolCategoryGuideProps) {
 
 {/* ── Relevant Tools ── */}
 {tools.length > 0 && (
-  <div className="bg-white dark:bg-zinc-900 rounded-xl border p-6 space-y-4">
+  <div className="bg-muted/30 rounded-xl border p-6 space-y-4">
     <h2 className="text-lg font-semibold">
       Relevant tools in this guide
     </h2>
