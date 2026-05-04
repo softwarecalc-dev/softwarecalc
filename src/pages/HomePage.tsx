@@ -167,7 +167,33 @@ const otherTools = TOOLS
     </Button>
   </Link>
 </section>
-
+<script type="application/ld+json">
+{JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "SoftwareCalc",
+  "url": "https://softwarecalc.com/",
+  "description": "Free online calculators for finance, math, conversions, health, and everyday use.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "SoftwareCalc",
+    "url": "https://softwarecalc.com/"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://softwarecalc.com/tools?query={search_term_string}",
+    "query-input": "required name=search_term_string"
+  },
+  "about": [
+    "Finance Calculators",
+    "Math Calculators",
+    "Loan Calculators",
+    "Percentage Calculators",
+    "Unit Conversions",
+    "Health Calculators"
+  ]
+})}
+</script>
       </div>
     </div>
   );
