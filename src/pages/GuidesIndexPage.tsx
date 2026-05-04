@@ -25,7 +25,7 @@ const GUIDE_DESCRIPTIONS = {
 const GUIDE_LIST = Object.entries(GUIDE_SLUGS).map(([slug, category]) => ({
   slug,
   category,
-  label: `${category} Calculator Guide`,
+  label: category,
   description: GUIDE_DESCRIPTIONS[category as keyof typeof GUIDE_DESCRIPTIONS],
 }));
 
@@ -62,12 +62,11 @@ export function GuidesIndexPage() {
               className="text-3xl md:text-4xl font-bold tracking-tight"
               style={{ fontFamily: 'var(--font-serif)' }}
             >
-              Calculator Guides
+              Real-Life Guides
             </h1>
           </div>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Practical guides to every calculator category on SoftwareCalc — covering real-world problems,
-            recommended tools, and when to use them.
+            Real-world stories that show how calculators solve everyday problems — from money and math to time, health, and decision-making.
           </p>
         </div>
 
