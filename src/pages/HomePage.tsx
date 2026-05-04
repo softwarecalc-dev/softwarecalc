@@ -134,21 +134,27 @@ const otherTools = TOOLS
 </section>
 
         {/* 👇 PASTE HERE */}
-        <section className="max-w-3xl mx-auto space-y-4 text-sm md:text-base pt-6">
-          <h2 className="text-2xl font-semibold tracking-tight">
-            Helpful Tools for Students, Professionals, and Everyday Users
-          </h2>
-          <p className="text-muted-foreground leading-relaxed">
-            SoftwareCalc is built for people who want quick answers without unnecessary complexity. Whether you are studying math,
-            comparing prices, planning savings, converting measurements, or working out time and date differences, these calculators
-            are designed to be simple, practical, and easy to use.
-          </p>
-          <p className="text-muted-foreground leading-relaxed">
-            We continue expanding the site with new calculators across finance, math, conversions, health, and everyday utility topics.
-            Each tool is designed to provide clear inputs, instant results, and useful supporting explanations so you can understand the
-            calculation as well as the answer.
-          </p>
-        </section>
+        <section className="max-w-3xl mx-auto space-y-5 text-sm md:text-base pt-6">
+  
+  <h2 className="text-2xl font-semibold tracking-tight">
+    Trusted Online Calculator Platform
+  </h2>
+
+  <p className="text-muted-foreground leading-relaxed">
+    SoftwareCalc is a free online calculator platform built to help users make faster and more accurate financial and mathematical decisions.
+    Our tools are designed for clarity, transparency, and real-world use — from loans and investments to everyday calculations.
+  </p>
+
+  <p className="text-muted-foreground leading-relaxed">
+    All calculators are built using standard formulas and are regularly reviewed to ensure accuracy.
+    We focus on practical use cases such as budgeting, loan planning, savings growth, taxes, and conversions.
+  </p>
+
+  <p className="text-muted-foreground leading-relaxed">
+    If you have feedback or want a new calculator added, feel free to reach out. We continuously improve the platform based on user needs.
+  </p>
+
+</section>
 {/* CTA SECTION */}
 <section className="text-center pt-12 space-y-3">
   <h3 className="text-xl font-semibold">
