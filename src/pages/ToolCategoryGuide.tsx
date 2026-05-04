@@ -261,26 +261,250 @@ That was worth more than the house itself.
 `
 },
   Math: {
-    title: 'Math Calculator Guide',
-    intro:
-      'Math calculators cover everyday arithmetic, number theory, fractions, percentages, roots, and more. Whether you are a student checking homework, a professional needing a quick calculation, or simply curious about a number, these tools provide fast and accurate results with step-aware explanations.',
-    problems: [
-      'How do I convert a decimal to a fraction or percentage?',
-      'What is the greatest common factor of two numbers?',
-      'How do I simplify a fraction to its lowest terms?',
-      'What is the square root or cube root of a number?',
-      'How do I calculate percentage increase or decrease?',
-      'Is this number prime? What are its factors?',
-      'How do I write a number in scientific notation?',
-    ],
-    whenToUse: [
-      'Checking homework or exam answers — use fraction, percentage, or root calculators to verify your working.',
-      'Cooking and scaling recipes — ratio and proportion calculators keep ingredient amounts accurate.',
-      'Data analysis — average, percentage change, and rounding calculators summarise numbers quickly.',
-      'Programming and engineering — sig fig, scientific notation, and exponent calculators handle precision formatting.',
-      'Number theory problems — GCF, LCM, prime factorization, and divisibility calculators solve common proofs and puzzles.',
-    ],
-  },
+  title: 'The Hidden Math of Everyday Life: From Recipes to Real Decisions',
+  intro: 'Math is rarely about classrooms alone. It shows up in cooking, budgeting, shopping, studying, construction, fitness, and everyday decisions. This guide follows a realistic day where simple math tools quietly solve problems most people face without even calling it “doing math.”',
+  story: `
+<p>
+Emma never thought of herself as a “math person.”
+</p>
+
+<p>
+At school, math had always felt like something trapped inside textbooks — equations on whiteboards, formulas to memorise, and exams designed to ruin weekends. Once adult life started, she assumed she had escaped most of it.
+</p>
+
+<p>
+She was wrong.
+</p>
+
+<p>
+Math had simply changed clothes.
+</p>
+
+<p>
+It appeared in grocery stores, bills, rent, recipes, gym progress, and online shopping. It was no longer called algebra — now it was called “figuring things out.”
+</p>
+
+<p>
+One Saturday morning, Emma started with something simple: pancakes.
+</p>
+
+<p>
+She was cooking for four people instead of two, and her usual recipe suddenly needed adjusting. Doubling ingredients sounded easy until the fractions arrived. Half a tablespoon became annoying surprisingly fast.
+</p>
+
+<p>
+She opened a <a href="/fraction-calculator" class="text-primary underline">Fraction Calculator</a> to work through the measurements and then used a <a href="/ratio-calculator" class="text-primary underline">Ratio Calculator</a> to keep ingredient proportions balanced.
+</p>
+
+<p>
+It felt slightly ridiculous using math tools for breakfast, but bad pancakes were somehow more offensive than difficult equations.
+</p>
+
+<p>
+Later that day, she went shopping for furniture.
+</p>
+
+<p>
+She found two rugs she liked. One looked cheaper, but it was also smaller. Comparing total prices was misleading, so she checked a <a href="/unit-price-calculator" class="text-primary underline">Unit Price Calculator</a> mindset — except this time with area and dimensions.
+</p>
+
+<p>
+She also used a <a href="/percentage-calculator" class="text-primary underline">Percentage Calculator</a> to calculate a weekend sale discount that the store’s giant red “SAVE 35%” sign somehow made intentionally confusing.
+</p>
+
+<p>
+Retail math had always been suspicious.
+</p>
+
+<p>
+At work on Monday, math appeared again.
+</p>
+
+<p>
+Her manager was reviewing monthly performance numbers, and everyone wanted quick summaries. Raw numbers were messy, but averages made patterns easier to understand.
+</p>
+
+<p>
+Emma used an <a href="/average-calculator" class="text-primary underline">Average Calculator</a> to compare team output across the month and a <a href="/percentage-change-calculator" class="text-primary underline">Percentage Change Calculator</a> to measure growth from the previous quarter.
+</p>
+
+<p>
+Suddenly “business strategy” looked a lot like middle-school arithmetic wearing a blazer.
+</p>
+
+<p>
+That evening, her younger brother called with homework panic.
+</p>
+
+<p>
+He was stuck simplifying fractions and converting decimals into percentages for a test the next day. Apparently, this was now a family emergency.
+</p>
+
+<p>
+They worked through a <a href="/simplify-fractions-calculator" class="text-primary underline">Simplify Fractions Calculator</a>, then used a <a href="/decimal-to-fraction-calculator" class="text-primary underline">Decimal To Fraction Calculator</a> and a <a href="/decimal-to-percent-calculator" class="text-primary underline">Decimal To Percent Calculator</a>.
+</p>
+
+<p>
+She realised something funny: helping someone else understand math made it feel much less intimidating.
+</p>
+
+<p>
+It was rarely difficult because the concept was impossible. Usually, it was difficult because people lost confidence halfway through.
+</p>
+
+<p>
+A few days later, she was planning gym progress.
+</p>
+
+<p>
+Her trainer talked about “progressive overload,” but Emma wanted actual numbers. If she increased weight too quickly, recovery suffered. Too slowly, and progress stalled.
+</p>
+
+<p>
+She used a <a href="/rounding-calculator" class="text-primary underline">Rounding Calculator</a> to keep weekly increases practical and checked estimated percentage increases with the <a href="/percentage-calculator" class="text-primary underline">Percentage Calculator</a> again.
+</p>
+
+<p>
+Even fitness, apparently, was just spreadsheets with better lighting.
+</p>
+
+<p>
+Then came apartment hunting.
+</p>
+
+<p>
+She found a place she liked, but the room dimensions were awkward. Would her desk fit? Would the wardrobe destroy all hope of walking space?
+</p>
+
+<p>
+She checked dimensions using a <a href="/square-root-calculator" class="text-primary underline">Square Root Calculator</a> while comparing floor area estimates and used a <a href="/proportion-calculator" class="text-primary underline">Proportion Calculator</a> for furniture scaling.
+</p>
+
+<p>
+Buying furniture without measurements was basically financial gambling.
+</p>
+
+<p>
+One evening, her father asked a classic parent question:
+</p>
+
+<p>
+“Can you quickly check if this number is prime?”
+</p>
+
+<p>
+No explanation. Just that sentence.
+</p>
+
+<p>
+She decided some questions should not be investigated too deeply and opened a <a href="/prime-number-calculator" class="text-primary underline">Prime Number Calculator</a>, followed by a <a href="/factors-calculator" class="text-primary underline">Factors Calculator</a>.
+</p>
+
+<p>
+The answer solved whatever mysterious father-project was happening in the garage.
+</p>
+
+<p>
+She chose not to ask further.
+</p>
+
+<p>
+The biggest surprise came when she started noticing how often math reduced stress.
+</p>
+
+<p>
+Uncertainty felt expensive.
+</p>
+
+<p>
+Should she buy now or wait?
+</p>
+
+<p>
+Was the discount real?
+</p>
+
+<p>
+Did the budget work?
+</p>
+
+<p>
+Would the recipe scale?
+</p>
+
+<p>
+Was the test answer correct?
+</p>
+
+<p>
+Most anxiety lived in not knowing.
+</p>
+
+<p>
+And most of that uncertainty disappeared the moment numbers became clear.
+</p>
+
+<p>
+Math was not really about equations.
+</p>
+
+<p>
+It was about confidence.
+</p>
+
+<p>
+It was the difference between guessing and knowing.
+</p>
+
+<p>
+Between hoping something fits and measuring first.
+</p>
+
+<p>
+Between assuming a deal is good and proving it.
+</p>
+
+<p>
+Between feeling behind and seeing actual progress.
+</p>
+
+<p>
+Emma still would not describe herself as a math person.
+</p>
+
+<p>
+But now she understood something better:
+</p>
+
+<p>
+Everyone is a math person.
+</p>
+
+<p>
+Some people just call it cooking.
+</p>
+
+<p>
+Or shopping.
+</p>
+
+<p>
+Or budgeting.
+</p>
+
+<p>
+Or life.
+</p>
+
+<p>
+The numbers were there either way.
+</p>
+
+<p>
+Calculators simply made them easier to trust.
+</p>
+`
+},
   Conversions: {
     title: 'Unit Conversion Guide',
     intro:
