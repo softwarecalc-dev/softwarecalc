@@ -506,116 +506,891 @@ Calculators simply made them easier to trust.
 `
 },
   Conversions: {
-    title: 'Unit Conversion Guide',
-    intro:
-      'Unit conversion calculators translate measurements between different systems instantly. The metric and imperial systems are used side by side across cooking, construction, science, and travel, so being able to convert quickly prevents costly mistakes and saves lookup time.',
-    problems: [
-      'A recipe uses cups but I only have a measuring jug in millilitres.',
-      'A product is listed in pounds but I need the weight in kilograms.',
-      'A blueprint uses feet and inches but I work in metres.',
-      'The weather forecast shows Fahrenheit but I think in Celsius.',
-      'I need to compare prices for products sold in different unit sizes.',
-    ],
-    whenToUse: [
-      'Cooking and baking — convert between cups, tablespoons, millilitres, and litres when following international recipes.',
-      'Fitness and health — convert body weight between kg and lbs, or height between cm and feet/inches.',
-      'Travel and shipping — convert distances, weights, and temperatures when working across countries.',
-      'Construction and DIY — convert room dimensions between metric and imperial before ordering materials.',
-      'Science and education — convert between SI units and common equivalents for labs and assignments.',
-    ],
-  },
-  Health: {
-    title: 'Health Calculator Guide',
-    intro:
-      'Health calculators help you interpret common health metrics using established clinical formulas. They are useful for understanding your current health data in context — not for diagnosing conditions, but for knowing where a measurement sits relative to standard reference ranges.',
-    problems: [
-      'Is my current weight healthy for my height?',
-      'What BMI category do I fall into based on WHO guidelines?',
-      'How do I interpret a BMI result — what does the number mean?',
-      'What is a healthy weight range for my height?',
-    ],
-    whenToUse: [
-      'Before a doctor appointment — check your BMI and weight range so you can discuss them more confidently.',
-      'When tracking a fitness goal — monitor changes in health metrics over time to measure progress.',
-      'For general health awareness — use reference ranges as a starting point for understanding your body metrics.',
-      'When researching health topics — health calculators provide accurate formula-based results consistent with clinical definitions.',
-      'Always consult a qualified healthcare professional before making health decisions based on any calculator result.',
-    ],
-  },
-  'Date & Time': {
-    title: 'Date & Time Calculator Guide',
-    intro:
-      'Date and time calculators measure durations, count down to events, calculate ages, and track working hours. They handle the complexity of calendar arithmetic — varying month lengths, leap years, and overnight time spans — so you get precise results without manual counting.',
-    problems: [
-      'How many days are left until a deadline, holiday, or event?',
-      'How long did a project or contract run between two dates?',
-      'How many hours did I work across a shift, including overnight?',
-      'How old is someone in years, months, and days?',
-      'What is the exact time between two timestamps?',
-    ],
-    whenToUse: [
-      'Project management — calculate exact durations between start and end dates to plan timelines accurately.',
-      'Payroll and timekeeping — calculate hours worked per shift, including breaks and overnight periods.',
-      'Event planning — count down days to birthdays, anniversaries, holidays, or product launches.',
-      'Legal and financial — calculate precise periods for contracts, payment terms, or age verification.',
-      'Travel planning — determine how many days a trip spans and calculate time differences between time zones.',
-    ],
-  },
-  Probability: {
-    title: 'Probability Calculator Guide',
-    intro:
-      'Probability calculators compute the theoretical likelihood of outcomes based on standard mathematical formulas. They are useful for understanding games, statistics, risk, and decision-making — any situation where you need to quantify how likely something is to happen.',
-    problems: [
-      'What are the odds of drawing a specific card from a deck?',
-      'How likely is a particular outcome in a dice game?',
-      'What probability does a given hand represent in a card game?',
-      'How do I calculate expected value for a repeated event?',
-    ],
-    whenToUse: [
-      'Board games and card games — calculate the probability of drawing a needed card or rolling a specific outcome.',
-      'Statistics and data science — use probability formulas to model distributions and interpret results.',
-      'Risk analysis — quantify the likelihood of events to inform decisions under uncertainty.',
-      'Education and homework — work through probability problems with a calculator to check theoretical answers.',
-      'Remember that calculated probabilities reflect long-run frequency — short-term results always vary.',
-    ],
-  },
-  'Random Generators': {
-    title: 'Random Generator Guide',
-    intro:
-      'Random generators produce unpredictable results within a range you set. They are useful any time you need a neutral, unbiased outcome — from running a fair prize draw to generating test data or making a quick decision between options.',
-    problems: [
-      'I need to pick a winner fairly from a list of entries.',
-      'I want a random number for a game or activity without bias.',
-      'I need sample data values for testing a spreadsheet or application.',
-      'I cannot decide between two options and want to let chance decide.',
-      'I want to simulate dice rolls or random card draws for a game.',
-    ],
-    whenToUse: [
-      'Prize draws and giveaways — generate a random number to pick a winner without favouritism.',
-      'Classroom activities — randomly assign students to groups or select who answers a question.',
-      'Games and entertainment — roll virtual dice, draw random numbers, or simulate random events.',
-      'Development and testing — generate random values for testing forms, databases, and calculations.',
-      'Decision making — use a random generator to break a tie when two options are equally good.',
-    ],
-  },
+  title: 'Lost in Conversion: A Practical Guide to Units in Real Life',
+  intro: 'Unit conversions show up everywhere — cooking, travel, shopping, construction, and fitness. This guide follows real situations where using the wrong unit is not just confusing, but can lead to expensive or frustrating mistakes.',
+  story: `
+<p>
+Daniel thought unit conversions were simple.
+</p>
+
+<p>
+Meters, kilograms, Celsius — he grew up using the metric system and assumed the rest of the world did too. Then he ordered a recipe book online.
+</p>
+
+<p>
+It arrived from the US.
+</p>
+
+<p>
+The first recipe called for cups, ounces, and tablespoons. None of which matched anything in his kitchen.
+</p>
+
+<p>
+He stared at the instructions for a moment, hoping the measurements would somehow convert themselves through sheer willpower.
+</p>
+
+<p>
+They did not.
+</p>
+
+<p>
+He opened a <a href="/recipe-volume-converter" class="text-primary underline">Recipe Volume Converter</a> and translated everything into millilitres. Suddenly, the recipe made sense again.
+</p>
+
+<p>
+Cooking, it turned out, was less about creativity and more about precision.
+</p>
+
+<p>
+A few days later, he was buying protein powder online.
+</p>
+
+<p>
+One product listed weight in pounds, another in kilograms. Prices looked different, but comparing them directly felt misleading.
+</p>
+
+<p>
+He used a <a href="/weight-converter" class="text-primary underline">Weight Converter</a> to standardise everything into kilograms. Only then did the cheaper option reveal itself.
+</p>
+
+<p>
+Numbers without context were surprisingly deceptive.
+</p>
+
+<p>
+Later that week, Daniel checked the weather before a trip.
+</p>
+
+<p>
+The forecast said 86°F.
+</p>
+
+<p>
+That sounded aggressive, but he had no idea what it actually meant for packing clothes. Guessing wrong could mean sweating all day or freezing at night.
+</p>
+
+<p>
+He used a <a href="/temperature-converter" class="text-primary underline">Temperature Converter</a> and realised it was about 30°C.
+</p>
+
+<p>
+Definitely not sweater weather.
+</p>
+
+<p>
+During the trip, conversions kept appearing.
+</p>
+
+<p>
+Distances were in miles. Road signs felt unfamiliar. What looked like a short drive turned out to be longer than expected.
+</p>
+
+<p>
+He checked distances using a <a href="/length-converter" class="text-primary underline">Length Converter</a> and started planning routes more realistically.
+</p>
+
+<p>
+Travel was much easier when distances made sense.
+</p>
+
+<p>
+Back home, Daniel decided to redecorate his apartment.
+</p>
+
+<p>
+He found a desk online with dimensions listed in inches. It looked perfect in photos, but photos had lied to him before.
+</p>
+
+<p>
+He converted the measurements using the <a href="/length-converter" class="text-primary underline">Length Converter</a> again and compared them to his room.
+</p>
+
+<p>
+Good decision.
+</p>
+
+<p>
+Without converting, he would have bought a desk that physically could not fit through his door.
+</p>
+
+<p>
+That would have been an expensive lesson.
+</p>
+
+<p>
+The final moment came when he was calculating flooring for his living room.
+</p>
+
+<p>
+He measured the space, but needed the total area to order materials. Guessing would either waste money or leave gaps.
+</p>
+
+<p>
+He used a <a href="/square-footage-calculator" class="text-primary underline">Square Footage Calculator</a> to get an exact number.
+</p>
+
+<p>
+For once, the result felt certain.
+</p>
+
+<p>
+No estimating. No rounding errors. No surprises.
+</p>
+
+<p>
+That was when Daniel realised something simple:
+</p>
+
+<p>
+Conversions were not about math.
+</p>
+
+<p>
+They were about avoiding mistakes.
+</p>
+
+<p>
+Using the wrong unit could ruin a recipe, distort a price, misjudge a journey, or waste money on something that does not fit.
+</p>
+
+<p>
+The numbers were never the problem.
+</p>
+
+<p>
+Understanding them was.
+</p>
+
+<p>
+And once everything used the same system, decisions became obvious.
+</p>
+
+<p>
+Not easier.
+</p>
+
+<p>
+Just clearer.
+</p>
+
+<p>
+Which, most of the time, was exactly what he needed.
+</p>
+`
+},
+ Health: {
+  title: 'Am I Actually Healthy? A Practical Guide to Understanding Your Numbers',
+  intro: 'Health is often reduced to a few numbers — weight, height, BMI — but those numbers can feel confusing without context. This guide follows a realistic situation where simple health calculations turn uncertainty into something clearer and easier to understand.',
+  story: `
+<p>
+Sofia had been going to the gym for three months.
+</p>
+
+<p>
+She felt better. Stronger. More consistent. But when she stepped on the scale, the number had barely changed.
+</p>
+
+<p>
+That was frustrating.
+</p>
+
+<p>
+She had expected visible progress — something obvious, something measurable. Instead, she got a number that refused to move in the way she wanted.
+</p>
+
+<p>
+That was when she started asking a different question:
+</p>
+
+<p>
+Was weight really the right thing to focus on?
+</p>
+
+<p>
+She had heard about BMI before, but never paid much attention to it. This time, she decided to check properly. She opened a <a href="/bmi-calculator" class="text-primary underline">BMI Calculator</a> and entered her height and weight.
+</p>
+
+<p>
+The result gave her a category — not perfect, but more informative than a single number on a scale.
+</p>
+
+<p>
+It showed her something important:
+</p>
+
+<p>
+Progress was not always obvious from weight alone.
+</p>
+
+<p>
+At first, the number made her uneasy.
+</p>
+
+<p>
+Labels like “normal,” “overweight,” or “underweight” felt more serious than expected. But after reading more, she understood that BMI was not a judgement — it was a reference point.
+</p>
+
+<p>
+Not a final answer.
+</p>
+
+<p>
+A starting point.
+</p>
+
+<p>
+That changed how she saw it.
+</p>
+
+<p>
+Instead of asking “Is this good or bad?”, she started asking:
+</p>
+
+<p>
+“What does this mean for me?”
+</p>
+
+<p>
+Over the next few weeks, Sofia kept tracking her workouts.
+</p>
+
+<p>
+She noticed her strength improving.
+</p>
+
+<p>
+Her energy levels were better.
+</p>
+
+<p>
+Her consistency was stronger than ever.
+</p>
+
+<p>
+And even though the scale barely moved, her body composition was changing in ways the number could not fully capture.
+</p>
+
+<p>
+That was the moment everything clicked.
+</p>
+
+<p>
+Health was not a single number.
+</p>
+
+<p>
+It was a combination of habits, consistency, and understanding what the numbers actually represent.
+</p>
+
+<p>
+The BMI result did not define her.
+</p>
+
+<p>
+But it gave her context.
+</p>
+
+<p>
+It helped her understand where she was starting from, and where she might want to go.
+</p>
+
+<p>
+Most importantly, it removed the guesswork.
+</p>
+
+<p>
+Instead of relying on assumptions, she had something objective to look at.
+</p>
+
+<p>
+Something measurable.
+</p>
+
+<p>
+Something she could track over time.
+</p>
+
+<p>
+She still had goals.
+</p>
+
+<p>
+She still wanted to improve.
+</p>
+
+<p>
+But now, she understood something she had missed before:
+</p>
+
+<p>
+Progress is easier when you understand the numbers behind it.
+</p>
+
+<p>
+Not perfectly.
+</p>
+
+<p>
+But clearly enough to move forward with confidence.
+</p>
+`
+},
+'Date & Time': {
+  title: 'Where Did the Time Go? A Practical Guide to Deadlines, Work Hours, and Life',
+  intro: 'Time calculations seem simple until they are not. Deadlines, work hours, age, and date differences quickly become confusing when real-life details are involved. This guide follows everyday situations where understanding time properly makes the difference between stress and control.',
+  story: `
+<p>
+Mark always felt like he was running out of time.
+</p>
+
+<p>
+Deadlines at work, plans with friends, bills, birthdays — everything seemed to stack up faster than expected. Days felt short, weeks disappeared, and months passed without warning.
+</p>
+
+<p>
+But the real problem was not time itself.
+</p>
+
+<p>
+It was not knowing where it went.
+</p>
+
+<p>
+One Monday morning, his manager asked a simple question:
+</p>
+
+<p>
+“How many hours did you work last week?”
+</p>
+
+<p>
+Mark guessed.
+</p>
+
+<p>
+That was his first mistake.
+</p>
+
+<p>
+Between late starts, early finishes, and one shift that ran past midnight, the numbers were not as obvious as they seemed. He opened an <a href="/hours-worked-calculator" class="text-primary underline">Hours Worked Calculator</a> and entered each shift properly.
+</p>
+
+<p>
+The result was not what he expected.
+</p>
+
+<p>
+He had worked more than he thought — but also less efficiently than he assumed.
+</p>
+
+<p>
+That small correction changed how he approached the next week.
+</p>
+
+<p>
+A few days later, another problem appeared.
+</p>
+
+<p>
+A project deadline was “two weeks away.”
+</p>
+
+<p>
+That sounded comfortable.
+</p>
+
+<p>
+Until he realised he did not actually know how many days that meant with weekends included. He checked using a <a href="/date-time-difference-calculator" class="text-primary underline">Date Time Difference Calculator</a>.
+</p>
+
+<p>
+The answer felt shorter than expected.
+</p>
+
+<p>
+Deadlines always did.
+</p>
+
+<p>
+From that moment, “two weeks” stopped being a vague idea and became a real number he could plan around.
+</p>
+
+<p>
+Later that evening, Mark remembered his friend’s birthday was coming up.
+</p>
+
+<p>
+He knew it was “soon,” but soon had a bad habit of turning into “too late.” He opened a <a href="/days-until-date-calculator" class="text-primary underline">Days Until Date Calculator</a>.
+</p>
+
+<p>
+Five days.
+</p>
+
+<p>
+Not “soon.”
+</p>
+
+<p>
+Urgent.
+</p>
+
+<p>
+He ordered the gift immediately.
+</p>
+
+<p>
+Problem avoided.
+</p>
+
+<p>
+The biggest moment came during a family dinner.
+</p>
+
+<p>
+Someone asked how old his grandfather was — not roughly, but exactly.
+</p>
+
+<p>
+Mark could guess.
+</p>
+
+<p>
+Or he could know.
+</p>
+
+<p>
+He opened an <a href="/age-calculator" class="text-primary underline">Age Calculator</a> and entered the birth date.
+</p>
+
+<p>
+The result showed years, months, and days.
+</p>
+
+<p>
+It felt oddly satisfying.
+</p>
+
+<p>
+Time, for once, was precise.
+</p>
+
+<p>
+Over the next few weeks, Mark started noticing a pattern.
+</p>
+
+<p>
+Every time something felt stressful, it usually involved time being unclear.
+</p>
+
+<p>
+How long something would take.
+</p>
+
+<p>
+How much time was left.
+</p>
+
+<p>
+How much time had already passed.
+</p>
+
+<p>
+Uncertainty made everything feel worse.
+</p>
+
+<p>
+But when the numbers were clear, decisions became easier.
+</p>
+
+<p>
+He could plan properly.
+</p>
+
+<p>
+Prioritise better.
+</p>
+
+<p>
+Avoid last-minute panic.
+</p>
+
+<p>
+Even rest without guilt.
+</p>
+
+<p>
+Time did not slow down.
+</p>
+
+<p>
+Deadlines did not disappear.
+</p>
+
+<p>
+Life did not suddenly become less busy.
+</p>
+
+<p>
+But something important changed:
+</p>
+
+<p>
+Mark stopped guessing.
+</p>
+
+<p>
+And when he stopped guessing, time stopped feeling like something chasing him.
+</p>
+
+<p>
+It became something he could actually manage.
+</p>
+
+<p>
+Not perfectly.
+</p>
+
+<p>
+But clearly.
+</p>
+
+<p>
+And most of the time, that was enough.
+</p>
+`
+},
+ 
+'Random Generators': {
+  title: 'When You Can’t Decide: A Practical Guide to Letting Randomness Choose',
+  intro: 'Sometimes there is no right answer — just too many options. Random generators remove bias, overthinking, and indecision by giving you a fair, instant result when you need it most.',
+  story: `
+<p>
+Elias had a small problem.
+</p>
+
+<p>
+Not a serious one. Not life-changing. Just one of those annoying decisions that should be easy but somehow was not.
+</p>
+
+<p>
+What should he eat?
+</p>
+
+<p>
+He opened three different food apps, scrolled for ten minutes, and closed all of them without choosing anything.
+</p>
+
+<p>
+Too many options.
+</p>
+
+<p>
+That was the real problem.
+</p>
+
+<p>
+So he tried something different.
+</p>
+
+<p>
+He listed a few options and opened a <a href="/random-number-generator" class="text-primary underline">Random Number Generator</a>.
+</p>
+
+<p>
+Each number matched a choice.
+</p>
+
+<p>
+One click later, the decision was made.
+</p>
+
+<p>
+No debate.
+</p>
+
+<p>
+No overthinking.
+</p>
+
+<p>
+Just food on the way.
+</p>
+
+<p>
+It felt surprisingly good.
+</p>
+
+<p>
+Later that week, he ran into the same idea again.
+</p>
+
+<p>
+At work, his team needed to pick a winner for a small giveaway. Normally, this turned into awkward discussions about fairness.
+</p>
+
+<p>
+This time, he suggested something simple:
+</p>
+
+<p>
+“Let’s just randomise it.”
+</p>
+
+<p>
+They used the <a href="/random-number-generator" class="text-primary underline">Random Number Generator</a> again.
+</p>
+
+<p>
+Everyone agreed on the result instantly.
+</p>
+
+<p>
+No bias.
+</p>
+
+<p>
+No arguments.
+</p>
+
+<p>
+Just a fair outcome.
+</p>
+
+<p>
+The biggest surprise came when he started using randomness for small daily decisions.
+</p>
+
+<p>
+Which task to start first.
+</p>
+
+<p>
+Which workout to do.
+</p>
+
+<p>
+Which movie to watch.
+</p>
+
+<p>
+It was not about avoiding responsibility.
+</p>
+
+<p>
+It was about removing unnecessary friction.
+</p>
+
+<p>
+Not every decision needed deep analysis.
+</p>
+
+<p>
+Some just needed to be made.
+</p>
+
+<p>
+And randomness was better than hesitation.
+</p>
+
+<p>
+Over time, Elias noticed something interesting:
+</p>
+
+<p>
+The stress was never about the outcome.
+</p>
+
+<p>
+It was about choosing.
+</p>
+
+<p>
+Once the choice was made — even randomly — everything became easier.
+</p>
+
+<p>
+He moved forward.
+</p>
+
+<p>
+No second guessing.
+</p>
+
+<p>
+No endless comparison.
+</p>
+
+<p>
+Just action.
+</p>
+
+<p>
+Not every decision should be random.
+</p>
+
+<p>
+But when options are equal, and overthinking takes over, letting randomness decide is sometimes the most efficient choice of all.
+</p>
+`
+},
   'Game Calculators': {
-    title: 'Game Calculator Guide',
-    intro:
-      'Game calculators apply mathematical strategy and probability analysis to card games and casino games. They help you understand the statistically optimal play for any given situation, so you can make informed decisions rather than relying on guesswork or superstition.',
-    problems: [
-      'Should I hit, stand, double, split, or surrender in blackjack?',
-      'What are the odds of winning a specific poker hand?',
-      'What is the house edge for a particular game configuration?',
-      'What is the expected value of a given play in a card game?',
-    ],
-    whenToUse: [
-      'Learning card game strategy — use strategy calculators to understand the optimal decision for every situation.',
-      'Practising before a real game — work through hand scenarios to build pattern recognition.',
-      'Analysing past decisions — review hands to see whether you made the statistically correct play.',
-      'Understanding odds — use probability-based tools to see win, lose, and push percentages for different hands.',
-      'Note that strategy calculators show the mathematically optimal long-run decision — short-term variance means any single hand can go either way.',
-    ],
-  },
+  title: 'Play Smarter, Not Luckier: A Guide to Game Strategy and Odds',
+  intro: 'Games like blackjack and poker may feel like luck, but decisions are driven by probability and strategy. This guide shows how understanding the numbers behind each move can completely change how you play.',
+  story: `
+<p>
+Lucas always thought he was a “decent” player.
+</p>
+
+<p>
+Not professional. Not terrible. Just good enough to win sometimes and lose sometimes. Whether it was blackjack or poker, he trusted his instincts.
+</p>
+
+<p>
+That worked — until it didn’t.
+</p>
+
+<p>
+One night, after a long losing streak, he started questioning something simple:
+</p>
+
+<p>
+Was he actually making good decisions?
+</p>
+
+<p>
+Or just lucky ones?
+</p>
+
+<p>
+He started with blackjack.
+</p>
+
+<p>
+Usually, he would hit or stand based on what “felt right.” But this time, he checked a <a href="/blackjack-calculator" class="text-primary underline">Blackjack Calculator</a>.
+</p>
+
+<p>
+The recommended move surprised him.
+</p>
+
+<p>
+In situations where he would normally play safe, the calculator suggested taking a risk. In others, it told him to stop when he would usually keep going.
+</p>
+
+<p>
+It was not random.
+</p>
+
+<p>
+It was based on probability.
+</p>
+
+<p>
+At first, it felt uncomfortable going against his instincts.
+</p>
+
+<p>
+But over time, he noticed something:
+</p>
+
+<p>
+The decisions were consistent.
+</p>
+
+<p>
+Not emotional.
+</p>
+
+<p>
+Not reactive.
+</p>
+
+<p>
+Just mathematically sound.
+</p>
+
+<p>
+Later, he tried the same approach with poker.
+</p>
+
+<p>
+He recreated a hand using a <a href="/texas-holdem-odds-calculator" class="text-primary underline">Texas Holdem Odds Calculator</a>.
+</p>
+
+<p>
+The result showed his actual chance of winning.
+</p>
+
+<p>
+It was lower than he expected.
+</p>
+
+<p>
+Much lower.
+</p>
+
+<p>
+That explained a lot.
+</p>
+
+<p>
+He had been calling bets based on hope, not probability.
+</p>
+
+<p>
+And hope, it turned out, was expensive.
+</p>
+
+<p>
+The biggest shift was not in the games themselves.
+</p>
+
+<p>
+It was in how he thought.
+</p>
+
+<p>
+Winning a hand no longer meant he made the right decision.
+</p>
+
+<p>
+And losing did not always mean he made the wrong one.
+</p>
+
+<p>
+What mattered was whether the choice made sense based on the odds.
+</p>
+
+<p>
+That idea changed everything.
+</p>
+
+<p>
+He stopped chasing lucky outcomes.
+</p>
+
+<p>
+He stopped reacting emotionally.
+</p>
+
+<p>
+And he started playing with a clear understanding of risk.
+</p>
+
+<p>
+The results did not become perfect.
+</p>
+
+<p>
+They became consistent.
+</p>
+
+<p>
+And over time, consistency beat luck.
+</p>
+`
+},
 };
 
 // ─── Slug ↔ category map ──────────────────────────────────────────────────────
@@ -626,7 +1401,7 @@ export const GUIDE_SLUGS: Record<string, ToolConfig['category']> = {
   conversions: 'Conversions',
   health: 'Health',
   'date-time': 'Date & Time',
-  probability: 'Probability',
+  
   'random-generators': 'Random Generators',
   'game-calculators': 'Game Calculators',
 };
