@@ -239,9 +239,8 @@ export const TOOLS: ToolConfig[] = [
     ],
     relatedTools: ['weight-converter', 'length-converter'],
     component: TemperatureConverter,
-    seoTitle: 'Online Temperature Converter | Celsius, Fahrenheit, Kelvin | SoftwareCalc',
-    seoDescription:
-      'Free online temperature converter. Convert between Celsius, Fahrenheit, and Kelvin instantly with precise formulas.',
+    seoTitle: 'Temperature Converter Online – Celsius, Fahrenheit & Kelvin | SoftwareCalc',
+    seoDescription: 'Free temperature converter. Convert Celsius, Fahrenheit, and Kelvin instantly for weather, cooking, and science.',
   },
   {
     id: 'weight-converter',
@@ -267,9 +266,8 @@ export const TOOLS: ToolConfig[] = [
     ],
     relatedTools: ['calorie-calculator', 'temperature-converter', 'recipe-volume-converter'],
     component: WeightConverter,
-    seoTitle: 'Weight Converter – Convert KG, LB, G, OZ | SoftwareCalc',
-    seoDescription:
-      'Free online weight converter. Convert between kilograms, grams, pounds, and ounces instantly with precision.',
+    seoTitle: 'Weight Converter Online – kg, lbs, grams Conversion | SoftwareCalc',
+    seoDescription: 'Free weight converter. Convert between kg, lbs, grams, and more instantly for fitness, cooking, and everyday use.',
   },
   {
     id: 'sales-tax-calculator',
@@ -447,9 +445,9 @@ howToUse: [
     ],
     relatedTools: ['calorie-calculator', 'weight-converter', 'length-converter'], 
     component: BmiCalculator,
-    seoTitle: 'BMI Calculator Online | Body Mass Index & Health Category | SoftwareCalc',
+    seoTitle: 'BMI Calculator Online – Body Mass Index & Weight Category | SoftwareCalc',
     seoDescription:
-      'Free online BMI calculator. Enter your height and weight to instantly calculate your Body Mass Index and see your BMI health category.',
+  'Free online BMI calculator. Calculate your body mass index and see your weight category based on height and weight instantly.',
   },
   {
     id: 'vat-calculator',
@@ -579,9 +577,8 @@ howToUse: [
     ],
     relatedTools: ['weight-converter', 'temperature-converter', 'recipe-volume-converter'],
     component: LengthConverter,
-    seoTitle: 'Length Converter Online | Convert Meters, Miles, Feet & More | SoftwareCalc',
-    seoDescription:
-      'Free online length converter. Convert between meters, kilometers, miles, feet, inches, centimeters and more instantly.',
+    seoTitle: 'Length Converter Online – cm, meters, feet & inches | SoftwareCalc',
+    seoDescription: 'Free length converter. Convert between cm, meters, feet, and inches instantly for everyday measurements.',
   },
   {
     id: 'average-calculator',
@@ -608,9 +605,8 @@ howToUse: [
     ],
     relatedTools: ['percentage-calculator', 'ratio-calculator', 'percentage-change-calculator'],
     component: AverageCalculator,
-    seoTitle: 'Average Calculator Online | Mean of Numbers | SoftwareCalc',
-    seoDescription:
-      'Free online average calculator. Enter a list of numbers to instantly calculate the mean and understand the central value of your data set.',
+    seoTitle: 'Average Calculator Online – Mean, Average & Numbers | SoftwareCalc',
+    seoDescription: 'Free average calculator. Calculate the mean and average of numbers instantly for quick data analysis.',
   },
   {
     id: 'compound-interest-calculator',
@@ -638,8 +634,8 @@ howToUse: [
 ],
     relatedTools: ['investment-calculator', 'roi-calculator', 'percentage-calculator'],
     component: CompoundInterestCalculator,
-    seoTitle: 'Compound Interest Calculator Online | Lump Sum Investment Growth',
-    seoDescription: 'Free online compound interest calculator. Estimate investment growth, interest earnings, and future value with optional regular contributions and compounding.',
+    seoTitle: 'Compound Interest Calculator Online – Growth & Investment Returns | SoftwareCalc',
+    seoDescription: 'Free compound interest calculator. Estimate investment growth, returns, and future value with compounding interest.',
   },
   {
     id: 'percentage-calculator',
@@ -668,9 +664,8 @@ howToUse: [
     ],
     relatedTools: ['percentage-change-calculator', 'discount-calculator', 'ratio-calculator'],
     component: PercentageCalculator,
-    seoTitle: 'Percentage Calculator Online | Increase, Decrease & Percent Change | SoftwareCalc',
-    seoDescription:
-      'Free online percentage calculator. Find percentages, calculate percentage increase or decrease, and determine percent change between numbers instantly.',
+    seoTitle: 'Percentage Calculator Online – Percent, Increase & Decrease | SoftwareCalc',
+    seoDescription: 'Free percentage calculator. Calculate percent, increase, decrease, and percentage change instantly.',
   },
   {
     id: 'blackjack-helper',
@@ -699,8 +694,8 @@ howToUse: [
     ],
     relatedTools: ['random-number-generator'],
     component: BlackjackCalculator,
-    seoTitle: 'Blackjack Strategy Calculator Online | Best Move & Odds | SoftwareCalc',
-    seoDescription: 'Free online blackjack strategy calculator. Enter your cards and the dealer upcard to see the best move based on basic strategy and probability.',
+    seoTitle: 'Blackjack Strategy Calculator Online – Best Move & Odds | SoftwareCalc',
+    seoDescription: 'Free blackjack strategy calculator. Get the best move and odds based on your cards and the dealer upcard.',
   },
   {
     id: 'random-number-generator',
@@ -727,8 +722,8 @@ howToUse: [
     ],
     relatedTools: ['blackjack-helper'],
     component: RandomNumberGenerator,
-    seoTitle: 'Random Number Generator Online | Free Randomizer Tool | SoftwareCalc',
-    seoDescription: 'Free online random number generator. Generate random numbers between any minimum and maximum values instantly for games, draws, and decision making.',
+    seoTitle: 'Random Number Generator Online – Generate Numbers Instantly | SoftwareCalc',
+    seoDescription: 'Free random number generator. Generate random numbers instantly for games, draws, and testing.',
   },
   {
     id: 'hours-worked-calculator',
@@ -781,8 +776,8 @@ howToUse: [
     ],
     relatedTools: ['time-zone-converter', 'hours-worked-calculator', 'age-calculator'],
     component: DateTimeDifferenceCalculator,
-    seoTitle: 'Date & Time Difference Calculator Online | Days & Hours Between Dates',
-    seoDescription: 'Free online date and time difference calculator. Find the exact difference between two dates and times in days, hours, and minutes.'
+    seoTitle: 'Date Time Difference Calculator – Days, Hours Between Dates | SoftwareCalc',
+    seoDescription: 'Free date time difference calculator. Calculate exact days, hours, and time between two dates instantly.',
   },
   {
     id: 'age-calculator',
@@ -807,8 +802,8 @@ howToUse: [
     ],
     relatedTools: ['date-time-difference-calculator', 'hours-worked-calculator'],
     component: AgeCalculator,
-    seoTitle: 'Age Calculator Online | Calculate Exact Age in Years, Months & Days | SoftwareCalc',
-    seoDescription: 'Free online age calculator. Enter your birth date to instantly calculate your exact age in years, months, and days.'
+    seoTitle: 'Age Calculator Online – Calculate Exact Age in Years, Months | SoftwareCalc',
+    seoDescription: 'Free age calculator. Calculate exact age in years, months, and days from your birthdate instantly.',
   },
   {
     id: 'unit-price-calculator',
@@ -961,8 +956,8 @@ howToUse: [
   ],
     relatedTools: ['compound-interest-calculator', 'percentage-calculator', 'loan-affordability-calculator'],
     component: LoanPaymentCalculator,
-    seoTitle: 'Loan Payment Calculator Online | Monthly Payments, Interest & Payoff Schedule',
-    seoDescription: 'Free online loan payment calculator to estimate monthly payments, total interest, total repayment, payoff date, and amortization schedule for fixed-rate loans.'
+    seoTitle: 'Loan Payment Calculator Online – Monthly Payments & Interest | SoftwareCalc',
+    seoDescription: 'Free online loan payment calculator. Calculate monthly payments, total interest, and repayment schedule instantly.',
   },
 {
     id: 'savings-goal-calculator',
@@ -1021,8 +1016,8 @@ howToUse: [
     formulaTitle: 'Net Salary Formula',
     formulaExpression: 'Net Salary = Gross Salary × (1 − Tax Rate)',
     formulaExplanation: 'The calculator subtracts tax from your gross salary using the provided tax rate. The result is your take-home (net) income.',
-    seoTitle: 'Salary After Tax Calculator Online | Net Income & Take-Home Pay',
-    seoDescription: 'Calculate your take-home salary after tax. Enter your gross income and tax rate to estimate net pay instantly.'
+    seoTitle: 'Salary After Tax Calculator – Net Income & Take-Home Pay | SoftwareCalc',
+    seoDescription: 'Free salary after tax calculator. Estimate your net income and take-home pay based on gross salary and deductions.',
   },
   {
     id: 'inflation-calculator',
@@ -1050,8 +1045,8 @@ howToUse: [
     formulaTitle: 'Inflation Adjustment Formula',
     formulaExpression: 'Adjusted Value = Present Value ÷ (1 + r)^t',
     formulaExplanation: 'r is the annual inflation rate (decimal), and t is the number of years. Inflation reduces purchasing power over time, so future value is lower.',
-    seoTitle: 'Inflation Calculator Online (Future Value & Purchasing Power)',
-    seoDescription: 'Calculate how inflation affects the value of money over time. See future purchasing power and value lost due to inflation.'
+    seoTitle: 'Inflation Calculator Online – Value Over Time & Buying Power | SoftwareCalc',
+    seoDescription: 'Free inflation calculator. See how money value changes over time and calculate buying power based on inflation rates.',
   },
   {
     id: 'texas-holdem-odds-calculator',
@@ -1080,8 +1075,8 @@ howToUse: [
     formulaTitle: 'Required Equity Formula',
     formulaExpression: 'Required Equity = Amount to Call ÷ (Pot Size + Amount to Call)',
     formulaExplanation: 'This simplified recommendation compares your estimated win probability to the equity required by the pot odds. It is a basic action hint, not a full poker strategy solver.',
-    seoTitle: 'Poker Odds Calculator (Texas Hold\u2019em) | Win %, Equity & Probabilities',
-    seoDescription: 'Free online poker odds calculator for Texas Hold\u2019em. Calculate win, tie, and loss probabilities from preflop to river.',
+    seoTitle: 'Texas Holdem Odds Calculator – Poker Hand Probabilities | SoftwareCalc',
+    seoDescription: 'Free Texas Holdem odds calculator. Calculate poker hand probabilities and winning chances instantly.',
   },
 {
     id: 'retirement-calculator',
@@ -1169,8 +1164,9 @@ howToUse: [
     formulaTitle: 'Mortgage Payment Formula',
     formulaExpression: 'M = P × [r(1+r)^n] ÷ [(1+r)^n − 1]',
     formulaExplanation: 'P is the loan amount (home price minus down payment), r is the monthly interest rate (annual rate ÷ 12), and n is the total number of monthly payments (years × 12).',
-    seoTitle: 'Mortgage Calculator Online | Monthly Payment, Interest & Home Loan Cost',
-    seoDescription: 'Free mortgage calculator. Estimate monthly payments, loan amount, total interest, and total cost based on home price and down payment.'
+    seoTitle: 'Mortgage Calculator Online – Monthly Payments & Interest | SoftwareCalc',
+    seoDescription:
+  'Free online mortgage calculator. Estimate monthly payments, total interest, and loan costs instantly based on loan amount and rate.',
   },
   {
     id: 'payback-period-calculator',
@@ -1407,8 +1403,8 @@ howToUse: [
   ],
   relatedTools: ['ratio-calculator', 'average-calculator', 'percentage-calculator'],
   component: FractionCalculator,
-  seoTitle: 'Fraction Calculator Online | Add Fractions & Simplify | SoftwareCalc',
-  seoDescription: 'Free online fraction calculator. Add two fractions, simplify the result, and view the decimal value instantly.',
+  seoTitle: 'Fraction Calculator Online – Add, Subtract & Simplify | SoftwareCalc',
+  seoDescription: 'Free fraction calculator. Add, subtract, multiply, divide, and simplify fractions instantly.',
   formulaTitle: 'Fraction Addition Formula',
   formulaExpression: 'a/b + c/d = (ad + bc) / bd',
   formulaExplanation: 'To add two fractions, multiply crosswise to create a common denominator, then simplify the result to lowest terms.'
@@ -2358,9 +2354,9 @@ howToUse: [
   relatedTools: ['bmi-calculator', 'weight-converter'],
   component: CalorieCalculator,
 
-  seoTitle: 'Calorie Calculator Online | TDEE & Daily Calories | SoftwareCalc',
+  seoTitle: 'Calorie Calculator Online – TDEE, Weight Loss & Daily Needs | SoftwareCalc',
   seoDescription:
-    'Free online calorie calculator to estimate your daily calorie needs (TDEE) based on age, weight, height, and activity level.',
+  'Free online calorie calculator to estimate TDEE, weight loss, and daily calorie needs based on age, weight, height, and activity level.',
 },
   {
   id: 'time-zone-converter',
@@ -2395,9 +2391,8 @@ howToUse: [
   relatedTools: ['date-time-difference-calculator'],
   component: TimeZoneConverter,
 
-  seoTitle: 'Time Zone Converter Online | Convert Time Between Countries',
-  seoDescription:
-    'Free online time zone converter. Convert time between global cities instantly and accurately for meetings, travel, and remote work.',
+  seoTitle: 'Time Zone Converter Online – Convert Time Between Countries | SoftwareCalc',
+  seoDescription: 'Free online time zone converter. Convert time between global cities and countries instantly for meetings, travel, and scheduling.',
 },
   {
   id: 'loan-affordability-calculator',
@@ -2431,9 +2426,8 @@ howToUse: [
   relatedTools: ['mortgage-calculator', 'loan-payment-calculator'],
   component: LoanAffordabilityCalculator,
 
-  seoTitle: 'Loan Affordability Calculator Online | How Much Can I Borrow?',
-  seoDescription:
-    'Free online loan affordability calculator. Find out how much you can borrow based on income, expenses, interest rate, and loan term.',
+  seoTitle: 'Loan Affordability Calculator – How Much Can I Borrow? | SoftwareCalc',
+  seoDescription: 'Free loan affordability calculator. Estimate how much you can borrow based on income, expenses, interest rate, and loan term.',
 }
 ];
 
