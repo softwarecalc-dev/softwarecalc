@@ -1355,12 +1355,44 @@ const tools = category && content
         ],
       },
       {
-        '@context': 'https://schema.org',
-        '@type': 'Article',
-        headline: content.title,
-        description: content.intro,
-        url: `https://softwarecalc.com/guides/${slug}`,
-      },
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: content.title,
+  description: content.intro,
+  url: `https://softwarecalc.com/guides/${slug}`,
+
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': `https://softwarecalc.com/guides/${slug}`
+  },
+
+  author: {
+    '@type': 'Organization',
+    name: 'SoftwareCalc'
+  },
+
+  publisher: {
+    '@type': 'Organization',
+    name: 'SoftwareCalc',
+    url: 'https://softwarecalc.com'
+  },
+
+  about: [
+    category,
+    'Online Calculators',
+    'Financial Tools',
+    'Math Calculators',
+    'SoftwareCalc Guides'
+  ],
+
+  keywords: [
+    `${category} calculator guide`,
+    'online calculators',
+    'financial tools',
+    'math tools',
+    'how to use calculators'
+  ]
+},
     ];
 
     let script = document.getElementById('guide-structured-data') as HTMLScriptElement;
