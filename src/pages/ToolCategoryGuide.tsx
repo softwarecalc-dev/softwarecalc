@@ -683,155 +683,73 @@ Which, most of the time, was exactly what he needed.
   intro: 'Health is often reduced to a few numbers — weight, height, BMI — but those numbers can feel confusing without context. This guide follows a realistic situation where simple health calculations turn uncertainty into something clearer and easier to understand.',
   story: `
 <p>
-Sofia had been going to the gym for three months.
+Mark never thought much about numbers when it came to health. He had a rough idea of whether he was “fit enough” or “not really,” but it was always based on feeling rather than anything measurable. Some days he felt light and active, other days slower and heavier — but there was no real system behind it.
 </p>
 
 <p>
-She felt better. Stronger. More consistent. But when she stepped on the scale, the number had barely changed.
+That changed when he first checked his BMI.
 </p>
 
 <p>
-That was frustrating.
+At first, it seemed simple: just height and weight. He opened a <a href="/bmi-calculator" class="text-primary underline">BMI Calculator</a> and entered his numbers. The result placed him in a category he didn’t fully expect. Not alarming, but also not as “safe” as he assumed.
 </p>
 
 <p>
-She had expected visible progress — something obvious, something measurable. Instead, she got a number that refused to move in the way she wanted.
+What surprised him more was that BMI didn’t actually explain much — it told him where he stood, but not what to do next.
 </p>
 
 <p>
-That was when she started asking a different question:
+That’s when he started looking deeper.
 </p>
 
 <p>
-Was weight really the right thing to focus on?
+He wanted to understand how his body actually used energy each day. Not just weight categories, but real daily needs. So he tried a <a href="/calorie-calculator" class="text-primary underline">Calorie Calculator</a>.
 </p>
 
 <p>
-She had heard about BMI before, but never paid much attention to it. This time, she decided to check properly. She opened a <a href="/bmi-calculator" class="text-primary underline">BMI Calculator</a> and entered her height and weight.
+This changed the way he thought about food completely. Instead of “eating less” or “eating more,” he now saw a clear number: how much energy his body actually needed just to maintain itself.
 </p>
 
 <p>
-The result gave her a category — not perfect, but more informative than a single number on a scale.
+For the first time, eating became something measurable rather than guesswork.
 </p>
 
 <p>
-It showed her something important:
+But there was still a problem.
 </p>
 
 <p>
-Progress was not always obvious from weight alone.
+All his fitness apps and food tracking used kilograms. His brain, however, still thought in pounds from years of habit and online content.
 </p>
 
 <p>
-At first, the number made her uneasy.
+So he used a <a href="/weight-converter" class="text-primary underline">Weight Converter</a> to switch between units instantly. It removed a small but constant friction point — no more mental math or guessing conversions.
 </p>
 
 <p>
-Labels like “normal,” “overweight,” or “underweight” felt more serious than expected. But after reading more, she understood that BMI was not a judgement — it was a reference point.
+Over time, he started connecting the dots between all three tools:
 </p>
 
 <p>
-Not a final answer.
+BMI told him where he was.<br>
+Calories told him what his body needed.<br>
+Weight conversion kept everything consistent.
 </p>
 
 <p>
-A starting point.
+Individually, each tool was simple. Together, they formed a clearer picture of his health than any single number ever could.
 </p>
 
 <p>
-That changed how she saw it.
+He stopped relying on vague impressions like “feeling in shape” or “looking okay in the mirror.” Instead, he had actual data he could adjust and track over time.
 </p>
 
 <p>
-Instead of asking “Is this good or bad?”, she started asking:
+It didn’t make decisions for him — but it made decisions easier.
 </p>
 
 <p>
-“What does this mean for me?”
-</p>
-
-<p>
-Over the next few weeks, Sofia kept tracking her workouts.
-</p>
-
-<p>
-She noticed her strength improving.
-</p>
-
-<p>
-Her energy levels were better.
-</p>
-
-<p>
-Her consistency was stronger than ever.
-</p>
-
-<p>
-And even though the scale barely moved, her body composition was changing in ways the number could not fully capture.
-</p>
-
-<p>
-That was the moment everything clicked.
-</p>
-
-<p>
-Health was not a single number.
-</p>
-
-<p>
-It was a combination of habits, consistency, and understanding what the numbers actually represent.
-</p>
-
-<p>
-The BMI result did not define her.
-</p>
-
-<p>
-But it gave her context.
-</p>
-
-<p>
-It helped her understand where she was starting from, and where she might want to go.
-</p>
-
-<p>
-Most importantly, it removed the guesswork.
-</p>
-
-<p>
-Instead of relying on assumptions, she had something objective to look at.
-</p>
-
-<p>
-Something measurable.
-</p>
-
-<p>
-Something she could track over time.
-</p>
-
-<p>
-She still had goals.
-</p>
-
-<p>
-She still wanted to improve.
-</p>
-
-<p>
-But now, she understood something she had missed before:
-</p>
-
-<p>
-Progress is easier when you understand the numbers behind it.
-</p>
-
-<p>
-Not perfectly.
-</p>
-
-<p>
-But clearly enough to move forward with confidence.
+And for the first time, his health stopped feeling like something random he had to guess about… and started feeling like something he could actually understand.
 </p>
 `
 },
