@@ -14,12 +14,11 @@ import {
 const GUIDE_DESCRIPTIONS = {
   Finance: 'From Paycheck to Property: A Practical Personal Finance Story',
   Math: 'The Hidden Math of Everyday Life: From Recipes to Real Decisions',
-  Conversions: 'Convert between metric and imperial units for length, weight, temperature, and volume.',
-  Health: 'BMI and body measurement calculators with standard reference ranges.',
-  'Date & Time': 'Calculate durations, ages, countdowns, and working hours precisely.',
-  Probability: 'Understand odds, expected values, and likelihood for games and statistics.',
-  'Random Generators': 'Generate unbiased random numbers for draws, games, and testing.',
-  'Game Calculators': 'Optimal strategy and probability tools for blackjack, poker, and more.',
+  Conversions: 'Lost in Conversion: A Practical Guide to Units in Real Life',
+  Health: 'Am I Actually Healthy? A Practical Guide to Understanding Your Numbers',
+  'Date & Time': 'Where Did the Time Go? A Practical Guide to Deadlines, Work Hours, and Life',
+  'Random Generators': 'When You Can’t Decide: A Practical Guide to Letting Randomness Choose',
+  'Game Calculators': 'Play Smarter, Not Luckier: A Guide to Game Strategy and Odds',
 };
 
 const GUIDE_LIST = Object.entries(GUIDE_SLUGS).map(([slug, category]) => ({
