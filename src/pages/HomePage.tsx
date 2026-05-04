@@ -34,9 +34,9 @@ const otherTools = TOOLS
         {/* Header */}
         <div className="text-center space-y-4 pt-4">
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-            Free Online Calculators for Finance, Math
+            Free Online Calculators That Save You Time
             <br className="hidden md:block" />
-              & Everyday Use
+                on Finance, Math & Everyday Tasks
           </h1>
           
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -82,7 +82,7 @@ const otherTools = TOOLS
 
           <CardContent>
           <Button className="w-full">
-            View {category.title.replace('Online ', '')}
+            Explore {category.title.replace('Online ', '')} <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
           </CardContent>
         </Card>
@@ -93,9 +93,9 @@ const otherTools = TOOLS
 </section>
       {/* FEATURED FINANCE TOOLS */}
 <section className="space-y-4 pt-12">
-  <h2 className="text-2xl font-semibold text-center">
-    Most Popular Finance Calculators
-  </h2>
+<h2 className="text-2xl font-semibold text-center">
+  Most Popular Finance Calculators Right Now
+</h2>
 
   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
     {TOOLS
@@ -108,15 +108,24 @@ const otherTools = TOOLS
         ].includes(t.id)
       )
       .map(tool => (
-        <Card key={tool.id} className="hover:shadow-lg transition-all">
+        <Card key={tool.id} className="relative hover:shadow-lg transition-all">
           <CardHeader>
+            {['mortgage-calculator','loan-payment-calculator','credit-card-payoff-calculator'].includes(tool.id) && (
+  <span className="absolute top-3 right-3 text-xs bg-primary text-white px-2 py-1 rounded-md">
+    Popular
+  </span>
+)}
             <CardTitle>{tool.name}</CardTitle>
-            <CardDescription>{tool.description}</CardDescription>
+             <CardDescription className="mt-2">
+  {tool.description}
+</CardDescription>
           </CardHeader>
 
           <CardContent>
             <Link to={tool.href as '/'} className="w-full">
-              <Button className="w-full">Open</Button>
+              <Button className="w-full">
+  Open Calculator <ArrowRight className="ml-2 h-4 w-4" />
+</Button>
             </Link>
           </CardContent>
         </Card>
@@ -148,7 +157,7 @@ const otherTools = TOOLS
 
   <Link to="/tools">
     <Button size="lg">
-      Open Tools Hub
+      Browse All Calculators <ArrowRight className="ml-2 h-4 w-4" />
     </Button>
   </Link>
 </section>
