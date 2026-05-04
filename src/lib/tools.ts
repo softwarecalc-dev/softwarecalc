@@ -2369,13 +2369,14 @@ howToUse: [
     'Convert time between global time zones instantly and accurately.',
 
   aboutText:
-    'The Time Zone Converter lets you convert a specific date and time between different global time zones. It is useful for remote work, international meetings, travel planning, and scheduling across regions. The tool uses built-in JavaScript date handling and timezone offsets to ensure accurate conversions. If you need to calculate time differences between two dates, you may also find the [Date Time Difference Calculator](/date-time-difference-calculator) useful.',
-
+  'The Calorie Calculator estimates how many calories your body needs per day to maintain, lose, or gain weight. It uses the Mifflin-St Jeor formula to calculate your Basal Metabolic Rate (BMR), then adjusts it based on activity level to estimate Total Daily Energy Expenditure (TDEE). This makes it useful for weight management, fitness planning, and nutrition tracking. You may also find the [BMI Calculator](/bmi-calculator) useful for understanding your weight category. If you prefer working in pounds instead of kilograms, you may also find the [Weight Converter](/weight-converter) useful for quick unit conversion.',
+    
   howToUse: [
     'Select a date and time.',
     'Choose the source time zone.',
     'Choose the target time zone.',
     'View the converted time instantly.',
+    'Use the Weight Converter if needed to convert lbs ↔ kg before inputting values.',
   ],
 
   href: '/time-zone-converter',
