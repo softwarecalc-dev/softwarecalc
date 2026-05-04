@@ -76,6 +76,7 @@ import { InvestmentCalculator } from '../components/calculators/InvestmentCalcul
 import { DebtPayoffCalculator } from '../components/calculators/DebtPayoffCalculator';
 import { InterestRateCalculator } from '../components/calculators/InterestRateCalculator';
 import { SalaryHourlyCalculator } from '../components/calculators/SalaryHourlyCalculator';
+import { CalorieCalculator } from '../components/calculators/CalorieCalculator';
 
 
 
@@ -2323,6 +2324,41 @@ howToUse: [
   formulaTitle: 'Income Conversion Formula',
   formulaExpression: 'Hourly = Salary / (Hours × Weeks)',
   formulaExplanation: 'Income is converted by dividing annual salary by total working hours per year.'
+},
+  {
+  id: 'calorie-calculator',
+  name: 'Calorie Calculator',
+  description:
+    'Calculate your daily calorie needs (TDEE) based on age, weight, height, and activity level.',
+  aboutText:
+    'The Calorie Calculator estimates how many calories your body needs per day to maintain, lose, or gain weight. It uses the Mifflin-St Jeor formula to calculate your Basal Metabolic Rate (BMR), then adjusts it based on activity level to estimate Total Daily Energy Expenditure (TDEE). This makes it useful for weight management, fitness planning, and nutrition tracking. You may also find the [BMI Calculator](/bmi-calculator) useful for understanding your weight category.',
+
+  howToUse: [
+    'Select your gender.',
+    'Enter age, weight (kg), and height (cm).',
+    'Choose your activity level.',
+    'View your BMR and daily calorie needs.',
+  ],
+
+  href: '/calorie-calculator',
+  icon: Calculator,
+  available: true,
+  category: 'Health',
+
+  howItWorks:
+    'Uses the Mifflin-St Jeor equation to calculate BMR, then multiplies it by an activity factor to estimate total daily energy expenditure (TDEE). It also calculates calorie ranges for weight loss and weight gain.',
+
+  exampleUsage: [
+    'Male, 80kg, 180cm, 30 years, moderate activity → ~2600 kcal maintenance',
+    'Female, 65kg, 165cm, light activity → ~1900 kcal maintenance',
+  ],
+
+  relatedTools: ['bmi-calculator'],
+  component: CalorieCalculator,
+
+  seoTitle: 'Calorie Calculator Online | TDEE & Daily Calories | SoftwareCalc',
+  seoDescription:
+    'Free online calorie calculator to estimate your daily calorie needs (TDEE) based on age, weight, height, and activity level.',
 }
 ];
 
