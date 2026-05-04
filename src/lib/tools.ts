@@ -77,6 +77,8 @@ import { DebtPayoffCalculator } from '../components/calculators/DebtPayoffCalcul
 import { InterestRateCalculator } from '../components/calculators/InterestRateCalculator';
 import { SalaryHourlyCalculator } from '../components/calculators/SalaryHourlyCalculator';
 import { CalorieCalculator } from '../components/calculators/CalorieCalculator';
+import { TimeZoneConverter } from '../components/calculators/TimeZoneConverter';
+import { LoanAffordabilityCalculator } from '../components/calculators/LoanAffordabilityCalculator';
 
 
 
@@ -2359,6 +2361,78 @@ howToUse: [
   seoTitle: 'Calorie Calculator Online | TDEE & Daily Calories | SoftwareCalc',
   seoDescription:
     'Free online calorie calculator to estimate your daily calorie needs (TDEE) based on age, weight, height, and activity level.',
+},
+  {
+  id: 'time-zone-converter',
+  name: 'Time Zone Converter',
+  description:
+    'Convert time between global time zones instantly and accurately.',
+
+  aboutText:
+    'The Time Zone Converter lets you convert a specific date and time between different global time zones. It is useful for remote work, international meetings, travel planning, and scheduling across regions. The tool uses built-in JavaScript date handling and timezone offsets to ensure accurate conversions. If you need to calculate time differences between two dates, you may also find the [Date Time Difference Calculator](/date-time-difference-calculator) useful.',
+
+  howToUse: [
+    'Select a date and time.',
+    'Choose the source time zone.',
+    'Choose the target time zone.',
+    'View the converted time instantly.',
+  ],
+
+  href: '/time-zone-converter',
+  icon: Calculator,
+  available: true,
+  category: 'Date & Time',
+
+  howItWorks:
+    'Converts input time to UTC internally, then applies the target timezone offset using JavaScript Intl API to display the correct local time.',
+
+  exampleUsage: [
+    '9:00 AM Stockholm → 3:00 AM New York',
+    '6:00 PM London → 3:00 AM Tokyo (next day)',
+  ],
+
+  relatedTools: ['date-time-difference-calculator'],
+  component: TimeZoneConverter,
+
+  seoTitle: 'Time Zone Converter Online | Convert Time Between Countries',
+  seoDescription:
+    'Free online time zone converter. Convert time between global cities instantly and accurately for meetings, travel, and remote work.',
+},
+  {
+  id: 'loan-affordability-calculator',
+  name: 'Loan Affordability Calculator',
+  description:
+    'Estimate how much you can borrow based on income, expenses, interest rate, and loan term.',
+
+  aboutText:
+    'The Loan Affordability Calculator estimates how much money you can realistically borrow based on your income, monthly expenses, interest rate, and loan term. It calculates your disposable income and applies debt-to-income limits to determine a safe borrowing range. This is useful for mortgage planning, loan pre-approval preparation, and understanding financial limits before applying for credit. You may also find the [Mortgage Calculator](/mortgage-calculator) useful for estimating monthly repayments.',
+
+  howToUse: [
+    'Enter your monthly income.',
+    'Enter your monthly expenses.',
+    'Set interest rate and loan term.',
+    'View maximum loan amount and payment capacity.',
+  ],
+
+  href: '/loan-affordability-calculator',
+  icon: Calculator,
+  available: true,
+  category: 'Finance',
+
+  howItWorks:
+    'Calculates disposable income and applies a debt-to-income ratio limit, then uses loan amortization formulas to estimate the maximum loan amount you can afford.',
+
+  exampleUsage: [
+    'Income 4000€, expenses 1500€ → ~180k–220k loan capacity',
+    'Higher interest rate reduces borrowing power significantly',
+  ],
+
+  relatedTools: ['mortgage-calculator', 'loan-payment-calculator'],
+  component: LoanAffordabilityCalculator,
+
+  seoTitle: 'Loan Affordability Calculator Online | How Much Can I Borrow?',
+  seoDescription:
+    'Free online loan affordability calculator. Find out how much you can borrow based on income, expenses, interest rate, and loan term.',
 }
 ];
 
