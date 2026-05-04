@@ -247,8 +247,8 @@ export const TOOLS: ToolConfig[] = [
     id: 'weight-converter',
     name: 'Weight Converter',
     description: 'Convert between kilograms, grams, pounds, and ounces.',
-    aboutText: 'The Weight Converter helps you quickly convert between common weight and mass units such as kilograms, grams, pounds, and ounces. It is useful for cooking, fitness, shipping, travel, and everyday measurements. Instead of converting units manually, this tool instantly gives you the correct result across both metric and imperial systems. If you also need to convert cooking measurements or other units, you may find the [Recipe Volume Converter](/recipe-volume-converter) or [Length Converter](/length-converter) helpful.',
-howToUse: [
+    aboutText: 'The Weight Converter allows you to convert between kilograms, pounds, grams, and other common weight units instantly. It is useful for cooking, fitness tracking, travel, and everyday measurements. If you are calculating calorie needs or tracking your fitness progress, you may also find the [Calorie Calculator](/calorie-calculator) useful.',
+    howToUse: [
   'Enter the weight value you want to convert.',
   'Choose the unit you are converting from.',
   'Select the unit you want to convert to.',
@@ -265,7 +265,7 @@ howToUse: [
       '5 lb to g → 2267.9619 g',
       '100 oz to kg → 2.8350 kg',
     ],
-    relatedTools: ['length-converter', 'temperature-converter', 'recipe-volume-converter'],
+    relatedTools: ['calorie-calculator', 'temperature-converter', 'recipe-volume-converter'],
     component: WeightConverter,
     seoTitle: 'Weight Converter – Convert KG, LB, G, OZ | SoftwareCalc',
     seoDescription:
@@ -427,7 +427,7 @@ howToUse: [
     id: 'bmi-calculator',
     name: 'BMI Calculator',
     description: 'Calculate your Body Mass Index (BMI) using your height and weight.',
-    aboutText: 'The BMI Calculator helps you estimate your Body Mass Index using your height and weight. BMI is a widely used measurement that helps indicate whether a person has a healthy body weight for their height. This tool calculates your BMI instantly and shows the category your result falls into, such as underweight, normal weight, overweight, or obese. It is commonly used for general health assessments and fitness tracking. If you need to convert body weight units before calculating, you can use the [Weight Converter](/weight-converter).',
+    aboutText: 'The BMI Calculator helps you understand whether your weight is within a healthy range based on your height. It uses the Body Mass Index formula to classify weight categories such as underweight, normal weight, overweight, and obesity. While BMI is a useful general indicator, it does not account for muscle mass or body composition. For a more complete picture of your daily energy needs, you may also find the [Calorie Calculator](/calorie-calculator) useful.',
     howToUse: [
       'Enter your weight in kilograms.',
       'Enter your height in centimeters or meters.',
@@ -445,7 +445,7 @@ howToUse: [
       'Weight 90kg, Height 180cm → BMI 27.8 (Overweight)',
       'Weight 50kg, Height 165cm → BMI 18.4 (Underweight)',
     ],
-    relatedTools: ['weight-converter', 'length-converter'],
+    relatedTools: ['calorie-calculator', 'weight-converter', 'length-converter'], 
     component: BmiCalculator,
     seoTitle: 'BMI Calculator Online | Body Mass Index & Health Category | SoftwareCalc',
     seoDescription:
@@ -762,7 +762,7 @@ howToUse: [
     id: 'date-time-difference-calculator',
     name: 'Date & Time Difference Calculator',
     description: 'Calculate the exact time difference between two dates and times in days, hours, and minutes.',
-    aboutText: "The Date & Time Difference Calculator helps you calculate the exact time between two dates and times. It shows the difference in total days, hours, and minutes, as well as a detailed breakdown. This tool is useful for planning events, tracking project durations, or calculating time spans between two moments. If you want to calculate the exact age of a person based on their birth date, you may also find the [Age Calculator](/age-calculator) helpful.",
+    aboutText: "The Date & Time Difference Calculator helps you calculate the exact time between two dates and times. It shows the difference in total days, hours, and minutes, as well as a detailed breakdown. This tool is useful for planning events, tracking project durations, or calculating time spans between two moments. If you want to calculate the exact age of a person based on their birth date, you may also find the [Age Calculator](/age-calculator) helpful. If you need to convert specific times between time zones, you may also find the [Time Zone Converter](/time-zone-converter) useful.",
 
     howToUse: [
       'Enter the start date and time',
@@ -779,7 +779,7 @@ howToUse: [
       'Start: March 1 08:00 → End: March 3 10:30 → 2 days 2 hours 30 minutes',
       'Start: Jan 1 00:00 → End: Jan 2 12:00 → 1 day 12 hours'
     ],
-    relatedTools: ['hours-worked-calculator', 'age-calculator'],
+    relatedTools: ['time-zone-converter', 'hours-worked-calculator', 'age-calculator'],
     component: DateTimeDifferenceCalculator,
     seoTitle: 'Date & Time Difference Calculator Online | Days & Hours Between Dates',
     seoDescription: 'Free online date and time difference calculator. Find the exact difference between two dates and times in days, hours, and minutes.'
@@ -940,7 +940,7 @@ howToUse: [
     id: 'loan-payment-calculator',
     name: 'Loan Payment Calculator',
     description: 'Calculate monthly loan payments, total interest, payoff date, and savings from extra payments.',
-    aboutText: "The Loan Payment Calculator helps you understand the true cost of borrowing by showing how a loan is repaid over time through fixed monthly payments. Each payment is split between interest and principal, and this balance changes over the life of the loan. In the early years, most of your payment goes toward interest, while later payments reduce the loan balance faster. This calculator is useful when comparing different loan options such as personal loans, car loans, or other installment loans. It also helps you see how changes in interest rate, loan term, or extra monthly payments can significantly affect the total cost and payoff time. Understanding these factors can help you make better borrowing decisions and potentially save a large amount in interest over time. For investment growth scenarios, you can use the [Compound Interest Calculator](/compound-interest-calculator) instead.",
+    aboutText: "The Loan Payment Calculator helps you understand the true cost of borrowing by showing how a loan is repaid over time through fixed monthly payments. Each payment is split between interest and principal, and this balance changes over the life of the loan. In the early years, most of your payment goes toward interest, while later payments reduce the loan balance faster. This calculator is useful when comparing different loan options such as personal loans, car loans, or other installment loans. It also helps you see how changes in interest rate, loan term, or extra monthly payments can significantly affect the total cost and payoff time. Understanding these factors can help you make better borrowing decisions and potentially save a large amount in interest over time. For investment growth scenarios, you can use the [Compound Interest Calculator](/compound-interest-calculator) instead. If you want to estimate how much you can borrow before calculating payments, you may also find the [Loan Affordability Calculator](/loan-affordability-calculator) useful.",
     howToUse: [
       'Enter the total loan amount.',
       'Add the annual interest rate for the loan.',
@@ -959,7 +959,7 @@ howToUse: [
     'Add an extra $200 monthly payment to see how many years of repayment you can eliminate',
     'Adjust interest rate from 5% to 8% to understand how borrowing cost changes significantly between lenders'
   ],
-    relatedTools: ['compound-interest-calculator', 'percentage-calculator', 'simple-interest-calculator'],
+    relatedTools: ['compound-interest-calculator', 'percentage-calculator', 'loan-affordability-calculator'],
     component: LoanPaymentCalculator,
     seoTitle: 'Loan Payment Calculator Online | Monthly Payments, Interest & Payoff Schedule',
     seoDescription: 'Free online loan payment calculator to estimate monthly payments, total interest, total repayment, payoff date, and amortization schedule for fixed-rate loans.'
@@ -999,7 +999,7 @@ howToUse: [
     id: 'salary-after-tax-calculator',
     name: 'Salary After Tax Calculator',
     description: 'Calculate your take-home salary after tax based on gross income and tax rate.',
-    aboutText: `The Salary After Tax Calculator helps you understand how much of your income you actually keep after taxes are deducted. Your gross salary can often look much higher than your real take-home pay, especially in countries with higher tax rates or additional deductions. This calculator helps you quickly compare gross and net income so you can make better decisions when evaluating job offers, planning a budget, or negotiating salary. It is especially useful when comparing different income levels or understanding how tax rates impact your monthly lifestyle. You can also use the [Savings Goal Calculator](/savings-goal-calculator) to plan how much you can save from your net income, or the [Compound Interest Calculator](/compound-interest-calculator) for long-term growth planning.`,
+    aboutText: `The Salary After Tax Calculator helps you understand how much of your income you actually keep after taxes are deducted. Your gross salary can often look much higher than your real take-home pay, especially in countries with higher tax rates or additional deductions. This calculator helps you quickly compare gross and net income so you can make better decisions when evaluating job offers, planning a budget, or negotiating salary. It is especially useful when comparing different income levels or understanding how tax rates impact your monthly lifestyle. You can also use the [Savings Goal Calculator](/savings-goal-calculator) to plan how much you can save from your net income, or the [Compound Interest Calculator](/compound-interest-calculator) for long-term growth planning. To better understand how your earnings translate into hourly income, you may also find the [Salary Hourly Calculator](/salary-hourly-calculator) useful.`,
     howToUse: [
       'Enter your gross salary amount.',
       'Enter the tax rate as a percentage.',
@@ -1016,7 +1016,7 @@ howToUse: [
     'Compare two job offers with different salaries and tax rates to understand actual earnings',
     'Convert monthly salary into yearly net income to better plan long-term budgeting'
   ],
-    relatedTools: ['simple-interest-calculator', 'commission-calculator', 'profit-margin-calculator'],
+    relatedTools: ['salary-hourly-calculator', 'inflation-calculator', 'commission-calculator', 'profit-margin-calculator'],
     component: SalaryAfterTaxCalculator,
     formulaTitle: 'Net Salary Formula',
     formulaExpression: 'Net Salary = Gross Salary × (1 − Tax Rate)',
@@ -1147,7 +1147,7 @@ howToUse: [
     id: 'mortgage-calculator',
     name: 'Mortgage Calculator',
     description: 'Estimate monthly mortgage payments and total cost of a home loan.',
-    aboutText: 'The Mortgage Calculator helps you understand the real long-term cost of buying a home by showing how your monthly payment is built from loan amount, interest rate, and repayment time. A mortgage is usually the largest financial commitment most people make, and even small changes in interest rate or loan term can significantly affect total repayment. This calculator helps you compare different scenarios such as shorter vs longer loan terms, or how increasing your down payment reduces both monthly cost and total interest paid over time. It is especially useful when planning a home purchase, comparing mortgage offers, or testing how much house you can realistically afford. For more detailed borrowing cost analysis including fees, you can also use the [APR Calculator](/apr-calculator).',
+    aboutText: 'The Mortgage Calculator helps you understand the real long-term cost of buying a home by showing how your monthly payment is built from loan amount, interest rate, and repayment time. A mortgage is usually the largest financial commitment most people make, and even small changes in interest rate or loan term can significantly affect total repayment. This calculator helps you compare different scenarios such as shorter vs longer loan terms, or how increasing your down payment reduces both monthly cost and total interest paid over time. It is especially useful when planning a home purchase, comparing mortgage offers, or testing how much house you can realistically afford. For more detailed borrowing cost analysis including fees, you can also use the [APR Calculator](/apr-calculator). You may also find the [Loan Affordability Calculator](/loan-affordability-calculator) useful to estimate how much you can borrow based on your income.',
     howToUse: [
       'Enter the home price.',
       'Enter your down payment amount.',
@@ -1164,7 +1164,7 @@ howToUse: [
     'Test a 15-year mortgage vs 30-year mortgage to understand how shorter terms reduce total interest but increase monthly cost',
     'Adjust interest rate from 5% to 7% to see how even small rate changes impact long-term affordability'
 ],
-    relatedTools: ['loan-payment-calculator', 'apr-calculator', 'savings-goal-calculator'],
+    relatedTools: ['loan-payment-calculator', 'loan-affordability-calculator', 'savings-goal-calculator'],
     component: MortgageCalculator,
     formulaTitle: 'Mortgage Payment Formula',
     formulaExpression: 'M = P × [r(1+r)^n] ÷ [(1+r)^n − 1]',
@@ -2355,7 +2355,7 @@ howToUse: [
     'Female, 65kg, 165cm, light activity → ~1900 kcal maintenance',
   ],
 
-  relatedTools: ['bmi-calculator'],
+  relatedTools: ['bmi-calculator', 'weight-converter'],
   component: CalorieCalculator,
 
   seoTitle: 'Calorie Calculator Online | TDEE & Daily Calories | SoftwareCalc',
