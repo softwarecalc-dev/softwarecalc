@@ -49,6 +49,10 @@ export function PrivacyPolicyPage() {
               <p>
                 We may use third-party analytics tools (like Google Analytics) to collect anonymous usage data. In the future, we may also use third-party advertising services to serve ads on the site. These third parties have their own privacy policies.
               </p>
+              
+              <p>
+                  We do not sell, trade, or rent users’ personal identification information to others. Data may only be shared with trusted third-party services necessary for operating the website, such as analytics and advertising providers.
+              </p>
             </section>
 <section>
   <h2 className="text-2xl font-bold border-b pb-2 mb-4">Advertising and Google AdSense</h2>
@@ -95,7 +99,7 @@ export function PrivacyPolicyPage() {
             <section>
               <h2 className="text-2xl font-bold border-b pb-2 mb-4">User Rights</h2>
               <p>
-                Depending on your location, you may have rights regarding your personal data, including the right to access, correct, or delete your information. You can manage your account settings or contact us for assistance.
+                Depending on your location, you may have rights regarding your personal data, including the right to access, correct, or delete your information. You can manage your account settings or contact us for assistance regarding your personal data.
               </p>
             </section>
 
