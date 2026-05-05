@@ -28,6 +28,7 @@ interface ToolPageTemplateProps {
  * calculator UI as children. Everything else (How it works, Example usage,
  * Related tools) is derived from the tools registry automatically.
  */
+const SHOW_ADS = false;
 export function ToolPageTemplate({ tool, children }: ToolPageTemplateProps) {
   const related = getRelatedTools(tool.id, tool.relatedTools);
   const faqItems = getEffectiveFaqs(tool);
@@ -157,16 +158,24 @@ script.text = JSON.stringify(structuredData.filter(Boolean));
           </div>
         </div>
 
-        {/* ── Top Ad Slot ── */}
-        <div className="ad-slot ad-slot-top" data-ad-slot="top" />
+        {SHOW_ADS && (
+          <>
+            {/* ── Top Ad Slot ── */}
+            <div className="ad-slot ad-slot-top" data-ad-slot="top" />
+          </>
+        )}
 
         {/* ── Calculator UI ── */}
         <section aria-label="Calculator">
           {children}
         </section>
 
-        {/* ── Middle Ad Slot ── */}
-        <div className="ad-slot ad-slot-middle" data-ad-slot="middle" />
+        {SHOW_ADS && (
+          <>
+            {/* ── Middle Ad Slot ── */}
+            <div className="ad-slot ad-slot-middle" data-ad-slot="middle" />
+          </>
+        )}
 
         {/* ── Formula ── */}
         {(tool.formulaTitle || tool.formulaExpression) && (
@@ -371,8 +380,12 @@ script.text = JSON.stringify(structuredData.filter(Boolean));
           </section>
         )}
 
-        {/* ── Bottom Ad Slot ── */}
-        <div className="ad-slot ad-slot-bottom" data-ad-slot="bottom" />
+        {SHOW_ADS && (
+          <>
+            {/* ── Bottom Ad Slot ── */}
+            <div className="ad-slot ad-slot-bottom" data-ad-slot="bottom" />
+          </>
+        )}
 
       </div>
     </div>
