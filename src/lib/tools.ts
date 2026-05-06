@@ -79,6 +79,7 @@ import { SalaryHourlyCalculator } from '../components/calculators/SalaryHourlyCa
 import { CalorieCalculator } from '../components/calculators/CalorieCalculator';
 import { TimeZoneConverter } from '../components/calculators/TimeZoneConverter';
 import { LoanAffordabilityCalculator } from '../components/calculators/LoanAffordabilityCalculator';
+import { LoanComparisonCalculator } from '../components/calculators/LoanComparisonCalculator';
 
 
 
@@ -2428,6 +2429,42 @@ howToUse: [
 
   seoTitle: 'Loan Affordability Calculator – How Much Can I Borrow? | SoftwareCalc',
   seoDescription: 'Free loan affordability calculator. Estimate how much you can borrow based on income, expenses, interest rate, and loan term.',
+},
+  {
+  id: 'loan-comparison-calculator',
+  name: 'Loan Comparison Calculator',
+  description:
+    'Compare multiple loans to find the cheapest option based on payments and total cost.',
+
+  aboutText:
+    'The Loan Comparison Calculator helps you compare multiple loan options side by side to determine which one is the most cost-effective. By entering different loan amounts, interest rates, and loan terms, you can instantly see differences in monthly payments and total repayment costs. This is especially useful when choosing between lenders or evaluating loan offers with different conditions. Even small differences in interest rates or loan length can significantly impact the total cost over time. For single loan calculations, you may also use the [Loan Payment Calculator](/loan-payment-calculator).',
+
+  howToUse: [
+    'Enter details for Loan 1 and Loan 2.',
+    'Adjust interest rates and loan terms.',
+    'Compare monthly payments and total repayment.',
+    'Identify the cheaper loan option.',
+  ],
+
+  href: '/loan-comparison-calculator',
+  icon: Calculator,
+  available: true,
+  category: 'Finance',
+
+  howItWorks:
+    'Each loan is calculated using the standard loan amortization formula. Monthly payments are computed based on loan amount, interest rate, and term. The calculator then compares total repayment and monthly cost to determine which loan is more affordable.',
+
+  exampleUsage: [
+    'Compare 200,000€ at 5% for 20 years vs 4.5% for 25 years',
+    'Check if lower monthly payment results in higher total cost',
+  ],
+
+  relatedTools: ['loan-payment-calculator', 'loan-affordability-calculator'],
+  component: LoanComparisonCalculator,
+
+  seoTitle: 'Loan Comparison Calculator Online – Compare Loan Costs | SoftwareCalc',
+  seoDescription:
+    'Free loan comparison calculator. Compare multiple loans by monthly payment and total cost to find the best option.',
 }
 ];
 
