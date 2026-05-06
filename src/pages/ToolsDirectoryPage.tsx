@@ -93,7 +93,7 @@ export function ToolsDirectoryPage() {
           </div>
 
             <div className="grid gap-3">
-              {grouped[category].slice(0, 4).map((tool) => (
+              {grouped[category].map((tool) => (
                 <Link
                   key={tool.id}
                   to={tool.available ? (tool.href as '/') : undefined}
@@ -149,6 +149,25 @@ export function ToolsDirectoryPage() {
           </section>
         ))}
 
+        {/* ALL TOOLS (SEO crawl boost) */}
+<section className="pt-12 space-y-4">
+  <h2 className="text-xl font-semibold text-center">
+    All Calculators
+  </h2>
+
+  <div className="flex flex-wrap gap-2 justify-center">
+    {TOOLS.filter(t => t.available).map(tool => (
+      <Link
+        key={tool.id}
+        to={tool.href as '/'}
+        className="text-sm text-primary underline hover:no-underline"
+      >
+        {tool.name}
+      </Link>
+    ))}
+  </div>
+</section>
+        
         <section className="max-w-3xl mx-auto space-y-5 pt-12 text-sm md:text-base">
 
   <h2 className="text-2xl font-semibold">
