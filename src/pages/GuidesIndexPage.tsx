@@ -69,6 +69,22 @@ export function GuidesIndexPage() {
           </p>
         </div>
 
+        <section className="max-w-3xl mx-auto space-y-4 text-sm md:text-base">
+          <h2 className="text-2xl font-semibold tracking-tight">
+            Practical Guides Built Around Real Calculations
+          </h2>
+
+          <p className="text-muted-foreground leading-relaxed">
+            SoftwareCalc guides are designed to show how calculators are used in real-life situations instead of isolated formulas. These guides explain how topics like budgeting, percentages, measurements, probability, time calculations, and health metrics appear in everyday decisions people make regularly.
+          </p>
+
+          <p className="text-muted-foreground leading-relaxed">
+            Each guide combines realistic scenarios with relevant calculators so users can both understand the concepts and immediately test calculations themselves. The goal is to make financial planning, math, conversions, and other calculations easier to understand through practical examples rather than technical explanations alone.
+          </p>
+        </section>
+
+        
+        
         {/* ── Guide list ── */}
         <div className="grid gap-4">
           {GUIDE_LIST.map(({ slug, label, description }) => (
