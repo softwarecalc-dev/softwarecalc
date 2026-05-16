@@ -353,7 +353,6 @@ howToUse: [
     answer: 'No. Percentage change compares a new value to an original value, while percentage difference compares two values without treating one as the starting point.'
   }
 ],
-],
     relatedTools: ['percentage-calculator', 'discount-calculator', 'ratio-calculator'],
     component: PercentageChangeCalculator,
     seoTitle: 'Percentage Change Calculator | Percentage Increase & Decrease | SoftwareCalc',
