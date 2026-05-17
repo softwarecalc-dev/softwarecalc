@@ -19,34 +19,38 @@ export function AboutPage() {
           </CardHeader>
 
           <CardContent className="prose dark:prose-invert max-w-none space-y-4">
-            <p>
-              SoftwareCalc was created with a simple goal in mind: to provide easy-to-use online calculators and utility tools that are free and accessible for everyone.
-            </p>
+          <p>
+            SoftwareCalc was created with a simple goal: to build a fast, reliable, and distraction-free collection of online calculators that anyone can use without complexity or paywalls.
+          </p>
 
-            <p>
-              We believe that useful tools should be fast, clear, and simple to use. Whether you need help calculating percentages, discounts, VAT, averages, time differences, or converting between units, SoftwareCalc is designed to give you accurate results instantly without unnecessary complexity.
-            </p>
+          <p>
+            SoftwareCalc is designed to replace overly complex calculator sites with a cleaner and more focused experience.
+          </p>
+            
+          <p>
+            Many calculator websites are cluttered with ads, unclear formulas, or unnecessary steps. SoftwareCalc focuses on the opposite approach — clear inputs, instant results, and tools that are easy to understand even without technical knowledge.
+          </p>
 
-            <p>
-              Our growing library includes calculators across several categories such as finance, math, conversions, health, game strategy, and date &amp; time. These tools are useful for everyday tasks like budgeting, comparing prices, studying math concepts, tracking changes, and solving practical problems quickly.
-            </p>
+          <p>
+            The platform includes calculators across finance, math, conversions, health, game strategy, and date &amp; time. These tools are designed for real-world use cases such as budgeting, comparing prices, studying, tracking changes, and solving everyday problems quickly.
+          </p>
 
-            <p>
-              Each calculator is designed to be easy to understand, mobile-friendly, and based on standard formulas to ensure reliable results. The focus is on providing tools that are both practical and straightforward to use.
-            </p>
+          <p>
+            Every calculator is built using standard, well-established formulas and is designed to be mobile-friendly, fast, and consistent. The goal is to ensure users can trust the results without needing to double-check calculations elsewhere.
+          </p>
 
-            <p>
-              We are continuously expanding SoftwareCalc with new calculators and improvements over time. The goal is to build a reliable and comprehensive collection of online tools that help users solve everyday calculations quickly and confidently.
-            </p>
+          <p>
+            SoftwareCalc is independently built and maintained as a long-term project. It is continuously updated with new tools and improvements based on user needs and practical use cases.
+          </p>
 
-            <p>
-              SoftwareCalc is an independent online tool platform created to provide free and practical calculators for everyday use.
-            </p>
+          <p>
+            We believe that useful tools should be simple, transparent, and accessible to everyone — whether you're a student, professional, or just solving everyday problems.
+          </p>
 
-            <p>
-              Thank you for using SoftwareCalc. We hope our tools make your tasks a little easier.
-            </p>
-          </CardContent>
+          <p>
+            Thank you for using SoftwareCalc. We hope it helps you save time and make everyday calculations easier.
+          </p>
+        </CardContent>
 
         </Card>
       </div>
