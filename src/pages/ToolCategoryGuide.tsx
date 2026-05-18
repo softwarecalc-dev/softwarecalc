@@ -1185,7 +1185,7 @@ He started with blackjack.
 </p>
 
 <p>
-Usually, he would hit or stand based on what “felt right.” But this time, he checked a <a href="/blackjack-calculator" class="text-primary underline">Blackjack Calculator</a>.
+Usually, he would hit or stand based on what “felt right.” But this time, he checked a <a href="/blackjack-helper" class="text-primary underline">Blackjack Calculator</a>.
 </p>
 
 <p>

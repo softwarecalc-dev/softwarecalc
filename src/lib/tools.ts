@@ -119,6 +119,12 @@ export interface ToolConfig {
     question: string;
     answer: string;
   }[];
+  /** Optional related real-life guide shown below Example Usage */
+guide?: {
+  title: string;
+  href: string;
+  description: string;
+};
   /** Optional title for the Formula section (defaults to "Formula") */
   formulaTitle?: string;
   /** The formula expression displayed in a monospace block */
@@ -210,6 +216,12 @@ export const TOOLS: ToolConfig[] = [
     '3 Tablespoons to Teaspoons → 9.00 tsp',
     '500 Milliliters to Liters → 0.50 L',
   ],
+  guide: {
+  title: 'Everyday Conversions: Making Units Make Sense in Real Life',
+  href: '/guides/conversions',
+  description:
+    'See how unit conversions help you adapt recipes between different measurement systems and avoid mistakes when cooking internationally.'
+},
   faq: [
   {
     question: 'What is a recipe volume converter?',
@@ -272,6 +284,12 @@ export const TOOLS: ToolConfig[] = [
       '100°F to Celsius → 37.78°C',
       '0°C to Kelvin → 273.15K',
     ],
+    guide: {
+  title: 'Everyday Conversions: Making Units Make Sense in Real Life',
+  href: '/guides/conversions',
+  description:
+    'Understand how temperature conversions help you interpret weather forecasts and make better decisions when travelling or planning activities.'
+},
     faq: [
   {
     question: 'What is a temperature converter?',
@@ -333,6 +351,12 @@ export const TOOLS: ToolConfig[] = [
       '5 lb to g → 2267.9619 g',
       '100 oz to kg → 2.8350 kg',
     ],
+    guide: {
+  title: 'Everyday Conversions: Making Units Make Sense in Real Life',
+  href: '/guides/conversions',
+  description:
+    'Learn how converting weight units helps compare products accurately when shopping, tracking nutrition, or evaluating fitness supplements.'
+},
     faq: [
   {
     question: 'What is a weight converter?',
@@ -421,6 +445,12 @@ howToUse: [
       'Original 100, New 80 → 20% decrease',
       'Original 200, New 200 → 0% change',
     ],
+    guide: {
+  title: 'Math in Everyday Life: Seeing Numbers Clearly in Real Situations',
+  href: '/guides/math',
+  description:
+    'Understand how percentage change is used in real life to compare growth, trends, and differences in business, shopping, and everyday decisions.'
+},
     faq: [
   {
     question: 'What is percentage change?',
@@ -648,6 +678,12 @@ howToUse: [
       'Weight 90kg, Height 180cm → BMI 27.8 (Overweight)',
       'Weight 50kg, Height 165cm → BMI 18.4 (Underweight)',
     ],
+    guide: {
+  title: 'Am I Actually Healthy? A Practical Guide to Understanding Your Numbers',
+  href: '/guides/health',
+  description:
+    'Learn how BMI provides a basic health indicator and how it fits into a broader understanding of body composition and fitness.'
+},
     faq: [
   {
     question: 'What is BMI and what does it measure?',
@@ -765,6 +801,12 @@ howToUse: [
     category: 'Math',
     howItWorks: 'Enter two numbers and the calculator reduces the ratio to its simplest form.',
     exampleUsage: ['20 : 30 → 2 : 3', '50 : 100 → 1 : 2'],
+    guide: {
+  title: 'Math in Everyday Life: Seeing Numbers Clearly in Real Situations',
+  href: '/guides/math',
+  description:
+    'Learn how ratios help you scale recipes, compare quantities, and maintain balance in real-world problems like cooking and design.'
+},
     faq: [
   {
     question: 'What is a ratio?',
@@ -882,6 +924,12 @@ howToUse: [
       '5 miles → 8.047 kilometers',
       '100 centimeters → 1 meter',
     ],
+    guide: {
+  title: 'Everyday Conversions: Making Units Make Sense in Real Life',
+  href: '/guides/conversions',
+  description:
+    'See how length conversions help avoid mistakes when measuring spaces, furniture, and travel distances in different unit systems.'
+},
     faq: [
   {
     question: 'What is a length converter?',
@@ -944,6 +992,12 @@ howToUse: [
       '5, 10, 15 → Average = 10',
       '1.5, 2.5, 3.5 → Average = 2.5',
     ],
+    guide: {
+  title: 'Math in Everyday Life: Seeing Numbers Clearly in Real Situations',
+  href: '/guides/math',
+  description:
+    'See how averages are used to simplify data and understand patterns in work performance, grades, and everyday decision-making.'
+},
     faq: [
   {
     question: 'What is an average?',
@@ -1007,6 +1061,12 @@ howToUse: [
   '$500 monthly contributions at 7% return over 30 years → $566,765 total value (majority from compound growth)',
   'Long-term investing scenario showing how consistent contributions can outperform one-time investments'
 ],
+     guide: {
+    title: 'From Paycheck to Property: A Practical Personal Finance Story',
+    href: '/guides/finance',
+    description:
+      'See how compound interest affects long-term savings, investing, and retirement planning in a practical real-world finance journey.'
+  },
     faq: [
   {
     question: 'Why does compound interest grow investments so much faster over time?',
@@ -1067,6 +1127,12 @@ howToUse: [
       'Decrease 200 by 15% → 170',
       'Change from 50 to 70 → 40%',
     ],
+    guide: {
+  title: 'Math in Everyday Life: Seeing Numbers Clearly in Real Situations',
+  href: '/guides/math',
+  description:
+    'Understand how percentages are used in discounts, comparisons, and everyday calculations like shopping and budgeting.'
+},
     faq: [
   {
     question: 'What does a percentage calculator do?',
@@ -1131,6 +1197,12 @@ howToUse: [
       'Player holds 8–8 (pair) vs dealer showing 7 → Split.',
       'Player holds 10–6 vs dealer showing 6 → Stand.',
     ],
+    guide: {
+  title: 'Play Smarter, Not Luckier: A Guide to Game Strategy and Odds',
+  href: '/guides/game-calculators',
+  description:
+    'Learn how blackjack strategy tools help you understand probabilities, reduce mistakes, and make more informed in-game decisions based on odds rather than guesswork.'
+},
     faq: [
   {
     question: 'What is a Blackjack calculator?',
@@ -1193,6 +1265,12 @@ howToUse: [
       'Pick a random page number between 1 and 500.',
       'Decide between two options by picking 1 or 2.',
     ],
+    guide: {
+  title: 'When You Can’t Decide: A Practical Guide to Letting Randomness Choose',
+  href: '/guides/random-generators',
+  description:
+    'See how random number generation helps with fair decision-making, games, and unbiased selection when you need an objective outcome.'
+},
     faq: [
   {
     question: 'What is a random number generator?',
@@ -1255,6 +1333,12 @@ howToUse: [
       'Overnight shift from 22:00 to 06:00 → 8 hours',
       'Quickly calculate earnings for 37.5 hours at $30/hr',
     ],
+    guide: {
+  title: 'Where Did the Time Go? A Practical Guide to Deadlines, Work Hours, and Life',
+  href: '/guides/date-time',
+  description:
+    'Learn how tracking work hours accurately helps you understand productivity, overtime, and real weekly workload instead of guessing.'
+},
     faq: [
   {
     question: 'What does a hours worked calculator do?',
@@ -1315,6 +1399,12 @@ howToUse: [
       'Start: March 1 08:00 → End: March 3 10:30 → 2 days 2 hours 30 minutes',
       'Start: Jan 1 00:00 → End: Jan 2 12:00 → 1 day 12 hours'
     ],
+    guide: {
+  title: 'Where Did the Time Go? A Practical Guide to Deadlines, Work Hours, and Life',
+  href: '/guides/date-time',
+  description:
+    'Understand how date difference calculations help you plan deadlines, projects, and time spans with precision instead of vague estimates.'
+},
     faq: [
   {
     question: 'What does a date and time difference calculator do?',
@@ -1371,6 +1461,12 @@ howToUse: [
       'Born Jan 1, 2000 → Age 26 years, 2 months, 12 days',
       'Born June 15, 1995 → Age 30 years, 8 months, 27 days'
     ],
+    guide: {
+  title: 'Where Did the Time Go? A Practical Guide to Deadlines, Work Hours, and Life',
+  href: '/guides/date-time',
+  description:
+    'See how age calculations provide precise time-based insights for planning, records, and personal milestones.'
+},
     faq: [
   {
     question: 'What does an age calculator do?',
@@ -1431,6 +1527,12 @@ howToUse: [
       'Price $5, Quantity 200 → $0.025 per unit',
       'Price $12.99, Quantity 6 → $2.165 per unit'
     ],
+    guide: {
+  title: 'Math in Everyday Life: Seeing Numbers Clearly in Real Situations',
+  href: '/guides/math',
+  description:
+    'Learn how unit pricing helps compare value when shopping and make smarter purchasing decisions based on size and cost.'
+},
     faq: [
   {
     question: 'What is a unit price calculator?',
@@ -1490,6 +1592,12 @@ howToUse: [
       'Length 10 ft, Width 10 ft → 100 sq ft',
       'Length 12 ft, Width 15 ft → 180 sq ft'
     ],
+    guide: {
+  title: 'Everyday Conversions: Making Units Make Sense in Real Life',
+  href: '/guides/conversions',
+  description:
+    'Understand how area calculations are used in real estate, flooring, and home projects to ensure accurate space measurements.'
+},
     relatedTools: ['unit-price-calculator', 'length-converter'],
     component: SquareFootageCalculator,
     seoTitle: 'Square Footage Calculator Online | Area Calculator | SoftwareCalc',
@@ -1514,6 +1622,12 @@ howToUse: [
       'Target date 30 days away → 30 days remaining',
       'Target date is today → Today!'
     ],
+    guide: {
+  title: 'Where Did the Time Go? A Practical Guide to Deadlines, Work Hours, and Life',
+  href: '/guides/date-time',
+  description:
+    'Learn how countdown-style date calculations help you track upcoming events, deadlines, and important personal dates.'
+},
     faq: [
   {
     question: 'What does a days until date calculator do?',
@@ -1686,6 +1800,12 @@ howToUse: [
     'Add an extra $200 monthly payment to see how many years of repayment you can eliminate',
     'Adjust interest rate from 5% to 8% to understand how borrowing cost changes significantly between lenders'
   ],
+    guide: {
+  title: 'From Paycheck to Property: A Practical Personal Finance Story',
+  href: '/guides/finance',
+  description:
+    'Learn how loan repayment length, interest rates, and monthly payment trade-offs affect long-term financial planning and home affordability.'
+},
     faq: [
   {
     question: 'What affects the size of a loan payment the most?',
@@ -1748,6 +1868,12 @@ howToUse: [
       'Time needed to reach a $20,000 emergency fund',
       'Impact of increasing monthly savings on goal timeline'
     ],
+  guide: {
+  title: 'From Paycheck to Property: A Practical Personal Finance Story',
+  href: '/guides/finance',
+  description:
+    'See how structured monthly saving plans can help build a house deposit and create realistic long-term financial goals.'
+},
   faq: [
   {
     question: 'How does a savings goal calculator help me reach financial targets?',
@@ -1811,6 +1937,12 @@ howToUse: [
     'Compare two job offers with different salaries and tax rates to understand actual earnings',
     'Convert monthly salary into yearly net income to better plan long-term budgeting'
   ],
+    guide: {
+  title: 'From Paycheck to Property: A Practical Personal Finance Story',
+  href: '/guides/finance',
+  description:
+    'Understand how real take-home pay affects budgeting, saving decisions, debt management, and overall financial planning.'
+},
     faq: [
   {
     question: 'Why is my take-home pay so much lower than my gross salary?',
@@ -1938,6 +2070,12 @@ howToUse: [
       'Flop with a flush draw → estimate equity with two cards to come.',
       'Turn decision facing a bet → compare estimated equity to pot odds for a simplified action hint.'
     ],
+    guide: {
+  title: 'Play Smarter, Not Luckier: A Guide to Game Strategy and Odds',
+  href: '/guides/game-calculators',
+  description:
+    'Understand how poker odds calculators estimate winning probabilities and help you make more strategic decisions in Texas Hold’em situations.'
+},
     faq: [
   {
     question: 'What is a Texas Hold’em odds calculator?',
@@ -2003,6 +2141,12 @@ howToUse: [
     'Compare retirement outcomes at different contribution levels',
     'See how changing retirement age impacts required savings'
     ],
+  guide: {
+  title: 'From Paycheck to Property: A Practical Personal Finance Story',
+  href: '/guides/finance',
+  description:
+    'See how early investing, consistent contributions, and long-term planning can significantly impact retirement outcomes.'
+},
   faq: [
   {
     question: 'How does a retirement calculator estimate future savings?',
@@ -2129,6 +2273,12 @@ howToUse: [
     'Test a 15-year mortgage vs 30-year mortgage to understand how shorter terms reduce total interest but increase monthly cost',
     'Adjust interest rate from 5% to 7% to see how even small rate changes impact long-term affordability'
 ],
+    guide: {
+  title: 'From Paycheck to Property: A Practical Personal Finance Story',
+  href: '/guides/finance',
+  description:
+    'Explore how mortgage payments, loan length, and interest costs influence the true long-term cost of buying a home.'
+},
     faq: [
   {
     question: 'How much mortgage can I realistically afford?',
@@ -2253,6 +2403,12 @@ howToUse: [
       'Property 300,000 with loan 240,000 → LTV 80%, equity 60,000',
       'Property 500,000 with loan 100,000 → LTV 20%, equity 400,000'
     ],
+    guide: {
+  title: 'From Paycheck to Property: A Practical Personal Finance Story',
+  href: '/guides/finance',
+  description:
+    'Learn why deposit size and loan-to-value ratio can affect mortgage approval chances, borrowing costs, and financial risk.'
+},
     faq: [
   {
     question: 'What does loan-to-value (LTV) ratio mean?',
@@ -2314,6 +2470,12 @@ howToUse: [
       'Monthly debt 1,500 and gross monthly income 5,000 → DTI 30%',
       'Monthly debt 2,000 and gross monthly income 8,000 → DTI 25%'
     ],
+    guide: {
+  title: 'From Paycheck to Property: A Practical Personal Finance Story',
+  href: '/guides/finance',
+  description:
+    'See how lenders evaluate debt-to-income ratio when reviewing mortgage applications and assessing borrowing capacity.'
+},
     faq: [
   {
     question: 'What is considered a good debt-to-income ratio?',
@@ -2432,6 +2594,12 @@ howToUse: [
     'Invest 1,000 and return 1,200 → ROI 20%, profit 200',
     'Invest 5,000 and return 6,500 → ROI 30%, profit 1,500'
   ],
+  guide: {
+  title: 'From Paycheck to Property: A Practical Personal Finance Story',
+  href: '/guides/finance',
+  description:
+    'Understand how return on investment calculations can help evaluate property upgrades, investments, and financial opportunities.'
+},
   faq: [
   {
     question: 'What does ROI (Return on Investment) actually measure?',
@@ -2494,6 +2662,12 @@ howToUse: [
     'Fixed costs 10,000, selling price 50, variable cost 30 → break-even at 500 units',
     'Fixed costs 5,000, selling price 25, variable cost 10 → break-even at 333.33 units'
   ],
+  guide: {
+  title: 'From Paycheck to Property: A Practical Personal Finance Story',
+  href: '/guides/finance',
+  description:
+    'Learn how break-even analysis helps evaluate renovation costs, investments, and financial decisions before committing money.'
+},
   faq: [
   {
     question: 'What is a break-even point?',
@@ -2677,6 +2851,12 @@ howToUse: [
     '1/2 + 1/4 → 3/4, decimal 0.75',
     '2/3 + 1/6 → 5/6, decimal 0.8333'
   ],
+  guide: {
+  title: 'Math in Everyday Life: Seeing Numbers Clearly in Real Situations',
+  href: '/guides/math',
+  description:
+    'See how fractions appear in cooking, measurements, and everyday tasks where precise division of quantities matters.'
+},
   faq: [
   {
     question: 'What is a fraction?',
@@ -2738,6 +2918,12 @@ howToUse: [
     '2 / 5 = 4 / X → X = 10',
     '3 / 8 = 6 / X → X = 16'
   ],
+  guide: {
+  title: 'Math in Everyday Life: Seeing Numbers Clearly in Real Situations',
+  href: '/guides/math',
+  description:
+    'Understand how proportions help scale recipes, designs, and real-world quantities while keeping relationships consistent.'
+},
   faq: [
   {
     question: 'What is a proportion?',
@@ -2985,6 +3171,12 @@ howToUse: [
     '1 / 4 → 0.25',
     '1 / 0.5 → 2'
   ],
+  guide: {
+  title: 'Everyday Conversions: Making Units Make Sense in Real Life',
+  href: '/guides/conversions',
+  description:
+    'Learn how recipe volume conversions help you adapt cooking measurements across different unit systems without mistakes.'
+},
   faq: [
   {
     question: 'What is a reciprocal?',
@@ -3047,6 +3239,12 @@ howToUse: [
     '√16 → 4',
     '√2.25 → 1.5'
   ],
+  guide: {
+  title: 'Math in Everyday Life: Seeing Numbers Clearly in Real Situations',
+  href: '/guides/math',
+  description:
+    'Learn how square roots are used in measurements, geometry, and practical calculations involving area and distance.'
+},
   faq: [
   {
     question: 'What is a square root?',
@@ -3360,6 +3558,12 @@ howToUse: [
     '0.75 → 3/4',
     '1.25 → 5/4'
   ],
+  guide: {
+  title: 'Math in Everyday Life: Seeing Numbers Clearly in Real Situations',
+  href: '/guides/math',
+  description:
+    'Understand how converting decimals to fractions helps in measurements, cooking, and more precise mathematical calculations.'
+},
   faq: [
   {
     question: 'What is a decimal to fraction conversion?',
@@ -3549,6 +3753,12 @@ howToUse: [
     '10/20 → 1/2',
     '15/25 → 3/5'
   ],
+  guide: {
+  title: 'Math in Everyday Life: Seeing Numbers Clearly in Real Situations',
+  href: '/guides/math',
+  description:
+    'Learn how simplifying fractions makes calculations easier and improves clarity when working with ratios and measurements.'
+},
   faq: [
   {
     question: 'What does it mean to simplify a fraction?',
@@ -3675,6 +3885,12 @@ howToUse: [
     '7.856 to 1 decimal place → 7.9',
     '12.499 to 0 decimal places → 12'
   ],
+  guide: {
+  title: 'Math in Everyday Life: Seeing Numbers Clearly in Real Situations',
+  href: '/guides/math',
+  description:
+    'See how rounding numbers is used to simplify calculations in budgeting, fitness tracking, and everyday estimates.'
+},
   faq: [
   {
     question: 'What is rounding in mathematics?',
@@ -3800,6 +4016,12 @@ howToUse: [
     '7 → Prime',
     '12 → Not Prime'
   ],
+  guide: {
+  title: 'Math in Everyday Life: Seeing Numbers Clearly in Real Situations',
+  href: '/guides/math',
+  description:
+    'Understand how prime numbers appear in number theory and why they matter in patterns, mathematics, and computing.'
+},
   faq: [
   {
     question: 'What is a prime number?',
@@ -3862,6 +4084,12 @@ howToUse: [
     'Factors of 15 → 1, 3, 5, 15',
     'Factors of 7 → 1, 7'
   ],
+  guide: {
+  title: 'Math in Everyday Life: Seeing Numbers Clearly in Real Situations',
+  href: '/guides/math',
+  description:
+    'Learn how factors are used to break down numbers and solve problems involving division, grouping, and simplification.'
+},
   faq: [
   {
     question: 'What are factors of a number?',
@@ -4174,6 +4402,12 @@ howToUse: [
     '0.25 → 25%',
     '1.2 → 120%'
   ],
+  guide: {
+  title: 'Math in Everyday Life: Seeing Numbers Clearly in Real Situations',
+  href: '/guides/math',
+  description:
+    'Understand how converting decimals to percentages helps in interpreting data, scores, and everyday comparisons.'
+},
   faq: [
   {
     question: 'What is a decimal to percent conversion?',
@@ -4391,6 +4625,12 @@ faq: [
   'Increase monthly payment by $50 to see how many months of debt you can eliminate',
   'Compare minimum payment vs fixed payment strategy to understand long-term interest impact'
 ],
+  guide: {
+  title: 'From Paycheck to Property: A Practical Personal Finance Story',
+  href: '/guides/finance',
+  description:
+    'See how reducing credit card debt faster can improve financial stability, reduce interest costs, and support future loan goals.'
+},
   faq: [
   {
     question: 'Why does it take so long to pay off credit card debt?',
@@ -4519,6 +4759,12 @@ faq: [
     'Compare different interest rates → see cost impact',
     'Test repayment strategies → optimize debt payoff'
   ],
+    guide: {
+  title: 'From Paycheck to Property: A Practical Personal Finance Story',
+  href: '/guides/finance',
+  description:
+    'Learn how structured debt repayment strategies can shorten payoff timelines and improve long-term financial flexibility.'
+},
     faq: [
   {
     question: 'What is the fastest way to pay off multiple debts?',
@@ -4645,6 +4891,12 @@ faq: [
     'Convert freelance rates',
     'Understand hourly value of salary'
   ],
+    guide: {
+  title: 'From Paycheck to Property: A Practical Personal Finance Story',
+  href: '/guides/finance',
+  description:
+    'Understand how converting salary into hourly earnings can help evaluate overtime, work opportunities, and income planning.'
+},
     faq: [
   {
     question: 'What does a salary to hourly calculator do?',
@@ -4714,6 +4966,12 @@ faq: [
     'Male, 80kg, 180cm, 30 years, moderate activity → ~2600 kcal maintenance',
     'Female, 65kg, 165cm, light activity → ~1900 kcal maintenance',
   ],
+    guide: {
+  title: 'Am I Actually Healthy? A Practical Guide to Understanding Your Numbers',
+  href: '/guides/health',
+  description:
+    'See how calorie calculations help estimate daily energy needs and support balanced nutrition and fitness planning.'
+},
   faq: [
   {
     question: 'What does a calorie calculator actually estimate?',
