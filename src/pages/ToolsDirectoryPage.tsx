@@ -93,7 +93,7 @@ export function ToolsDirectoryPage() {
           </div>
 
             <div className="grid gap-3">
-              {grouped[category].map((tool) => (
+              {grouped[category].slice(0, 4).map((tool) => (
                 <Link
                   key={tool.id}
                   to={tool.available ? (tool.href as '/') : undefined}
@@ -150,19 +150,19 @@ export function ToolsDirectoryPage() {
         ))}
 
         {/* ALL TOOLS (SEO crawl boost) */}
-<section className="pt-12 space-y-4">
-  <h2 className="text-xl font-semibold text-center">
-    All Calculators
+<section className="pt-12 space-y-4 text-center">
+  <h2 className="text-xl font-semibold">
+    Explore All Calculators
   </h2>
 
   <div className="flex flex-wrap gap-2 justify-center">
-    {TOOLS.filter(t => t.available).map(tool => (
+    {CATEGORY_ORDER.map((cat) => (
       <Link
-        key={tool.id}
-        to={tool.href as '/'}
+        key={cat}
+        to={`/${CATEGORY_META[cat].slug}` as '/'}
         className="text-sm text-primary underline hover:no-underline"
       >
-        {tool.name}
+        {cat} Calculators
       </Link>
     ))}
   </div>
