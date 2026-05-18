@@ -1015,7 +1015,7 @@ howToUse: [
 ],
      guide: {
     title: 'From Paycheck to Property: A Practical Personal Finance Story',
-    href: '/guides/paycheck-to-property',
+    href: '/guides/finance',
     description:
       'See how compound interest affects long-term savings, investing, and retirement planning in a practical real-world finance journey.'
   },
