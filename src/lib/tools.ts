@@ -119,6 +119,12 @@ export interface ToolConfig {
     question: string;
     answer: string;
   }[];
+  /** Optional related real-life guide shown below Example Usage */
+guide?: {
+  title: string;
+  href: string;
+  description: string;
+};
   /** Optional title for the Formula section (defaults to "Formula") */
   formulaTitle?: string;
   /** The formula expression displayed in a monospace block */
@@ -1007,6 +1013,12 @@ howToUse: [
   '$500 monthly contributions at 7% return over 30 years → $566,765 total value (majority from compound growth)',
   'Long-term investing scenario showing how consistent contributions can outperform one-time investments'
 ],
+     guide: {
+    title: 'From Paycheck to Property: A Practical Personal Finance Story',
+    href: '/guides/paycheck-to-property',
+    description:
+      'See how compound interest affects long-term savings, investing, and retirement planning in a practical real-world finance journey.'
+  },
     faq: [
   {
     question: 'Why does compound interest grow investments so much faster over time?',
