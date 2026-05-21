@@ -362,6 +362,40 @@ script.text = JSON.stringify(structuredData.filter(Boolean));
     </Card>
   </section>
 )}
+
+        {/* ── Real-life guide ── */}
+{tool.guide && (
+  <section aria-labelledby="guide-heading" className="space-y-4">
+    <h2
+      id="guide-heading"
+      className="text-2xl font-semibold tracking-tight"
+      style={{ fontFamily: 'var(--font-serif)' }}
+    >
+      Real-life example
+    </h2>
+
+    <Card className="border-primary/20 bg-primary/5">
+      <CardContent className="pt-6 space-y-4">
+        <div className="space-y-2">
+          <h3 className="text-lg font-semibold">
+            {tool.guide.title}
+          </h3>
+
+          <p className="text-muted-foreground leading-relaxed">
+            {tool.guide.description}
+          </p>
+        </div>
+
+        <Link to={tool.guide.href as '/'}>
+          <Button className="gap-2">
+            Read Guide
+            <ArrowRight className="w-4 h-4" />
+          </Button>
+        </Link>
+      </CardContent>
+    </Card>
+  </section>
+)}
         
         {/* ── Related tools ── */}
         {related.length > 0 && (
