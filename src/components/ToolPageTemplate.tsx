@@ -37,6 +37,19 @@ export function ToolPageTemplate({ tool, children }: ToolPageTemplateProps) {
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
+    // ── Canonical URL ──
+const canonicalUrl = `https://softwarecalc.com${tool.href}`;
+
+let canonicalTag = document.querySelector("link[rel='canonical']") as HTMLLinkElement | null;
+
+if (!canonicalTag) {
+  canonicalTag = document.createElement('link');
+  canonicalTag.setAttribute('rel', 'canonical');
+  document.head.appendChild(canonicalTag);
+}
+
+canonicalTag.setAttribute('href', canonicalUrl);
+
     // Create or update script tag in head
     let script = document.getElementById('tool-structured-data') as HTMLScriptElement;
     if (!script) {
