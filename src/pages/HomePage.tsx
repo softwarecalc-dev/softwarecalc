@@ -179,11 +179,6 @@ const otherTools = TOOLS
     "name": "SoftwareCalc",
     "url": "https://softwarecalc.com/"
   },
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://softwarecalc.com/tools?query={search_term_string}",
-    "query-input": "required name=search_term_string"
-  },
   "about": [
     "Finance Calculators",
     "Math Calculators",
